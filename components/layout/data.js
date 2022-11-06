@@ -9,3 +9,7 @@ export const headerData = {
 export const footerData = {
   maxWidthClass: "max-w-7xl",
 };
+
+export const mainData = {
+  maxWidthClass: "max-w-6xl",
+};

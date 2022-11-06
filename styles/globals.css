@@ -5,6 +5,10 @@
 body {
   direction: rtl;
   font-family: 'Open sans';
+  overflow-x: hidden;
+}
+::selection {
+  /* background-color: rgba(223, 181, 66, 0.3); */
 }
 #__next {
   display: flex;

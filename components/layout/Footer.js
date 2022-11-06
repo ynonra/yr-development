@@ -6,8 +6,8 @@ import NavLinks from "./NavLinks";
 
 const Footer = () => {
   return (
-    <footer className="mx-auto px-10 py-5 w-full">
-      <div className={`flex flex-col gap-5 ${footerData.maxWidthClass}`}>
+    <footer className="px-10 py-5 w-full">
+      <div className={`flex flex-col mx-auto gap-5 ${footerData.maxWidthClass}`}>
         <section className="hidden sm:flex items-center justify-between">
           <Logo />
           <NavLinks />

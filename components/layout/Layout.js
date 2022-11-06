@@ -1,6 +1,6 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import { headerData } from "./data";
+import { headerData, mainData } from "./data";
 import Head from "next/head";
 
 const Layout = ({ children }) => {
@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       <main
         className={`${headerData.mobileMarginTopClass} ${headerData.desktopMarginTopClass}`}
       >
-        {children}
+        <div className={`${mainData.maxWidthClass} mx-auto`}>{children}</div>
       </main>
       <Footer />
     </>
