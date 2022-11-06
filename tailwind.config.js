@@ -11,6 +11,9 @@ module.exports = {
         'appRed': {
           500: "#E87F75",
         },
+        'appPurple': {
+          500: "#99ADF9",
+        },
       },
     },
   },

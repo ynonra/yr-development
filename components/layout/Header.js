@@ -3,7 +3,6 @@ import ContactIcons from "../ContactIcons";
 import Logo from "../Logo";
 import { headerData } from "./data";
 import NavLinks from "./NavLinks";
-import { BiMenuAltRight } from "react-icons/bi";
 import { BiMenu } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 
@@ -19,7 +18,7 @@ const Header = () => {
       <header
         className={`fixed ${
           !drawerOpen ? "hidden" : ""
-        } sm:block z-20  inset-0 sm:bottom-auto px-10 py-5 ${
+        } sm:block z-20  inset-0 sm:bottom-auto px-10 py-5 sm:bg-white ${
           headerData.desktopHeightClass
         }`}
       >

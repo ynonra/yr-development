@@ -7,8 +7,9 @@ body {
   font-family: 'Open sans';
   overflow-x: hidden;
 }
-::selection {
-  /* background-color: rgba(223, 181, 66, 0.3); */
+p {
+  line-height: 1.8;
+  margin-bottom: .6rem;
 }
 #__next {
   display: flex;
