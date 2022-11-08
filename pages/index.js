@@ -229,12 +229,12 @@ export default function Home() {
             <WorkStepCard
               title="פיתוח"
               description="לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף."
-              imageFilename="time.svg"
+              imageFilename="time1.svg"
             />
             <WorkStepCard
               title="בקרת איכות"
               description="לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף."
-              imageFilename="star.svg"
+              imageFilename="star1.svg"
             />
             <WorkStepCard
               title="עלייה לאוויר"
