@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import AppButton from "../components/AppButton";
 import ServiceDescriptionItem from "../components/ServiceDescriptionItem";
+import WorkCard from "../components/WorkCard";
 import WorkStepCard from "../components/WorkStepCard";
 
 export default function Home() {
@@ -209,7 +210,9 @@ export default function Home() {
           />
         </section>
         <section className="mt-20">
-          <h2 className="text-4xl font-bold mb-6 text-center sm:text-right">תהליך העבודה</h2>
+          <h2 className="text-4xl font-bold mb-10 text-center sm:text-right">
+            תהליך העבודה
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 md:gap-y-14 lg:gap-y-20 justify-between justify-items-center">
             <WorkStepCard
               title="אפיון"
@@ -240,6 +243,32 @@ export default function Home() {
               title="עלייה לאוויר"
               description="לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף."
               imageFilename="strike.svg"
+            />
+          </div>
+        </section>
+        {/* 4 - Works */}
+        <section className="mt-24">
+          <h2 className="text-4xl font-bold mb-10 text-center sm:text-right">
+            תיק עבודות
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 md:gap-y-14 lg:gap-y-20 justify-between justify-items-center">
+            <WorkCard
+              logoFilename="vogo-big.svg"
+              workUrl="vogo"
+              imageScale={0.9}
+            />
+            <WorkCard logoFilename="סימנא.svg" workUrl="simana" />
+            <WorkCard logoFilename="מם-דלת.gif" workUrl="memdalet" />
+            <WorkCard logoFilename="squadd-big.png" workUrl="squadd" />
+            <WorkCard
+              logoFilename="כף החיים.png"
+              workUrl="kaf-hachaim"
+              imageScale={0.6}
+            />
+            <WorkCard
+              logoFilename="ברכת אליהו.svg"
+              workUrl="birkat-eliyahu"
+              imageScale={0.9}
             />
           </div>
         </section>
