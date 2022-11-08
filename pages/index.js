@@ -6,6 +6,12 @@ import ServiceDescriptionItem from "../components/ServiceDescriptionItem";
 import WorkCard from "../components/WorkCard";
 import WorkStepCard from "../components/WorkStepCard";
 
+import { Pagination, A11y } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import RecommendationCard from "../components/RecommendationCard";
+
 export default function Home() {
   const [answerAIndex, setAnswerAIndex] = useState(0);
   const [answerBIndex, setAnswerBIndex] = useState(0);
@@ -175,17 +181,20 @@ export default function Home() {
           <AppButton>ספר לי עוד</AppButton>
         </article>
       </section>
-      {/* 3 - SERVICES */}
-      <section className="border-2 border-appRed-500 px-10 py-10 mx-auto text-center mt-28 max-w-4xl">
-        <h2 className="text-4xl font-bold mb-6">מוצרים דיגטליים מ-א’ ועד ת’</h2>
-        <p className="text-2xl font-light leading-normal">
-          המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות היכולות
-          האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת מיומנויות
-          נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד בשיתוף פעולה
-          עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו לגבהים חדשים.
-        </p>
-      </section>
       <div className="max-w-5xl mx-auto">
+        {/* 3 - SERVICES */}
+        <section className="border-2 border-appRed-500 px-10 py-10 mx-auto text-center mt-28 max-w-4xl">
+          <h2 className="text-4xl font-bold mb-6">
+            מוצרים דיגטליים מ-א’ ועד ת’
+          </h2>
+          <p className="text-2xl font-light leading-normal">
+            המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות
+            היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת
+            מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד
+            בשיתוף פעולה עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו
+            לגבהים חדשים.
+          </p>
+        </section>
         <section className="flex flex-col items-center md:flex-row justify-between mt-14 gap-y-8">
           <ServiceDescriptionItem
             number={1}
@@ -271,6 +280,50 @@ export default function Home() {
               imageScale={0.9}
             />
           </div>
+        </section>
+
+        {/* 5 - SERVICES */}
+        <section className="border-2 border-appRed-500 py-10 mx-auto text-center mt-28 max-w-4xl relative">
+          <h2 className="text-4xl font-bold mb-12 mr-10 sm:text-right">
+            לקוחות מספרים
+          </h2>
+          <div className="absolute" />
+          <Swiper
+            pagination={{
+              clickable: true,
+              bulletActiveClass: "!bg-appRed-500 !opacity-100 !h-3.5 !w-2.5",
+              bulletClass:
+                "transition-all w-2 h-2 rounded-full bg-gray-300 rotate-90",
+              horizontalClass: "flex justify-center items-center gap-2 w-20",
+            }}
+            modules={[Pagination]}
+            autoplay
+          >
+            <SwiperSlide>
+              <RecommendationCard
+                description="המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד בשיתוף פעולה עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו לגבהים חדשים."
+                profileImageFilename="profile1.png"
+                profileName="מיכאל מנריקס"
+                profileRole="הבעלים של מם דלת"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <RecommendationCard
+                description="המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד בשיתוף פעולה עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו לגבהים חדשים."
+                profileImageFilename="profile1.png"
+                profileName="מיכאל מנריקס"
+                profileRole="הבעלים של מם דלת"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <RecommendationCard
+                description="המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד בשיתוף פעולה עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו לגבהים חדשים."
+                profileImageFilename="profile1.png"
+                profileName="אמיתי אלירם"
+                profileRole="מגיב אקראי בחנות גוגלפלי"
+              />
+            </SwiperSlide>
+          </Swiper>
         </section>
       </div>
     </>
