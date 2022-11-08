@@ -6,12 +6,22 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      rubik: [
+        "Rubik",
+        "Open sans",
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+      ],
+    },
     extend: {
       colors: {
-        'appRed': {
+        appRed: {
           500: "#E87F75",
         },
-        'appPurple': {
+        appPurple: {
           500: "#99ADF9",
         },
       },
