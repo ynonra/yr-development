@@ -12,6 +12,9 @@ const Header = () => {
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
   };
+  const closeDrawer = () => {
+    setDrawerOpen(false);
+  };
 
   return (
     <>
@@ -29,7 +32,7 @@ const Header = () => {
             <div className="hidden sm:block">
               <Logo />
             </div>
-            <NavLinks />
+            <NavLinks closeDrawer={closeDrawer} />
           </nav>
           <ContactIcons />
         </div>

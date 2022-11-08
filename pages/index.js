@@ -11,40 +11,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import RecommendationCard from "../components/RecommendationCard";
+import HashLinkAnchor from "../components/HashLinkAnchor";
 
 export default function Home() {
   const [answerAIndex, setAnswerAIndex] = useState(0);
   const [answerBIndex, setAnswerBIndex] = useState(0);
-
-  // function SwitchButtons({ label1, label2, questionIndex }) {
-  //   const value = [answerAIndex, answerBIndex][questionIndex];
-  //   const setValue = [setAnswerAIndex, setAnswerBIndex][questionIndex];
-  //   return (
-  //     <div className="relative border-2 border-appRed-500 flex rounded-xl text-center w-56 ">
-  //       <div
-  //         className={`absolute bg-appRed-500 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
-  //           value === 0 ? "right-0" : "right-1/2"
-  //         }`}
-  //       />
-  //       <button
-  //         className={`px-3 py-2 w-1/2 cursor-pointer transition-all ${
-  //           value === 0 ? "text-white" : "text-appRed-500"
-  //         }`}
-  //         onClick={() => setValue(0)}
-  //       >
-  //         {label1}
-  //       </button>
-  //       <button
-  //         className={`px-3 py-2 w-1/2 cursor-pointer transition-all ${
-  //           value === 1 ? "text-white" : "text-appRed-500"
-  //         }`}
-  //         onClick={() => setValue(1)}
-  //       >
-  //         {label2}
-  //       </button>
-  //     </div>
-  //   );
-  // }
 
   return (
     <>
@@ -58,6 +29,8 @@ export default function Home() {
       </Head>
       {/* 1 - INTRO */}
       <section className="flex justify-center sm:justify-between items-center mt-0 sm:mt-24">
+        <HashLinkAnchor id="home" />
+
         <div className="flex flex-col items-center sm:items-start sm:mt-20">
           <div className="w-64 h-96 relative sm:hidden">
             <Image
@@ -90,7 +63,8 @@ export default function Home() {
         </div>
       </section>
       {/* 2 - ABOUT ME */}
-      <section className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between mt-24 sm:mt-52 max-w-5xl mx-auto">
+      <section className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between mt-24 sm:mt-52 max-w-5xl mx-auto anchor-link-offset">
+        <HashLinkAnchor id="about-me" />
         {/* my image */}
         <h2 className="sm:hidden text-4xl relative font-bold text-center mb-6">
           <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-28"></div>
@@ -184,6 +158,7 @@ export default function Home() {
       <div className="max-w-5xl mx-auto">
         {/* 3 - SERVICES */}
         <section className="border-2 border-appRed-500 px-10 py-10 mx-auto text-center mt-28 max-w-4xl">
+          <HashLinkAnchor id="services" />
           <h2 className="text-4xl font-bold mb-6">
             מוצרים דיגטליים מ-א’ ועד ת’
           </h2>
@@ -257,6 +232,7 @@ export default function Home() {
         </section>
         {/* 4 - Works */}
         <section className="mt-24">
+          <HashLinkAnchor id="projects" />
           <h2 className="text-4xl font-bold mb-10 text-center sm:text-right">
             תיק עבודות
           </h2>
@@ -282,12 +258,16 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5 - SERVICES */}
-        <section className="border-2 border-appRed-500 py-10 mx-auto text-center mt-28 max-w-4xl relative">
-          <h2 className="text-4xl font-bold mb-12 mr-10 sm:text-right">
+        {/* 5 - RECOMMENDATIONS */}
+        <section className="border-2 border-appRed-500 bg-white py-10 mx-auto text-center mt-28 max-w-4xl relative">
+          <HashLinkAnchor id="recommendations" />
+          <h2 className="text-4xl font-bold mb-12 mx-10 sm:text-right">
             לקוחות מספרים
           </h2>
-          <div className="absolute" />
+          <div className="-z-10 absolute top-[58%] left-1/2 -translate-x-1/2 rotate-12">
+            <div className="bg-appRed-500/50 w-[100vw] h-20" />
+            <div className="bg-appRed-500/10 w-[200vw] h-20" />
+          </div>
           <Swiper
             pagination={{
               clickable: true,
@@ -324,6 +304,39 @@ export default function Home() {
               />
             </SwiperSlide>
           </Swiper>
+        </section>
+        {/* 6 - CONTACT */}
+        <section className="flex max-sm:flex-col justify-around items-center py-10 mx-auto text-center mt-20 max-w-4xl">
+          <HashLinkAnchor id="contact" />
+          <h2 className="sm:hidden text-4xl font-bold mb-2 relative">
+            <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-24"></div>
+            בואו נדבר
+          </h2>
+          <div className="flex flex-col w-full items-center text-center max-sm:order-3">
+            <h2 className="max-sm:hidden text-4xl font-bold mb-2">בואו נדבר</h2>
+            <span className="text-lg text-gray-400 italic font-light max-sm:w-40">
+              שלחו לי מספר טלפון. אחזור אליכם בהקדם
+            </span>
+            <div className="mt-8 sm:mt-14 flex relative w-11/12 sm:w-80 h-11 outline rounded-lg outline-2 outline-appRed-500/40 outline-offset-1 ">
+              <input
+                className="text-lg text-center absolute inset-0 left-24 px-3 outline-0 rounded-lg"
+                maxLength={12}
+                type="tel"
+                placeholder="05X-XXX-XXXX"
+              />
+              <AppButton className="inset-y-0 left-0 absolute">
+                דבר אליי ;)
+              </AppButton>
+            </div>
+          </div>
+          <div className="relative w-96 h-72 sm:w-[29rem] sm:h-[29rem]">
+            <Image
+              src="/images/finish-line.svg"
+              fill
+              alt="contact-me"
+              className="object-cover"
+            />
+          </div>
         </section>
       </div>
     </>

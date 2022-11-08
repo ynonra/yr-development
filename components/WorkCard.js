@@ -5,8 +5,8 @@ const WorkCard = ({ logoFilename, workUrl, imageScale = 1 }) => {
   return (
     <Link href={`/projects/${workUrl}`}>
       <div className="w-56 h-52 lg:w-64 lg:h-56 flex items-center justify-center group relative hover:shadow-sm shadow-sm hover:bg-appPurple-500/5">
-        <div className="w-4/5 h-28 lg:h-28 relative md:opacity-80 group-hover:opacity-100 transition-all duration-300">
-        {/* <div className="w-4/5 h-28 lg:h-28 relative grayscale-[90%] group-hover:grayscale-0 transition-all duration-300"> */}
+        {/* <div className="w-4/5 h-28 lg:h-28 relative md:opacity-80 group-hover:opacity-100 transition-all duration-300"> */}
+        <div className="w-4/5 h-28 lg:h-28 relative md:opacity-80 group-hover:opacity-100 sm:grayscale-[100%] sm:group-hover:grayscale-0 transition-all duration-300">
           <Image
             src={`/images/works-logos/${logoFilename}`}
             fill
