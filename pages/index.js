@@ -317,14 +317,14 @@ export default function Home() {
             <span className="text-lg text-gray-400 italic font-light max-sm:w-40">
               שלחו לי מספר טלפון. אחזור אליכם בהקדם
             </span>
-            <div className="mt-8 sm:mt-14 flex relative w-11/12 sm:w-80 h-11 outline rounded-lg outline-2 outline-appRed-500/40 outline-offset-1 ">
+            <div className="mt-8 sm:mt-14 flex relative w-11/12 sm:w-80 h-14 p-2 border-2 border-appRed-500/40 rounded-lg">
               <input
-                className="text-lg text-center absolute inset-0 left-24 px-3 outline-0 rounded-lg"
+                className="text-lg text-center absolute inset-0 left-24 px-3 outline-none rounded-lg"
                 maxLength={12}
                 type="tel"
                 placeholder="05X-XXX-XXXX"
               />
-              <AppButton className="inset-y-0 left-0 absolute">
+              <AppButton className="inset-px right-auto absolute">
                 דבר אליי ;)
               </AppButton>
             </div>
