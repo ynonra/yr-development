@@ -25,7 +25,6 @@ export default function Home() {
           name="description"
           content="אנו מציעים ללקוחותינו מגוון פתרונות טכנולוגיים שישדרגו להם את העסק. מערכות ניהול, אתרי תדמית, אפליקציות, עיצוב ואיפיון, כתיבת תוכן ועוד. המחירים הוגנים, והתוצאה?... בואו לראות בעצמכם..."
         />
-        <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* 1 - INTRO */}
       <section className="flex justify-center sm:justify-between items-center mt-0 sm:mt-24">

@@ -9,7 +9,8 @@ const ServiceDescriptionItem = ({
 }) => {
   return (
     <article className="flex flex-col items-center w-full max-w-[16rem]">
-      <div className="bg-white shadow w-14 h-14 rounded-full outline outline-1 outline-appRed-500/30 -outline-offset-4 flex items-center justify-center">
+      <div className="bg-white shadow w-14 h-14 rounded-full flex items-center justify-center relative">
+        <div className="absolute z-50 border border-appRed-500/10 inset-1 rounded-full" />
         <div className="bg-appRed-500 w-8 h-8 rounded-full flex items-center justify-center text-white font-rubik">
           {number}
         </div>
