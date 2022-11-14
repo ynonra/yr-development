@@ -235,7 +235,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-10 text-center sm:text-right">
             תיק עבודות
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 md:gap-y-14 lg:gap-y-20 justify-between justify-items-center">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-8 md:gap-y-14 lg:gap-y-20">
             <WorkCard
               logoFilename="vogo-big.svg"
               workUrl="vogo"
@@ -243,7 +243,7 @@ export default function Home() {
             />
             <WorkCard logoFilename="סימנא.svg" workUrl="simana" />
             <WorkCard logoFilename="מם-דלת.gif" workUrl="memdalet" />
-            <WorkCard logoFilename="squadd-big.png" workUrl="squadd" />
+            {/* <WorkCard logoFilename="squadd-big.png" workUrl="squadd" /> */}
             <WorkCard
               logoFilename="כף החיים.png"
               workUrl="kaf-hachaim"
@@ -323,7 +323,10 @@ export default function Home() {
                 type="tel"
                 placeholder="05X-XXX-XXXX"
               />
-              <AppButton className="inset-px right-auto absolute">
+              <AppButton
+                className="inset-px right-auto absolute"
+                withoutTransition
+              >
                 דבר אליי ;)
               </AppButton>
             </div>

@@ -18,6 +18,7 @@ export const PROJECTS_DATA = [
     ],
     impact:
       "פיתוח המערכת יצר ללקוח סביבת עבודה נוחה, מהירה ומודרנית, ללא צורך להתעסק בתפל (כי בשביל זה יש מחשבים, לא?). כמו כן שביעות הרצון של הלקוחות מהמערכת הביאה לפרסום מפה לאוזן, לעליה משמעותית במכירות. בנוסף, הצגת נתוני הסטטיסטיקות באתר אפשרה ללקוח לנתח את השוק בצורה מיטבית ולחזות התנהגות לקוחות עתידית.",
+    links: { websiteUrl: "https://memdalet.co.il" },
   },
   {
     slug: "vogo",
@@ -37,6 +38,7 @@ export const PROJECTS_DATA = [
       techTypes["material-ui"],
     ],
     impact: "לאחר הפיתוח, ......",
+    links: { websiteUrl: "https://vogo-impact.com" },
   },
   {
     slug: "simana",
@@ -55,32 +57,55 @@ export const PROJECTS_DATA = [
     ],
     impact:
       "הוצאת המוצר לאור יצרה ממש הד ציבורי, מה שמעיד על הצורך הגדול שהוא בא לפתור\nהמון תגובות חיוביות, הורדות, ואפילו כמה תותחים שתרמו לצורך המשך פיתוח",
+    links: {
+      websiteUrl: "https://tikunkorim.co.il",
+      googlePlayUrl:
+        "https://play.google.com/store/apps/details?id=il.co.tikunkorim.www.twa",
+      appStoreUrl:
+        "https://apps.apple.com/us/app/סימנא-תיקון-קוראים/id6443906764?platform=iphone",
+    },
   },
   {
-    slug: "",
-    title: "",
-    inShort: "",
-    customerNeed: "",
-    developmentProcess: "",
-    technologies: "",
-    impact: "",
+    slug: "kaf-hachaim",
+    title: "כף החיים",
+    inShort:
+      "אפליקציה שמגישה את הספר 'כף החיים' בתצוגה נוחה ומזמינה, ניווט קל בין חלקי הספר, אפשרות חיפוש, סימניות, היסטוריה, ועוד",
+    customerNeed:
+      "היישומון כף החיים פותח ביוזמתי, לאחר ששמתי לב שלמרות ביקושו הרב - טרם נמצא בחנויות האפליקציות. בתור תלמיד ישיבה, ספר זה הוא חובה במסגרת לימודי הלכה, בהירותו והיקפו מושכים רבים ללמוד בו. ומכיוון שעל פי רוב הרבה יותר קל לקחת את הפלאפון מאשר להסתכל לכיוון הספר (רגע של כנות...) יישומון כזה היה ממש צורך לאנשים רבים.",
+    developmentProcess:
+      "תהליך הפיתוח כלל איפיון פיתוח ובדיקות. היה מאתגר מצד אחד להציג את כל התוכן של הספר (כ-10 כרכים!) ומצד שני לאפשר חוויה קלילה ולא עמוסה. זה בא לידי ביטוי לדוגמא בתיבת חיפוש שהוספנו, בתוכן עניינים מסוגנן, ובזכירה של הדפים האחרונים שביקרו בהם. ייעוץ עיצוב ניתן מאריאל לוק.\nהפיתוח נעשה ב-React Native, עם סיפריית Paper. כל המידע של האפליקציה (סימניות, היסטוריה, העדפות סגנון) נשמר מקומית במכשיר.",
+    technologies: [techTypes["react-native"], techTypes["react-native-paper"]],
+    impact:
+      "היישומון התקבל בציבור בשמחה ואהדה רבה, המון תגובות חיוביות ומעודדות, שבעיקר הדגישו נוחות, יופי, וחוויית משתמש ראויים לשבח.",
+    links: {
+      googlePlayUrl: "https://play.google.com/store/apps/details?id=com.kaf",
+    },
   },
   {
-    slug: "",
-    title: "",
-    inShort: "",
-    customerNeed: "",
-    developmentProcess: "",
-    technologies: "",
-    impact: "",
+    slug: "birkat-eliyahu",
+    title: 'בד"ץ ברכת אליהו',
+    inShort:
+      'אתר תדמיתי וניהולי לצורך פרסום הבד"ץ מחד, ומאידך מספק מערכת ניהול נוחה וייחודית',
+    customerNeed:
+      'בד"ץ ברכת אליהו ביקש להקים פלטפורמה תדמיתית שתשרת את הארגון לצורך פרסום. לאחר שיח והכרת הצרכים, הצעתי לפתח גם מערכת המיועדת לניהול לקוחות, עסקים, הפקת תעודות כשרות, תשלומים, ופניות ציבור',
+    developmentProcess:
+      'תהליך הפיתוח כלל איפיון פיתוח ובדיקות. עיצוב ע"י מאריאל לוק.\nהפיתוח נעשה ב-Nextjs, עם סיפריית Material-UI. הזדהות באמצעות Google cloud.',
+    technologies: [
+      techTypes.nextjs,
+      techTypes["material-ui"],
+      techTypes["google-cloud"],
+    ],
+    impact:
+      "האתר תורם לפרסום הארגון, במיוחד לאחר שטיפס בתוצאות החיפוש בגוגל.\nכמו כן משמש ככלי עזר ניהולי",
+    links: { websiteUrl: "https://birkat-eliyahu.co.il" },
   },
-  {
-    slug: "",
-    title: "",
-    inShort: "",
-    customerNeed: "",
-    developmentProcess: "",
-    technologies: "",
-    impact: "",
-  },
+  // {
+  //   slug: "",
+  //   title: "",
+  //   inShort: "",
+  //   customerNeed: "",
+  //   developmentProcess: "",
+  //   technologies: "",
+  //   impact: "",
+  // },
 ];

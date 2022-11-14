@@ -9,9 +9,12 @@ export const techTypes = {
   tailwindcss: "tailwindcss",
   firebase: "firebase",
   react: "react",
+  "react-native": "react-native",
   mongodb: "mongodb",
   cloudinary: "cloudinary",
   "material-ui": "material-ui",
+  "react-native-paper": "react-native-paper",
+  "google-cloud": "google-cloud",
   pwa: "pwa",
 };
 
@@ -56,6 +59,10 @@ const TECHNOLOGIES = {
     imageUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
+  [techTypes["react-native"]]: {
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
   [techTypes.mongodb]: {
     imageUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
@@ -67,6 +74,14 @@ const TECHNOLOGIES = {
   [techTypes["material-ui"]]: {
     imageUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg",
+  },
+  [techTypes["react-native-paper"]]: {
+    imageUrl:
+      "https://arpitbhalla.gallerycdn.vsassets.io/extensions/arpitbhalla/rnp-snippets/0.0.1/1620141921636/Microsoft.VisualStudio.Services.Icons.Default",
+  },
+  [techTypes["google-cloud"]]: {
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
   },
   [techTypes.pwa]: {
     imageUrl: "/images/pwa-logo.png",
