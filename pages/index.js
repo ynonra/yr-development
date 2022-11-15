@@ -1,17 +1,19 @@
 import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
+
+import RECOMMENDATIONS from "../data/recommendations";
+
 import AppButton from "../components/AppButton";
 import ServiceDescriptionItem from "../components/ServiceDescriptionItem";
 import WorkCard from "../components/WorkCard";
 import WorkStepCard from "../components/WorkStepCard";
-
+import RecommendationCard from "../components/RecommendationCard";
+import HashLinkAnchor from "../components/HashLinkAnchor";
 import { Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import RecommendationCard from "../components/RecommendationCard";
-import HashLinkAnchor from "../components/HashLinkAnchor";
 
 export default function Home() {
   const [answerAIndex, setAnswerAIndex] = useState(0);
@@ -156,12 +158,12 @@ export default function Home() {
       </section>
       <div className="max-w-5xl mx-auto">
         {/* 3 - SERVICES */}
-        <section className="border-2 border-appRed-500 px-10 py-10 mx-auto text-center mt-28 max-w-4xl">
+        <section className="border-2 border-appRed-500 px-3 sm:px-10 py-5 sm:py-10 mx-auto text-center mt-28 max-w-4xl">
           <HashLinkAnchor id="services" />
           <h2 className="text-4xl font-bold mb-6">
             מוצרים דיגטליים מ-א’ ועד ת’
           </h2>
-          <p className="text-2xl font-light leading-normal">
+          <p className="text-base sm:text-2xl font-light leading-normal">
             המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות
             היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת
             מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד
@@ -278,30 +280,16 @@ export default function Home() {
             modules={[Pagination]}
             autoplay
           >
-            <SwiperSlide>
-              <RecommendationCard
-                description="המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד בשיתוף פעולה עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו לגבהים חדשים."
-                profileImageFilename="profile1.png"
-                profileName="מיכאל מנריקס"
-                profileRole="הבעלים של מם דלת"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <RecommendationCard
-                description="המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד בשיתוף פעולה עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו לגבהים חדשים."
-                profileImageFilename="profile1.png"
-                profileName="מיכאל מנריקס"
-                profileRole="הבעלים של מם דלת"
-              />
-            </SwiperSlide>
-            <SwiperSlide>
-              <RecommendationCard
-                description="המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד בשיתוף פעולה עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו לגבהים חדשים."
-                profileImageFilename="profile1.png"
-                profileName="אמיתי אלירם"
-                profileRole="מגיב אקראי בחנות גוגלפלי"
-              />
-            </SwiperSlide>
+            {RECOMMENDATIONS.map(({ description, profile }) => (
+              <SwiperSlide className="!h-auto" key={profile.role}>
+                <RecommendationCard
+                  description={description}
+                  profileImageFilename={profile.imageFilename}
+                  profileName={profile.name}
+                  profileRole={profile.role}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </section>
         {/* 6 - CONTACT */}

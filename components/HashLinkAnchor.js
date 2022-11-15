@@ -1,4 +1,4 @@
-const HashLinkAnchor = ({ id, offset = 130 }) => {
+const HashLinkAnchor = ({ id, offset = 120 }) => {
   return (
     <span
       id={id}
@@ -6,6 +6,7 @@ const HashLinkAnchor = ({ id, offset = 130 }) => {
         marginTop: -offset,
         paddingBottom: offset,
         display: "block",
+        height: 0,
       }}
     >
       &nbsp;
