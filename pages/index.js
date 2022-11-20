@@ -14,6 +14,8 @@ import { Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import { PROJECTS_DATA } from "../data/projects";
+import ContactSection from "../components/ContactSection";
 
 export default function Home() {
   const [answerAIndex, setAnswerAIndex] = useState(0);
@@ -238,24 +240,14 @@ export default function Home() {
             תיק עבודות
           </h2>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-8 md:gap-y-14 lg:gap-y-20">
-            <WorkCard
-              logoFilename="vogo-big.svg"
-              workUrl="vogo"
-              imageScale={0.9}
-            />
-            <WorkCard logoFilename="סימנא.svg" workUrl="simana" />
-            <WorkCard logoFilename="מם-דלת.gif" workUrl="memdalet" />
-            {/* <WorkCard logoFilename="squadd-big.png" workUrl="squadd" /> */}
-            <WorkCard
-              logoFilename="כף החיים.png"
-              workUrl="kaf-hachaim"
-              imageScale={0.6}
-            />
-            <WorkCard
-              logoFilename="ברכת אליהו.svg"
-              workUrl="birkat-eliyahu"
-              imageScale={0.9}
-            />
+            {PROJECTS_DATA.map(({ slug, logoFilename, logoScale }) => (
+              <WorkCard
+                key={slug}
+                logoFilename={logoFilename}
+                workUrl={slug}
+                imageScale={logoScale}
+              />
+            ))}
           </div>
         </section>
 
@@ -293,41 +285,7 @@ export default function Home() {
           </Swiper>
         </section>
         {/* 6 - CONTACT */}
-        <section className="flex max-sm:flex-col justify-around items-center py-10 mx-auto text-center mt-20 max-w-4xl">
-          <HashLinkAnchor id="contact" />
-          <h2 className="sm:hidden text-4xl font-bold mb-2 relative">
-            <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-24"></div>
-            בואו נדבר
-          </h2>
-          <div className="flex flex-col w-full items-center text-center max-sm:order-3">
-            <h2 className="max-sm:hidden text-4xl font-bold mb-2">בואו נדבר</h2>
-            <span className="text-lg text-gray-400 italic font-light max-sm:w-40">
-              שלחו לי מספר טלפון. אחזור אליכם בהקדם
-            </span>
-            <div className="mt-8 sm:mt-14 flex relative w-11/12 sm:w-80 h-14 p-2 border-2 border-appRed-500/40 rounded-lg">
-              <input
-                className="text-lg text-center absolute inset-0 left-24 px-3 outline-none rounded-lg"
-                maxLength={12}
-                type="tel"
-                placeholder="05X-XXX-XXXX"
-              />
-              <AppButton
-                className="inset-px right-auto absolute"
-                withoutTransition
-              >
-                דבר אליי ;)
-              </AppButton>
-            </div>
-          </div>
-          <div className="relative w-96 h-72 sm:w-[29rem] sm:h-[29rem]">
-            <Image
-              src="/images/finish-line.svg"
-              fill
-              alt="contact-me"
-              className="object-cover"
-            />
-          </div>
-        </section>
+        <ContactSection />
       </div>
     </>
   );

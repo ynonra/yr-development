@@ -14,7 +14,7 @@ const Footer = () => {
         </section>
         <hr />
         <section className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-y-4">
-          <ContactIcons />
+          <ContactIcons reverse />
           <Link href="sensei.art">UX/UI Design by sensei.art</Link>
         </section>
       </div>

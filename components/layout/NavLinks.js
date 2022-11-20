@@ -5,14 +5,14 @@ const NavLinks = ({ closeDrawer = () => {} }) => {
     <ul className="flex flex-col sm:flex-row justify-center items-center gap-x-2 gap-y-1.5 text-lg sm:text-base">
       <li>
         <Link
-          href="/#home"
+          href="/"
           className="px-2 py-1 block text-appRed-500"
           onClick={closeDrawer}
         >
           בית
         </Link>
       </li>
-      <li>
+      {/* <li>
         <Link
           href="/#about-me"
           className="px-2 py-1 block"
@@ -20,7 +20,7 @@ const NavLinks = ({ closeDrawer = () => {} }) => {
         >
           אודות
         </Link>
-      </li>
+      </li> */}
       <li>
         <Link
           href="/#services"

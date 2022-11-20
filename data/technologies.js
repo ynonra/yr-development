@@ -13,6 +13,7 @@ export const techTypes = {
   mongodb: "mongodb",
   cloudinary: "cloudinary",
   "material-ui": "material-ui",
+  "RNUILib": "RNUILib",
   "react-native-paper": "react-native-paper",
   "google-cloud": "google-cloud",
   pwa: "pwa",
@@ -85,6 +86,9 @@ const TECHNOLOGIES = {
   },
   [techTypes.pwa]: {
     imageUrl: "/images/pwa-logo.png",
+  },
+  [techTypes.RNUILib]: {
+    imageUrl: "/images/rnui.png",
   },
 };
 

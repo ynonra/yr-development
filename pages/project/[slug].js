@@ -4,6 +4,9 @@ import Image from "next/image";
 import TechCard from "../../components/TechCard";
 import Head from "next/head";
 import WorkLinks from "../../components/WorkLinks";
+import WorkCard from "../../components/WorkCard";
+import { PROJECTS_DATA } from "../../data/projects";
+import ContactSection from "../../components/ContactSection";
 
 const Project = () => {
   const data = useProject();
@@ -18,6 +21,9 @@ const Project = () => {
         <AppButton href="/#projects">לתיק עבודות</AppButton>
       </div>
     );
+
+  const Paragraphs = ({ text }) =>
+    text.split("\n").map((str) => <p key={str.slice(-10)}>{str}</p>);
 
   return (
     <div className="max-w-5xl mx-auto">
@@ -70,7 +76,7 @@ const Project = () => {
         </div>
       </section>
       {/* 2 - Description */}
-      <section className="flex max-lg:flex-col justify-between items-start mt-32">
+      <section className="flex max-lg:flex-col justify-between items-start mt-48">
         <div className="w-full flex justify-center">
           <div className="w-96 h-96 lg:w-[29rem] lg:h-[29rem] relative">
             <Image
@@ -86,17 +92,53 @@ const Project = () => {
             <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-28" />
             על הפרוייקט
           </h2>
-          <h3 className="text-lg font-semibold mb-1">הצורך של הלקוח</h3>
-          <p>{data.customerNeed}</p>
-          <h3 className="text-lg font-semibold mb-1">
+          <h3 className="text-lg font-semibold mb-1 mt-4 sm:mt-3">
+            הצורך של הלקוח
+          </h3>
+          <Paragraphs text={data.customerNeed} />
+          <h3 className="text-lg font-semibold mb-1 mt-4 sm:mt-3">
             תהליך הפיתוח וטכנולוגיות
           </h3>
-          <p>{data.developmentProcess}</p>
-          <h3 className="text-lg font-semibold mb-1">השפעת המוצר</h3>
-          <p>{data.impact}</p>
+          <Paragraphs text={data.developmentProcess} />
+          {data.impact ? (
+            <>
+              <h3 className="text-lg font-semibold mb-1 mt-4 sm:mt-3">
+                השפעת המוצר
+              </h3>
+              <Paragraphs text={data.impact} />
+            </>
+          ) : null}
           <WorkLinks {...data.links} className="self-end mt-8" />
         </article>
       </section>
+      {/* 3 - Other projects */}
+      <section className="mt-40 relative">
+        <h2 className="text-4xl relative font-bold mb-7">
+          {/* <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-28" /> */}
+          פרויקטים נוספים
+        </h2>
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-8 md:gap-y-14 lg:gap-y-20">
+          {PROJECTS_DATA.map(({ slug, logoFilename, logoScale }) =>
+            slug !== data.slug ? (
+              <WorkCard
+                key={slug}
+                logoFilename={logoFilename}
+                workUrl={slug}
+                imageScale={logoScale}
+              />
+            ) : null
+          )}
+        </div>
+      </section>
+      <div className="relative mt-24">
+        <div className="-z-10 absolute top-[58%] left-1/2 -translate-x-1/2 rotate-12">
+          <div className="bg-appRed-500/40 w-[200vw] h-20" />
+          <div className="bg-appRed-500/10 w-[200vw] h-20" />
+        </div>
+      </div>
+      <div className="h-24" />
+      {/* 4 - Contact */}
+      <ContactSection title="אהבתם?" />
     </div>
   );
 };

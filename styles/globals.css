@@ -14,7 +14,7 @@ main {
 }
 p {
   line-height: 1.8;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.2rem;
 }
 ::placeholder {
   font-family: "Open sans", system-ui, -apple-system, BlinkMacSystemFont,
