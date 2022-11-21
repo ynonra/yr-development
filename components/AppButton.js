@@ -3,6 +3,7 @@ const AppButton = ({
   className = "",
   withoutTransition,
   inverted,
+  disabled=false,
   ...props
 }) => {
   const Container = (props) =>
@@ -18,7 +19,7 @@ const AppButton = ({
         !withoutTransition
           ? "hover:shadow-lg hover:-translate-y-0.5"
           : "hover:bg-appRed-500/95 hover:text-white"
-      } ${className}`}
+      } ${disabled && "pointer-events-none opacity-80"} ${className}`}
       {...props}
     >
       {children}
