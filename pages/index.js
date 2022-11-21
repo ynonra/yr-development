@@ -51,7 +51,7 @@ export default function Home() {
             </span>{" "}
             דיגיטלים<div>במחירים נגישים</div>
           </h1>
-          <div className="hidden sm:block  text-gray-500 text-2xl mb-14">
+          <div className="hidden sm:block  text-gray-500 text-2xl mb-14 font-light">
             אם אתם יכולים לחלום את זה, אני יכול ליצור את זה
           </div>
           <AppButton>ספר לי עוד</AppButton>

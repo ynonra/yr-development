@@ -3,13 +3,15 @@ import { useState, useRef } from "react";
 import Image from "next/image";
 import AppButton from "./AppButton";
 import HashLinkAnchor from "./HashLinkAnchor";
+import { useRouter } from "next/router";
 
 const ContactSection = ({ title = "בואו נדבר" }) => {
   const phoneRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
+
+  const router = useRouter();
 
   const validate = () => {
     const phone = phoneRef.current.value.replace(/\D/g, "");
@@ -40,9 +42,8 @@ const ContactSection = ({ title = "בואו נדבר" }) => {
     setLoading(false);
 
     if (res.success) {
-      setSuccess(true);
+      router.push("/we-will-speak-soon");
     } else {
-      setSuccess(false);
       setError("אירעה שגיאה בלתי צפויה. אנא שלחו לי הודעה בוואצאפ :)");
     }
   };
@@ -76,11 +77,11 @@ const ContactSection = ({ title = "בואו נדבר" }) => {
             onChange={clearError}
           />
           <AppButton
-            disabled={loading || success}
+            disabled={loading}
             className="inset-px right-auto absolute"
             withoutTransition
           >
-            {loading ? "היונה בדרך..." : success ? "הגיעה :)" : "דבר אליי ;)"}
+            {loading ? "היונה בדרך..." : "דבר אליי ;)"}
           </AppButton>
         </div>
         {error ? <div className="mt-2 text-appRed-500">{error}</div> : null}

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const AppButton = ({
   children,
   className = "",
@@ -7,7 +9,7 @@ const AppButton = ({
   ...props
 }) => {
   const Container = (props) =>
-    props.href ? <a {...props} /> : <button {...props} />;
+    props.href ? <Link {...props} /> : <button {...props} />;
 
   return (
     <Container
