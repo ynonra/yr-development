@@ -19,7 +19,7 @@ const weWillSpeakSoonPage = () => {
           </h1>
           <div className="text-gray-500 text-2xl mb-14 max-w-lg font-light leading-normal text-center sm:text-right">
             ההודעה שלכם כבר הגיעה אליי, אחזור אליכם בהקדם. בינתיים אתם מוזמנים
-            להסתכל שוב על הפרוייקטים באתר ולתכנן את החלום האישי שלכם.
+            להעיף מבט נוסף על הפרוייקטים שלי ולתכנן את החלום האישי שלכם.
           </div>
           <AppButton href="/#projects">תיק עבודות</AppButton>
         </div>
