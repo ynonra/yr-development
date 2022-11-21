@@ -44,6 +44,7 @@ const Project = () => {
           <div className="sm:hidden w-full h-80 relative mb-6">
             <Image
               src={`/images/works/${data.slug}/1.png`}
+              key={`${data.slug}-mockup-1`}
               fill
               alt={`${data.slug}-mockup`}
               className="object-contain"
@@ -57,6 +58,7 @@ const Project = () => {
         <div className="max-sm:hidden w-[35rem] h-[29rem] relative my-24">
           <Image
             src={`/images/works/${data.slug}/1.png`}
+            key={`${data.slug}-mockup-1`}
             fill
             alt={`${data.slug}-mockup-1`}
             className="object-contain"
@@ -76,11 +78,12 @@ const Project = () => {
         </div>
       </section>
       {/* 2 - Description */}
-      <section className="flex max-lg:flex-col justify-between items-start mt-48">
+      <section className="flex max-lg:flex-col justify-between items-start mt-20 sm:mt-48">
         <div className="w-full flex justify-center lg:ml-8">
-          <div className="w-96 h-96 lg:w-[29rem] lg:h-[40rem] relative">
+          <div className="w-96 h-96 lg:w-[29rem] lg:h-[40rem] relative mb-14 sm:mb-0">
             <Image
               src={`/images/works/${data.slug}/2.png`}
+              key={`${data.slug}-mockup-2`}
               fill
               alt={`${data.slug}-mockup-2`}
               className="object-contain"
@@ -114,6 +117,7 @@ const Project = () => {
       {/* Divider-mockup */}
       <Image
         src={`/images/works/${data.slug}/3.png`}
+        key={`${data.slug}-mockup-3`}
         alt={`${data.slug}-mockup`}
         className="object-contain mx-auto mt-32 mb-12"
         width={600}
