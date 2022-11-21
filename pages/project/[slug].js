@@ -43,22 +43,22 @@ const Project = () => {
           </h1>
           <div className="sm:hidden w-full h-80 relative mb-6">
             <Image
-              src="/images/works/memdalet-1.png"
+              src={`/images/works/${data.slug}/1.png`}
               fill
-              alt={`${data.slug}-screenshot`}
+              alt={`${data.slug}-mockup`}
               className="object-contain"
             />
           </div>
-          <div className="text-gray-500 text-base sm:text-lg">
+          <div className="text-gray-500 text-base sm:text-lg md:pl-10">
             {data.inShort}
           </div>
           <AppButton className="mt-6 sm:mt-14">ספר לי עוד</AppButton>
         </div>
-        <div className="max-sm:hidden w-[29rem] h-[29rem] relative my-24">
+        <div className="max-sm:hidden w-[35rem] h-[29rem] relative my-24">
           <Image
-            src="/images/works/memdalet-1.png"
+            src={`/images/works/${data.slug}/1.png`}
             fill
-            alt={`${data.slug}-screenshot-1`}
+            alt={`${data.slug}-mockup-1`}
             className="object-contain"
           />
         </div>
@@ -77,12 +77,12 @@ const Project = () => {
       </section>
       {/* 2 - Description */}
       <section className="flex max-lg:flex-col justify-between items-start mt-48">
-        <div className="w-full flex justify-center">
-          <div className="w-96 h-96 lg:w-[29rem] lg:h-[29rem] relative">
+        <div className="w-full flex justify-center lg:ml-8">
+          <div className="w-96 h-96 lg:w-[29rem] lg:h-[40rem] relative">
             <Image
-              src="/images/works/memdalet-1.png"
+              src={`/images/works/${data.slug}/2.png`}
               fill
-              alt={`${data.slug}-screenshot-2`}
+              alt={`${data.slug}-mockup-2`}
               className="object-contain"
             />
           </div>
@@ -111,6 +111,20 @@ const Project = () => {
           <WorkLinks {...data.links} className="self-end mt-8" />
         </article>
       </section>
+      {/* Divider-mockup */}
+      <Image
+        src={`/images/works/${data.slug}/3.png`}
+        alt={`${data.slug}-mockup`}
+        className="object-contain mx-auto mt-32 mb-12"
+        width={600}
+        height={600}
+      />
+      <div className="relative">
+        <div className="-z-10 absolute bottom-[58%] left-1/2 -translate-x-1/2 -rotate-6">
+          <div className="bg-appRed-500/40 w-[200vw] h-36 sm:h-44" />
+          <div className="bg-appRed-500/10 w-[200vw] h-36 sm:h-44" />
+        </div>
+      </div>
       {/* 3 - Other projects */}
       <section className="mt-40 relative">
         <h2 className="text-4xl relative font-bold mb-7">
@@ -132,7 +146,7 @@ const Project = () => {
       </section>
       <div className="relative mt-24">
         <div className="-z-10 absolute top-[58%] left-1/2 -translate-x-1/2 rotate-12">
-          <div className="bg-appRed-500/40 w-[200vw] h-20" />
+          <div className="bg-appRed-500/20 w-[200vw] h-20" />
           <div className="bg-appRed-500/10 w-[200vw] h-20" />
         </div>
       </div>
