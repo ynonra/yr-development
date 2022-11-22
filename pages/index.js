@@ -54,7 +54,15 @@ export default function Home() {
           <div className="hidden sm:block  text-gray-500 text-2xl mb-14 font-light">
             אם אתם יכולים לחלום את זה, אני יכול ליצור את זה
           </div>
-          <AppButton>ספר לי עוד</AppButton>
+          <AppButton
+            onClick={() =>
+              document
+                .querySelector("#about-me")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            ספר לי עוד
+          </AppButton>
         </div>
         <div className="hidden sm:block w-[25rem] h-[25rem] relative">
           <Image
@@ -230,7 +238,7 @@ export default function Home() {
               title="עלייה לאוויר"
               description="היום הגדול הגיע, לאחר שעברנו ביחד את הדרך למוצר המושלם עבורכם, באה העת להנות מהפירות. לחיים!"
               imageFilename="cheer.svg"
-              imageScale={.8}
+              imageScale={0.8}
             />
           </div>
         </section>

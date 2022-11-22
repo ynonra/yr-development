@@ -92,7 +92,7 @@ const ContactSection = ({ title = "בואו נדבר" }) => {
           src="/images/got-mail.svg"
           fill
           alt="contact-me"
-          className="object-contain"
+          className="object-cover"
         />
       </div>
     </section>
