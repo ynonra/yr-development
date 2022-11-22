@@ -13,7 +13,14 @@ const WorkLinks = ({
       className={`flex flex-row sm:flex-row-reverse flex-wrap gap-3 sm:gap-8 justify-center items-center ${className}`}
     >
       {websiteUrl ? (
-        <AppButton withoutTransition inverted href={websiteUrl} className="h-10 py-0 rounded-md">
+        <AppButton
+          withoutTransition
+          inverted
+          href={websiteUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="h-10 py-0 rounded-md"
+        >
           <div className="flex justify-between items-center gap-3 h-full">
             <span>כניסה לאתר</span>
             <BiLinkExternal
@@ -24,7 +31,7 @@ const WorkLinks = ({
         </AppButton>
       ) : null}
       {googlePlayUrl ? (
-        <a href={googlePlayUrl}>
+        <a href={googlePlayUrl} target="_blank" rel="noreferrer">
           <Image
             width={1.117 * 120}
             height={25}
@@ -35,7 +42,7 @@ const WorkLinks = ({
         </a>
       ) : null}
       {appStoreUrl ? (
-        <a href={appStoreUrl}>
+        <a href={appStoreUrl} target="_blank" rel="noreferrer">
           <Image
             width={120}
             height={25}
