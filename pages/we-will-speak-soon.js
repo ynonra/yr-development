@@ -2,6 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import AppButton from "../components/AppButton";
 
+import Lottie from "lottie-react";
+import highFiveAnimation from "../assets/json-animations/high-five.json";
+
 const weWillSpeakSoonPage = () => {
   return (
     <>
@@ -24,12 +27,13 @@ const weWillSpeakSoonPage = () => {
           <AppButton href="/#projects">תיק עבודות</AppButton>
         </div>
         <div className="w-64 sm:w-[35rem] h-64 sm:h-[35rem] relative">
-          <Image
-            src="/images/got-mail.svg"
+          {/* <Image
+            src="/images/medal.svg"
             fill
             alt="light"
             className="object-contain"
-          />
+          /> */}
+          <Lottie animationData={highFiveAnimation} />
         </div>
       </section>
     </>

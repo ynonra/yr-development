@@ -54,7 +54,7 @@ const ContactSection = ({ title = "בואו נדבר" }) => {
     <section className="flex max-sm:flex-col justify-around items-center py-10 mx-auto text-center mt-20 max-w-4xl">
       <HashLinkAnchor id="contact" />
       <h2 className="sm:hidden text-4xl font-bold mb-2 relative">
-        <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-24"></div>
+        <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 -right-2 w-24"></div>
         {title}
       </h2>
       <form
@@ -86,12 +86,13 @@ const ContactSection = ({ title = "בואו נדבר" }) => {
         </div>
         {error ? <div className="mt-2 text-appRed-500">{error}</div> : null}
       </form>
-      <div className="relative w-96 h-72 sm:w-[29rem] sm:h-[29rem]">
+      <div className="relative w-80 h-72 sm:w-[29rem] sm:h-[29rem]">
         <Image
-          src="/images/finish-line.svg"
+          // src="/images/finish-line.svg"
+          src="/images/got-mail.svg"
           fill
           alt="contact-me"
-          className="object-cover"
+          className="object-contain"
         />
       </div>
     </section>
