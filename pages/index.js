@@ -105,13 +105,13 @@ export default function Home() {
           <div className="relative flex rounded-xl text-center w-56 ">
             <div className="absolute border-2 border-appRed-500 -inset-px rounded-xl" />
             <div
-              className={`absolute bg-appRed-500 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
+              className={`absolute bg-appRed-500/80 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
                 answerAIndex === 0 ? "right-0" : "right-1/2"
               }`}
             />
             <button
               className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
-                answerAIndex === 0 ? "text-white" : "text-appRed-500"
+                answerAIndex === 0 ? "text-white" : "text-appRed-500/80"
               }`}
               onClick={() => setAnswerAIndex(0)}
             >
@@ -119,7 +119,7 @@ export default function Home() {
             </button>
             <button
               className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
-                answerAIndex === 1 ? "text-white" : "text-appRed-500"
+                answerAIndex === 1 ? "text-white" : "text-appRed-500/80"
               }`}
               onClick={() => setAnswerAIndex(1)}
             >
@@ -131,13 +131,13 @@ export default function Home() {
           <div className="relative flex rounded-xl text-center w-56 ">
             <div className="absolute border-2 border-appRed-500 -inset-px rounded-xl" />
             <div
-              className={`absolute bg-appRed-500 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
+              className={`absolute bg-appRed-500/80 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
                 answerBIndex === 0 ? "right-0" : "right-1/2"
               }`}
             />
             <button
               className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
-                answerBIndex === 0 ? "text-white" : "text-appRed-500"
+                answerBIndex === 0 ? "text-white" : "text-appRed-500/80"
               }`}
               onClick={() => setAnswerBIndex(0)}
             >
@@ -145,7 +145,7 @@ export default function Home() {
             </button>
             <button
               className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
-                answerBIndex === 1 ? "text-white" : "text-appRed-500"
+                answerBIndex === 1 ? "text-white" : "text-appRed-500/80"
               }`}
               onClick={() => setAnswerBIndex(1)}
             >
@@ -203,33 +203,34 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 md:gap-y-14 lg:gap-y-20 justify-between justify-items-center">
             <WorkStepCard
               title="אפיון"
-              description="לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף."
+              description="יושבים ביחד ומדברים על דרישות הפרוייקט, מהם הצרכים, מה האפשרויות השונות, וכו׳. הכל מסוכם במסמך שמהווה את השלד של המוצר"
               imageFilename="certificate.svg"
             />
             <WorkStepCard
               title="קופירייטינג"
-              description="לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף."
+              description="אחד החלקים המשמעותיים במוצר תדמיתי הינו התוכן שבו. אנו מציעים שירותים של כתיבה שיווקית, שתקפיץ לכם את הרמה וגם את הכניסות!"
               imageFilename="paper.svg"
             />
             <WorkStepCard
               title="עיצוב"
-              description="לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף."
+              description="בשלב זה כבר מתחילים לראות את החלום רוקם עור וגידים ומתגשם... מעצב ילווה אתכם לכל אורך התהליך עד לעיצוב שאתם הכי אוהבים"
               imageFilename="puzzle.svg"
             />
             <WorkStepCard
               title="פיתוח"
-              description="לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף."
+              description="הגיע הזמן ללכלך את הידיים ולפתח את המוצר שלכם בהתאמה מדוייקת להחלטות שהתקבלו בשלבים הקודמים. לוקח קצת זמן, אבל שווה לחכות!"
               imageFilename="time1.svg"
             />
             <WorkStepCard
               title="בקרת איכות"
-              description="לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף."
+              description="רגע לפני שמשחררים את המוצר ומספרים לכולם, עושים בדיקות אחרונות כדי לוודא שאין תקלות לא צפויות"
               imageFilename="star1.svg"
             />
             <WorkStepCard
               title="עלייה לאוויר"
-              description="לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוואזי במר מודוף."
-              imageFilename="strike.svg"
+              description="היום הגדול הגיע, לאחר שעברנו ביחד את הדרך למוצר המושלם עבורכם, באה העת להנות מהפירות. לחיים!"
+              imageFilename="cheer.svg"
+              imageScale={.8}
             />
           </div>
         </section>

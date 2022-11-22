@@ -3,7 +3,7 @@ const RECOMMENDATIONS = [
     description:
       "תענוג לעבוד עם ינון, מהתכנון של האתר ברעיון ועד שהוא הביא את זה למוצר מוגמר הכל מושלם!\nהשקיע את כל הנשמה בעבודה. ואני שמח שינון הוא זה שעשה לי את האתר\nלא הייתי יכול לבקש דרך קלה יותר לאתר מושלם!",
     profile: {
-      imageFilename: "profile1.png",
+      imageFilename: "michael.jpg",
       role: "בעלים של מ.ד. הדפסות",
       name: "מיכאל מנריקס",
     },
@@ -17,22 +17,15 @@ const RECOMMENDATIONS = [
       name: "אמיתי אלירם",
     },
   },
-//   {
-//     description: "",
-//     profile: {
-//       imageUrl: "",
-//       role: "",
-//       name: "",
-//     },
-//   },
-//   {
-//     description: "",
-//     profile: {
-//       imageUrl: "",
-//       role: "",
-//       name: "",
-//     },
-//   },
+  {
+    description:
+      "פשוט מדהים ביופיו ובכלל👑 עבודה מצויינת של המפתח.... ערוך יפה, אפשרויות מתקדמות ועוד. ממש יפה",
+    profile: {
+      imageFilename: "liron-k.png",
+      role: "מגיב בגוגל פלי",
+      name: "לירון",
+    },
+  },
 ];
 
 export default RECOMMENDATIONS;
