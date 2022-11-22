@@ -1,4 +1,4 @@
-import useProject from "../../hooks/useProject";
+import getProject from "../../hooks/getProject";
 import AppButton from "../../components/AppButton";
 import Image from "next/image";
 import TechCard from "../../components/TechCard";
@@ -8,9 +8,22 @@ import WorkCard from "../../components/WorkCard";
 import { PROJECTS_DATA } from "../../data/projects";
 import ContactSection from "../../components/ContactSection";
 
-const Project = () => {
-  const data = useProject();
+export async function getStaticPaths() {
+  return {
+    paths: PROJECTS_DATA.map(({ slug }) => ({ params: { slug } })),
+    fallback: true, // can also be true or 'blocking'
+  };
+}
 
+// `getStaticPaths` requires using `getStaticProps`
+export async function getStaticProps(context) {
+  return {
+    // Passed to the page component as props
+    props: { data: getProject(context.params?.slug) || null },
+  };
+}
+
+const Project = ({ data }) => {
   if (!data)
     return (
       <div className="h-[30vh] flex flex-col items-center gap-5 text-center">
@@ -25,10 +38,12 @@ const Project = () => {
   const Paragraphs = ({ text }) =>
     text.split("\n").map((str) => <p key={str.slice(-10)}>{str}</p>);
 
+  const documentTitle = `ינון רחמים | פרוייקט ${data.title}`;
+
   return (
     <div className="max-w-5xl mx-auto">
       <Head>
-        <title>ינון רחמים | פרוייקט {data.title}</title>
+        <title>{documentTitle}</title>
         <meta
           name="description"
           content="אנו מציעים ללקוחותינו מגוון פתרונות טכנולוגיים שישדרגו להם את העסק. מערכות ניהול, אתרי תדמית, אפליקציות, עיצוב ואיפיון, כתיבת תוכן ועוד. המחירים הוגנים, והתוצאה?... בואו לראות בעצמכם..."
