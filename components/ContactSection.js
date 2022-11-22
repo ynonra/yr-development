@@ -4,8 +4,9 @@ import Image from "next/image";
 import AppButton from "./AppButton";
 import HashLinkAnchor from "./HashLinkAnchor";
 import { useRouter } from "next/router";
+import ContactIcons from "./ContactIcons";
 
-const ContactSection = ({ title = "בואו נדבר" }) => {
+const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => {
   const phoneRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
@@ -51,7 +52,11 @@ const ContactSection = ({ title = "בואו נדבר" }) => {
   const clearError = () => setError("");
 
   return (
-    <section className="flex max-sm:flex-col justify-around items-center py-10 mx-auto text-center mt-20 max-w-4xl">
+    <section
+      className={`flex max-sm:flex-col justify-around items-center py-10 mx-auto text-center ${
+        !dialogMode ? "mt-20" : ""
+      } max-w-4xl min-w-[300px]`}
+    >
       <HashLinkAnchor id="contact" />
       <h2 className="sm:hidden text-4xl font-bold mb-2 relative">
         <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 -right-2 w-24"></div>
@@ -62,9 +67,11 @@ const ContactSection = ({ title = "בואו נדבר" }) => {
         className="flex flex-col w-full items-center text-center max-sm:order-3"
       >
         <h2 className="max-sm:hidden text-4xl font-bold mb-2">{title}</h2>
-        <span className="text-lg text-gray-400 italic font-light max-sm:w-40">
-          שלחו לי מספר טלפון. אחזור אליכם בהקדם
-        </span>
+        {!dialogMode && (
+          <span className="text-lg text-gray-400 italic font-light max-sm:w-40">
+            שלחו לי מספר טלפון. אחזור אליכם בהקדם
+          </span>
+        )}
         <div className="mt-8 sm:mt-14 flex relative w-11/12 sm:w-80 h-14 p-2 border-2 border-appRed-500/40 rounded-lg">
           <input
             className="text-lg placeholder:font-thin text-center absolute inset-0 left-24 px-3 outline-none rounded-lg"
@@ -85,16 +92,24 @@ const ContactSection = ({ title = "בואו נדבר" }) => {
           </AppButton>
         </div>
         {error ? <div className="mt-2 text-appRed-500">{error}</div> : null}
+        {dialogMode && (
+          <div className="mt-8">
+            {" "}
+            <ContactIcons />
+          </div>
+        )}
       </form>
-      <div className="relative w-80 h-72 sm:w-[29rem] sm:h-[29rem]">
-        <Image
-          // src="/images/finish-line.svg"
-          src="/images/got-mail.svg"
-          fill
-          alt="contact-me"
-          className="object-cover"
-        />
-      </div>
+      {!dialogMode && (
+        <div className="relative w-80 h-72 sm:w-[29rem] sm:h-[29rem]">
+          <Image
+            // src="/images/finish-line.svg"
+            src="/images/got-mail.svg"
+            fill
+            alt="contact-me"
+            className="object-cover"
+          />
+        </div>
+      )}
     </section>
   );
 };

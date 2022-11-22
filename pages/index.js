@@ -16,10 +16,15 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { PROJECTS_DATA } from "../data/projects";
 import ContactSection from "../components/ContactSection";
+import ContactDialog from "../components/ContactDialog";
 
 export default function Home() {
   const [answerAIndex, setAnswerAIndex] = useState(0);
   const [answerBIndex, setAnswerBIndex] = useState(0);
+  const [contactDialogOpen, setContactDialogOpen] = useState(false);
+
+  const onCloseContactDialog = () => setContactDialogOpen(false);
+  const onOpenContactDialog = () => setContactDialogOpen(true);
 
   return (
     <>
@@ -75,7 +80,7 @@ export default function Home() {
       </section>
       {/* 2 - ABOUT ME */}
       <section className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between mt-24 sm:mt-52 max-w-5xl mx-auto anchor-link-offset">
-        <HashLinkAnchor id="about-me" />
+        <HashLinkAnchor id="about-me" offset={30} />
         {/* my image */}
         <h2 className="sm:hidden text-4xl relative font-bold text-center mb-6">
           <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-28"></div>
@@ -163,7 +168,11 @@ export default function Home() {
           <p className="mt-8 mb-6">
             {"מגניב :) אשמח שתספרו לי עליו ואולי אגשים לכם את החלום."}
           </p>
-          <AppButton>ספר לי עוד</AppButton>
+          <AppButton onClick={onOpenContactDialog}>ספר לי</AppButton>
+          <ContactDialog
+            open={contactDialogOpen}
+            onClose={onCloseContactDialog}
+          />
         </article>
       </section>
       <div className="max-w-5xl mx-auto">
