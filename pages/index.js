@@ -165,7 +165,7 @@ export default function Home() {
           <h2 className="text-4xl font-bold mb-6">
             מוצרים דיגטליים מ-א’ ועד ת’
           </h2>
-          <p className="text-base sm:text-2xl font-light leading-normal">
+          <p className="text-lg sm:text-2xl font-light leading-normal">
             המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות
             היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת
             מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד

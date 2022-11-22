@@ -80,7 +80,7 @@ const Project = () => {
       {/* 2 - Description */}
       <section className="flex max-lg:flex-col justify-between items-start mt-20 sm:mt-48">
         <div className="w-full flex justify-center lg:ml-8">
-          <div className="w-96 h-96 lg:w-[29rem] lg:h-[40rem] relative mb-14 sm:mb-0">
+          <div className="w-96 h-96 lg:w-[29rem] lg:h-[40rem] relative mb-14 lg:mb-0">
             <Image
               src={`/images/works/${data.slug}/2.png`}
               key={`${data.slug}-mockup-2`}

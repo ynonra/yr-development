@@ -20,6 +20,7 @@ module.exports = {
       colors: {
         appRed: {
           500: "#E87F75",
+          100: "#fededb",
         },
         appPurple: {
           500: "#99ADF9",
