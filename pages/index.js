@@ -94,7 +94,7 @@ export default function Home() {
               alt="ינון-רחמים"
               className="object-contain"
             />
-            <div className="bg-appPurple-500 rounded-full absolute w-[70vw] h-[70vw] sm:h-96 sm:w-96 top-5 -z-10 left-1/2 -translate-x-1/2" />
+            <div className="bg-appPurple-500 rounded-full absolute w-[70vw] h-[70vw] sm:h-96 sm:w-96 top-5 -z-10 left-1/2 -translate-x-[48%]" />
           </div>
         </div>
         <article className="sm:w-1/2 mt-10 sm:mt-0 px-6 sm:px-0">
@@ -168,7 +168,7 @@ export default function Home() {
           <p className="mt-8 mb-6">
             {"מגניב :) אשמח שתספרו לי עליו ואולי אגשים לכם את החלום."}
           </p>
-          <AppButton onClick={onOpenContactDialog}>ספר לי</AppButton>
+          <AppButton onClick={onOpenContactDialog}>צור איתי קשר</AppButton>
           <ContactDialog
             open={contactDialogOpen}
             onClose={onCloseContactDialog}
