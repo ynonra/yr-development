@@ -63,6 +63,7 @@ const Header = () => {
       <button
         className={`sm:hidden fixed top-0 right-0 m-3 z-20 w-14 h-14 flex items-center justify-center rounded-full text-gray-600 text-2xl`}
         onClick={toggleDrawer}
+        aria-label="open menu"
       >
         {/* blur background */}
         <div

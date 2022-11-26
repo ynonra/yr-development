@@ -19,8 +19,8 @@ import ContactSection from "../components/ContactSection";
 import ContactDialog from "../components/ContactDialog";
 
 export default function Home() {
-  const [answerAIndex, setAnswerAIndex] = useState(0);
-  const [answerBIndex, setAnswerBIndex] = useState(0);
+  const [answerAIndex, setAnswerAIndex] = useState(null);
+  const [answerBIndex, setAnswerBIndex] = useState(null);
   const [contactDialogOpen, setContactDialogOpen] = useState(false);
 
   const onCloseContactDialog = () => setContactDialogOpen(false);
@@ -46,6 +46,7 @@ export default function Home() {
               fill
               alt="big-logo"
               className="object-fit"
+              priority
             />
           </div>
           <h1 className="text-3xl sm:text-6xl font-semibold sm:font-extrabold leading-tight mb-14 sm:mb-4 text-center sm:text-start">
@@ -118,8 +119,14 @@ export default function Home() {
           <div className="relative flex rounded-xl text-center w-56 ">
             <div className="absolute border-2 border-appRed-500 -inset-px rounded-xl" />
             <div
-              className={`absolute bg-appRed-500/80 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
-                answerAIndex === 0 ? "right-0" : "right-1/2"
+              className={`${
+                answerAIndex === null ? "opacity-0" : "opacity-100"
+              } absolute bg-appRed-500/80 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
+                answerAIndex !== null
+                  ? answerAIndex === 0
+                    ? "right-0"
+                    : "right-1/2"
+                  : ""
               }`}
             />
             <button
@@ -144,8 +151,14 @@ export default function Home() {
           <div className="relative flex rounded-xl text-center w-56 ">
             <div className="absolute border-2 border-appRed-500 -inset-px rounded-xl" />
             <div
-              className={`absolute bg-appRed-500/80 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
-                answerBIndex === 0 ? "right-0" : "right-1/2"
+              className={`${
+                answerBIndex === null ? "opacity-0" : "opacity-100"
+              } absolute bg-appRed-500/80 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
+                answerBIndex !== null
+                  ? answerBIndex === 0
+                    ? "right-0"
+                    : "right-1/2"
+                  : ""
               }`}
             />
             <button

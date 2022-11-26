@@ -12,12 +12,14 @@ const ContactIcons = ({ reverse = false }) => {
         target="_blank"
         rel="noreferrer"
         className="flex items-center justify-center w-10 h-10 bg-appRed-500 text-white rounded-full"
+        aria-label="whatsapp"
       >
         <AiOutlineWhatsApp size={"1.1em"} />
       </a>
       <a
         href="tel:0586741194"
         className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full"
+        aria-label="phone"
       >
         <AiFillPhone />
       </a>
@@ -26,6 +28,7 @@ const ContactIcons = ({ reverse = false }) => {
         target="_blank"
         rel="noreferrer"
         className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full"
+        aria-label="email"
       >
         <AiOutlineMail />
       </a>
