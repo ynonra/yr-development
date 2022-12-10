@@ -47,7 +47,7 @@ const Header = () => {
         >
           <div className="flex items-center gap-2">
             <button
-              className="sm:hidden flex items-center justify-center w-9 h-9 border border-white text-white rounded-full"
+              className="md:hidden flex items-center justify-center w-9 h-9 border border-white text-white rounded-full"
               aria-label="menu"
               onClick={toggleDrawer}
             >
