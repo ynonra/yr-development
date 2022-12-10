@@ -171,7 +171,7 @@ export default function Home() {
             </div>
             <hr />
             <div className="flex flex-col lg:flex-row gap-y-1.5 items-center justify-between">
-              <span className="font-bold text-center">
+              <span className="font-bold text-center md:text-right">
                 {"מגניב :) אשמח שתספרו לי עליו ואולי אגשים לכם את החלום."}
               </span>
               <AppButton
@@ -205,12 +205,16 @@ export default function Home() {
         {/* 3 - SERVICES */}
         <section
           id="services"
-          className="relative border-2 border-appRed-500 px-3 sm:px-10 py-5 sm:py-10 mx-auto text-center mt-28"
+          className="relative flex flex-col items-center px-3 sm:px-10 py-5 sm:py-10 text-center mt-28"
         >
-          <h2 className="text-4xl font-bold mb-6">
-            מוצרים דיגטליים מ-א’ ועד ת’
+          <h2 className="text-3xl md:text-4xl relative font-bold mb-6">
+            מוצרים דיגטליים{" "}
+            <span className="relative">
+              <div className="absolute -z-10 bg-appRed-500 -inset-x-0.5 bottom-1.5 md:bottom-2 h-2 md:h-2.5 rounded-full"></div>
+              <span>מ-א’ ועד ת’</span>
+            </span>
           </h2>
-          <p className="text-lg sm:text-2xl font-light leading-normal">
+          <p className="font-light leading-normal max-w-lg">
             המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות
             היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת
             מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד
