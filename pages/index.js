@@ -9,7 +9,6 @@ import ServiceDescriptionItem from "../components/ServiceDescriptionItem";
 import WorkCard from "../components/WorkCard";
 import WorkStepCard from "../components/WorkStepCard";
 import RecommendationCard from "../components/RecommendationCard";
-import HashLinkAnchor from "../components/HashLinkAnchor";
 import { Pagination, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -36,29 +35,36 @@ export default function Home() {
         />
       </Head>
       {/* 1 - INTRO */}
-      <section className="flex justify-center sm:justify-between items-center mt-0 sm:mt-24">
-        <HashLinkAnchor id="home" />
-
-        <div className="flex flex-col items-center sm:items-start sm:mt-20">
-          <div className="w-64 h-96 relative sm:hidden">
-            <Image
-              src="/images/logo-big.svg"
-              fill
-              alt="big-logo"
-              className="object-fit"
-              priority
-            />
-          </div>
-          <h1 className="text-3xl sm:text-6xl font-semibold sm:font-extrabold leading-tight mb-14 sm:mb-4 text-center sm:text-start">
+      <section
+        id="home"
+        className="relative flex flex-col md:flex-row justify-center md:justify-between items-center mt-0 gap-7 md:gap-3"
+      >
+        <Image
+          src="/images/light.svg"
+          width={320}
+          height={320}
+          alt="light"
+          className="max-md:hidden object-contain"
+        />
+        <Image
+          src="/images/light.svg"
+          width={180}
+          height={180}
+          alt="light"
+          className="md:hidden object-contain"
+        />
+        <div className="text-center md:text-right text-white flex flex-col items-center md:items-start md:mt-20">
+          <h1 className="tracking-tight text-4xl md:text-5xl lg:text-7xl font-semibold md:font-bold leading-none md:leading-tight mb-4 md:mb-4 text-center md:text-start">
             יוצר{" "}
             <span className="relative">
-              <div className="hidden sm:block absolute -z-10 bg-appRed-500 bottom-[.3em] right-1 h-3.5 -left-6"></div>
-              <span>מוצרים</span>
+              <div className="absolute -z-10 bg-appRed-500 -inset-x-0.5 bottom-1.5 md:bottom-2.5 h-2 md:h-3.5 rounded-full"></div>
+              <span>מוצרים דיגיטלים</span>
             </span>{" "}
-            דיגיטלים<div>במחירים נגישים</div>
+            <div>במחירים נגישים</div>
           </h1>
-          <div className="hidden sm:block  text-gray-500 text-2xl mb-14 font-light">
-            אם אתם יכולים לחלום את זה, אני יכול ליצור את זה
+          <div className="md:tracking-wide text-xl md:text-2xl mb-4 md:mb-10 font-light">
+            <div className="md:inline">אם אתם יכולים לחלום את זה,</div> אני יכול
+            ליצור את זה
           </div>
           <AppButton
             onClick={() =>
@@ -70,40 +76,21 @@ export default function Home() {
             ספר לי עוד
           </AppButton>
         </div>
-        <div className="hidden sm:block w-[25rem] h-[25rem] relative">
-          <Image
-            src="/images/light.svg"
-            fill
-            alt="light"
-            className="object-contain"
-          />
-        </div>
       </section>
       {/* 2 - ABOUT ME */}
-      <section className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between mt-24 sm:mt-52 max-w-5xl mx-auto anchor-link-offset">
-        <HashLinkAnchor id="about-me" offset={30} />
-        {/* my image */}
-        <h2 className="sm:hidden text-4xl relative font-bold text-center mb-6">
-          <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-28"></div>
-          נעים להכיר
-        </h2>
-        <div className="flex w-full sm:w-1/2">
-          <div className="w-full h-96 px-8 sm:w-[26rem] sm:h-[36rem] relative">
-            <Image
-              src="/images/me.png"
-              fill
-              alt="ינון-רחמים"
-              className="object-contain"
-            />
-            <div className="bg-appPurple-500 rounded-full absolute w-[70vw] h-[70vw] sm:h-96 sm:w-96 top-5 -z-10 left-1/2 -translate-x-[48%]" />
-          </div>
-        </div>
-        <article className="sm:w-1/2 mt-10 sm:mt-0 px-6 sm:px-0">
-          <h2 className="hidden sm:block text-4xl relative font-bold mb-6">
-            <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-28"></div>
-            נעים להכיר
+      <section
+        id="about-me"
+        className="relative flex flex-col md:flex-row items-center md:items-start md:justify-between mt-24 md:mt-60 mx-auto gap-y-9 md:gap-14 lg:gap-[5.8rem]"
+      >
+        <article className="text-center md:text-right mt-10 md:mt-0 px-6 md:px-0">
+          <h2 className="text-3xl md:text-4xl relative font-bold mb-6">
+            נעים{" "}
+            <span className="relative">
+              <div className="absolute -z-10 bg-appRed-500 -inset-x-0.5 bottom-1.5 md:bottom-2 h-2 md:h-2.5 rounded-full"></div>
+              <span>להכיר</span>
+            </span>
           </h2>
-          <p>
+          <p className="track">
             אהלן, אני ינון. בן 28, מתגורר בצפת ומתפרנס מאחד המקצועות הכי שווים
             בשוק - פיתוח אתרים ואפליקציות. אני נהנה להתעורר לעבודה הזו בכל בוקר
             מחדש. יש משהו מאוד מרגש ביצירה עבור לקוחות. אפשר לומר שאני מגשים להם
@@ -114,84 +101,112 @@ export default function Home() {
             חיים של אנשים. ואולי יש לכם חלום יותר צנוע, למשל ליצור אתר מרשים
             לעסק או לעמותה, או לחילופין לעצב קורות חיים אינטראקטיביים.
           </p>
-          <p className="mt-8">איזה מין חולמים אתם?</p>
-          {/* <SwitchButtons label1="צנועים" label2="שאפתנים" questionIndex={0} /> */}
-          <div className="relative flex rounded-xl text-center w-56 ">
-            <div className="absolute border-2 border-appRed-500 -inset-px rounded-xl" />
-            <div
-              className={`${
-                answerAIndex === null ? "opacity-0" : "opacity-100"
-              } absolute bg-appRed-500/80 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
-                answerAIndex !== null
-                  ? answerAIndex === 0
-                    ? "right-0"
-                    : "right-1/2"
-                  : ""
-              }`}
-            />
-            <button
-              className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
-                answerAIndex === 0 ? "text-white" : "text-appRed-500/80"
-              }`}
-              onClick={() => setAnswerAIndex(0)}
-            >
-              צנועים
-            </button>
-            <button
-              className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
-                answerAIndex === 1 ? "text-white" : "text-appRed-500/80"
-              }`}
-              onClick={() => setAnswerAIndex(1)}
-            >
-              שאפתנים
-            </button>
+          <div className="flex flex-col px-7 py-6 gap-6 rounded-3xl shadow-xl shadow-appPurple-200/10 mt-8">
+            <div className="flex flex-col lg:flex-row gap-y-1.5 items-center justify-between">
+              <span className="font-bold">איזה מין חולמים אתם?</span>
+              <div className="relative flex rounded-full text-center w-56">
+                <div className="absolute border-2 border-appPurple-200 -inset-px rounded-full" />
+                <div
+                  className={`${
+                    answerAIndex === null ? "opacity-0" : "opacity-100"
+                  } absolute bg-appPurple-200 w-1/2 inset-y-0 -z-10 transition-all ${
+                    answerAIndex !== null
+                      ? answerAIndex === 0
+                        ? "right-0 rounded-r-full"
+                        : "right-1/2 rounded-l-full"
+                      : ""
+                  }`}
+                />
+                <button
+                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
+                    answerAIndex === 0 ? "text-white" : "text-appPurple-200"
+                  }`}
+                  onClick={() => setAnswerAIndex(0)}
+                >
+                  צנועים
+                </button>
+                <button
+                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
+                    answerAIndex === 1 ? "text-white" : "text-appPurple-200"
+                  }`}
+                  onClick={() => setAnswerAIndex(1)}
+                >
+                  שאפתנים
+                </button>
+              </div>
+            </div>
+            <hr />
+            <div className="flex flex-col lg:flex-row gap-y-1.5 items-center justify-between">
+              <span className="font-bold">רוצים להגשים את החלום?</span>
+              <div className="relative flex rounded-full text-center w-56">
+                <div className="absolute border-2 border-appPurple-200 -inset-px rounded-full" />
+                <div
+                  className={`${
+                    answerBIndex === null ? "opacity-0" : "opacity-100"
+                  } absolute bg-appPurple-200 w-1/2 inset-y-0 -z-10 transition-all ${
+                    answerBIndex !== null
+                      ? answerBIndex === 0
+                        ? "right-0 rounded-r-full"
+                        : "right-1/2 rounded-l-full"
+                      : ""
+                  }`}
+                />
+                <button
+                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
+                    answerBIndex === 0 ? "text-white" : "text-appPurple-200"
+                  }`}
+                  onClick={() => setAnswerBIndex(0)}
+                >
+                  כן בטח
+                </button>
+                <button
+                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
+                    answerBIndex === 1 ? "text-white" : "text-appPurple-200"
+                  }`}
+                  onClick={() => setAnswerBIndex(1)}
+                >
+                  שחרר אותי
+                </button>
+              </div>
+            </div>
+            <hr />
+            <div className="flex flex-col lg:flex-row gap-y-1.5 items-center justify-between">
+              <span className="font-bold text-center">
+                {"מגניב :) אשמח שתספרו לי עליו ואולי אגשים לכם את החלום."}
+              </span>
+              <AppButton
+                onClick={onOpenContactDialog}
+                className="shrink-0 py-2 text-base px-16"
+              >
+                צרו איתי קשר
+              </AppButton>
+              <ContactDialog
+                open={contactDialogOpen}
+                onClose={onCloseContactDialog}
+              />
+            </div>
           </div>
-          <p className="mt-8">רוצים להגשים את החלום?</p>
-          {/* <SwitchButtons label1="כן בטח" label2="שחרר אותי" questionIndex={1} /> */}
-          <div className="relative flex rounded-xl text-center w-56 ">
-            <div className="absolute border-2 border-appRed-500 -inset-px rounded-xl" />
-            <div
-              className={`${
-                answerBIndex === null ? "opacity-0" : "opacity-100"
-              } absolute bg-appRed-500/80 w-1/2 inset-y-0 rounded-lg -z-10 transition-all ${
-                answerBIndex !== null
-                  ? answerBIndex === 0
-                    ? "right-0"
-                    : "right-1/2"
-                  : ""
-              }`}
-            />
-            <button
-              className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
-                answerBIndex === 0 ? "text-white" : "text-appRed-500/80"
-              }`}
-              onClick={() => setAnswerBIndex(0)}
-            >
-              כן בטח
-            </button>
-            <button
-              className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
-                answerBIndex === 1 ? "text-white" : "text-appRed-500/80"
-              }`}
-              onClick={() => setAnswerBIndex(1)}
-            >
-              שחרר אותי
-            </button>
-          </div>
-          <p className="mt-8 mb-6">
-            {"מגניב :) אשמח שתספרו לי עליו ואולי אגשים לכם את החלום."}
-          </p>
-          <AppButton onClick={onOpenContactDialog}>צור איתי קשר</AppButton>
-          <ContactDialog
-            open={contactDialogOpen}
-            onClose={onCloseContactDialog}
-          />
         </article>
+        {/* my image */}
+        <div className="flex w-full justify-center md:justify-end">
+          <div className="flex justify-center w-[74vw] sm:w-80 lg:w-[26rem] relative rounded-b-full overflow-hidden">
+            <Image
+              src="/images/me-cropped.png"
+              width={400}
+              height={400}
+              alt="ינון-רחמים"
+              className="object-contain mr-[2%]"
+            />
+            <div className="bg-gradient-to-br from-appPurple-300 to-appPurple-400 rounded-full absolute h-[74vw] sm:h-80 lg:h-[26rem] w-[74vw] sm:w-80 lg:w-[26rem] bottom-px -z-10 left-1/2 -translate-x-1/2" />
+          </div>
+        </div>
       </section>
-      <div className="max-w-5xl mx-auto">
+      <div className="mx-auto">
         {/* 3 - SERVICES */}
-        <section className="border-2 border-appRed-500 px-3 sm:px-10 py-5 sm:py-10 mx-auto text-center mt-28 max-w-4xl">
-          <HashLinkAnchor id="services" />
+        <section
+          id="services"
+          className="relative border-2 border-appRed-500 px-3 sm:px-10 py-5 sm:py-10 mx-auto text-center mt-28"
+        >
           <h2 className="text-4xl font-bold mb-6">
             מוצרים דיגטליים מ-א’ ועד ת’
           </h2>
@@ -265,8 +280,7 @@ export default function Home() {
           </div>
         </section>
         {/* 4 - Works */}
-        <section className="mt-24">
-          <HashLinkAnchor id="projects" />
+        <section className="relative mt-24" id="projects">
           <h2 className="text-4xl font-bold mb-10 text-center sm:text-right">
             תיק עבודות
           </h2>
@@ -283,8 +297,10 @@ export default function Home() {
         </section>
 
         {/* 5 - RECOMMENDATIONS */}
-        <section className="border-2 border-appRed-500 bg-white py-10 mx-auto text-center mt-28 max-w-4xl relative">
-          <HashLinkAnchor id="recommendations" />
+        <section
+          id="recommendations"
+          className="relative border-2 border-appRed-500 bg-white py-10 mx-auto text-center mt-28"
+        >
           <h2 className="text-4xl font-bold mb-12 mx-10 sm:text-right">
             לקוחות מספרים
           </h2>

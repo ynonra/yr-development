@@ -7,7 +7,6 @@ import WorkLinks from "../../components/WorkLinks";
 import WorkCard from "../../components/WorkCard";
 import { PROJECTS_DATA } from "../../data/projects";
 import ContactSection from "../../components/ContactSection";
-import HashLinkAnchor from "../../components/HashLinkAnchor";
 
 export async function getStaticPaths() {
   return {
@@ -91,8 +90,7 @@ const Project = ({ data }) => {
         </div>
       </section>
       {/* 2 - Technologies */}
-      <section>
-        <HashLinkAnchor id="technologies" offset={0} />
+      <section id="technologies">
         <h2 className="mt-20 sm:inline-block text-2xl sm:text-4xl relative font-bold leading-tight text-center mb-6 sm:mb-14">
           <div className="max-sm:hidden absolute -z-10 bg-appRed-500 h-4 bottom-0 right-0 w-28"></div>
           טכנולוגיות

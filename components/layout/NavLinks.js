@@ -2,14 +2,15 @@ import Link from "next/link";
 
 const NavLinks = ({ closeDrawer = () => {} }) => {
   return (
-    <ul className="flex flex-col sm:flex-row justify-center items-center gap-x-2 gap-y-1.5 text-lg sm:text-base">
+    <ul className="tracking-wide flex flex-col sm:flex-row justify-center items-center gap-x-2 lg:gap-x-4 gap-y-1.5 text-lg sm:text-lg font-light">
       <li>
         <Link
           href="/"
-          className="px-2 py-1 block text-appRed-500"
+          className="px-2 py-1 block relative"
           onClick={closeDrawer}
         >
           בית
+          <div className="absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
         </Link>
       </li>
       {/* <li>

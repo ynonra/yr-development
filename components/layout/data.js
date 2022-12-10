@@ -1,9 +1,9 @@
 export const headerData = {
-  desktopHeightClass: "sm:h-20",
-  desktopMarginTopClass: "sm:mt-20",
+  desktopHeightClass: "md:h-20",
+  desktopMarginTopClass: "md:mt-20",
   mobileHeightClass: "h-20",
-  mobileMarginTopClass: "mt-20",
-  maxWidthClass: "max-w-7xl",
+  mobileMarginTopClass: "mt-5",
+  maxWidthClass: "",
 };
 
 export const footerData = {
@@ -11,5 +11,5 @@ export const footerData = {
 };
 
 export const mainData = {
-  maxWidthClass: "max-w-6xl",
+  maxWidthClass: "max-w-5xl",
 };

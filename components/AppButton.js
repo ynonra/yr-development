@@ -13,13 +13,13 @@ const AppButton = ({
 
   return (
     <Container
-      className={`${
+      className={`text-lg ${
         !inverted
           ? "bg-appRed-500 text-white"
           : "bg-white text-appRed-500 border border-appRed-500"
-      } rounded-lg px-4 py-3 font-medium transition ${
+      } rounded-full px-12 py-3 font-light transition ${
         !withoutTransition
-          ? "hover:shadow-lg hover:-translate-y-0.5"
+          ? "hover:shadow-lg !shadow-appPurple-200/10 hover:-translate-y-0.5"
           : "hover:bg-appRed-500/95 hover:text-white"
       } ${disabled && "pointer-events-none opacity-80"} ${className}`}
       {...props}

@@ -2,7 +2,6 @@ import { useState, useRef } from "react";
 
 import Image from "next/image";
 import AppButton from "./AppButton";
-import HashLinkAnchor from "./HashLinkAnchor";
 import { useRouter } from "next/router";
 import ContactIcons from "./ContactIcons";
 
@@ -53,11 +52,11 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
 
   return (
     <section
-      className={`flex max-sm:flex-col justify-around items-center py-10 mx-auto text-center ${
+    id="contact"
+      className={`relative flex max-sm:flex-col justify-around items-center py-10 mx-auto text-center ${
         !dialogMode ? "mt-20" : ""
       } max-w-4xl min-w-[300px]`}
     >
-      <HashLinkAnchor id="contact" />
       <h2 className="sm:hidden text-4xl font-bold mb-2 relative">
         <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 -right-2 w-24"></div>
         {title}
@@ -72,9 +71,9 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
             שלחו לי מספר טלפון. אחזור אליכם בהקדם
           </span>
         )}
-        <div className="mt-8 sm:mt-14 flex relative w-11/12 sm:w-80 h-14 p-2 border-2 border-appRed-500/40 rounded-lg">
+        <div className="mt-8 sm:mt-14 flex relative w-11/12 sm:w-96 h-14 p-2 border-2 border-appRed-500 rounded-full">
           <input
-            className="text-lg placeholder:font-thin text-center absolute inset-0 left-24 px-3 outline-none rounded-lg"
+            className="text-lg placeholder:font-thin text-center absolute inset-0 left-40 px-3 outline-none rounded-full"
             maxLength={12}
             type="tel"
             placeholder="05X-XXX-XXXX"
@@ -85,7 +84,7 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
           />
           <AppButton
             disabled={loading}
-            className="inset-px right-auto absolute"
+            className="inset-0 right-auto absolute rounded-r-none"
             withoutTransition
           >
             {loading ? "היונה בדרך..." : "דבר אליי ;)"}
@@ -95,7 +94,7 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
         {dialogMode && (
           <div className="mt-8">
             {" "}
-            <ContactIcons />
+            <ContactIcons inverted />
           </div>
         )}
       </form>

@@ -19,11 +19,15 @@ module.exports = {
     extend: {
       colors: {
         appRed: {
-          500: "#E87F75",
+          500: "#ef6b74",
           100: "#fededb",
         },
         appPurple: {
-          500: "#99ADF9",
+          200: "#7475d6",
+          300: "#5a7fdb",
+          400: "#9d68cf",
+          500: "#4a43b1",
+          700: "#5a3281",
         },
       },
     },

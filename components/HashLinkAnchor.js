@@ -3,9 +3,9 @@ const HashLinkAnchor = ({ id, offset = 130 }) => {
     <span
       id={id}
       style={{
-        marginTop: -offset,
+        top: -offset,
         paddingBottom: offset,
-        display: "block",
+        display: "absolute",
         height: 0,
       }}
     >

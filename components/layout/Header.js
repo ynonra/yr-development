@@ -3,7 +3,7 @@ import ContactIcons from "../ContactIcons";
 import Logo from "../Logo";
 import { headerData } from "./data";
 import NavLinks from "./NavLinks";
-import { BiMenu } from "react-icons/bi";
+import { IoMdMenu } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
 import { Dialog, Transition } from "@headlessui/react";
 
@@ -33,54 +33,36 @@ const Header = () => {
 
   return (
     <>
+      {/* gradient - background */}
+      <div className="absolute top-0 inset-x-0 h-[650px] md:h-[730px] bg-gradient-to-b md:bg-gradient-to-l from-appPurple-500 to-appPurple-700 rounded-br-[5.8rem] md:rounded-br-[18rem] -z-10" />
       {/* *********** */}
       {/* FOR DESKTOP */}
       {/* *********** */}
 
       <header
-        className={`hidden sm:block z-20  inset-0 bottom-auto px-10 py-5 bg-white ${
-          headerData.desktopHeightClass
-        }`}
+        className={`z-20 inset-0 bottom-auto px-4 sm:px-10 py-5 text-white ${headerData.desktopHeightClass}`}
       >
         <div
-          className={`flex flex-row mx-auto h-full justify-between items-center gap-y-8 ${headerData.maxWidthClass}`}
+          className={`flex flex-row mx-auto h-full justify-between items-center gap-y-8`}
         >
-          <nav className="flex flex-row items-center gap-10">
-            <div className="block">
-              <Logo />
-            </div>
+          <div className="flex items-center gap-2">
+            <button
+              className="sm:hidden flex items-center justify-center w-9 h-9 border border-white text-white rounded-full"
+              aria-label="menu"
+              onClick={toggleDrawer}
+            >
+              <IoMdMenu className="w-6 h-6" />
+            </button>
+            <ContactIcons className="md:w-36" />
+          </div>
+          <nav className="hidden md:flex flex-row items-center gap-10">
             <NavLinks closeDrawer={closeDrawer} />
           </nav>
-          <ContactIcons />
+          <div className="flex justify-end md:w-36">
+            <Logo stroke="white" />
+          </div>
         </div>
       </header>
-
-      {/* ********** */}
-      {/* FOR MOBILE */}
-      {/* ********** */}
-
-      {/* Toggle button */}
-      <button
-        className={`sm:hidden fixed top-0 right-0 m-3 z-20 w-14 h-14 flex items-center justify-center rounded-full text-gray-600 text-2xl`}
-        onClick={toggleDrawer}
-        aria-label="open menu"
-      >
-        {/* blur background */}
-        <div
-          className={`absolute w-full h-full rounded-full ${
-            drawerOpen ? "" : "bg-appRed-100/60"
-          }`}
-          style={
-            !drawerOpen
-              ? {
-                  backdropFilter: "blur(4px)",
-                  WebkitBackdropFilter: "blur(4px)",
-                }
-              : {}
-          }
-        />
-        <BiMenu className="z-10" />
-      </button>
 
       <Transition appear show={drawerOpen} as={Fragment}>
         <Dialog as="div" className="relative z-30" onClose={closeDrawer}>
@@ -94,7 +76,7 @@ const Header = () => {
             leaveTo="opacity-0"
           >
             <div
-              className="fixed inset-0 bg-white/70"
+              className="fixed inset-0 bg-white/90"
               style={{
                 backdropFilter: "blur(16px)",
                 WebkitBackdropFilter: "blur(16px)",
@@ -123,7 +105,6 @@ const Header = () => {
                       </div>
                       <NavLinks closeDrawer={closeDrawer} />
                     </nav>
-                    <ContactIcons />
                   </div>
                 </Dialog.Panel>
               </Transition.Child>

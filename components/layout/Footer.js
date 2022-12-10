@@ -16,7 +16,7 @@ const Footer = () => {
         </section>
         <hr />
         <section className="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-y-4 my-2 sm:my-0">
-          <ContactIcons reverse />
+          <ContactIcons reverse inverted />
           <div className="sm:hidden my-8">
             <NavLinks />
           </div>
