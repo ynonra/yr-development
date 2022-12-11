@@ -16,7 +16,7 @@ const NavLinks = ({ closeDrawer = () => {} }) => {
       {/* <li>
         <Link
           href="/#about-me"
-          className="px-2 py-1 block"
+          className="px-2 py-1 block relative group"
           onClick={closeDrawer}
         >
           אודות
@@ -25,40 +25,44 @@ const NavLinks = ({ closeDrawer = () => {} }) => {
       <li>
         <Link
           href="/#services"
-          className="px-2 py-1 block"
+          className="px-2 py-1 block relative group"
           onClick={closeDrawer}
         >
           שירותים
+          <div className="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
         </Link>
       </li>
       <li>
         <Link
           href="/#recommendations"
-          className="px-2 py-1 block"
+          className="px-2 py-1 block relative group"
           onClick={closeDrawer}
         >
           המלצות
+          <div className="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
         </Link>
       </li>
       <li>
         <Link
           href="/#projects"
-          className="px-2 py-1 block"
+          className="px-2 py-1 block relative group"
           onClick={closeDrawer}
         >
           תיק עבודות
+          <div className="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
         </Link>
       </li>
       <li>
         <Link
           href="/#contact"
-          className="px-2 py-1 block"
+          className="px-2 py-1 block relative group"
           onClick={() => {
             closeDrawer();
             console.log("close");
           }}
         >
           יצירת קשר
+          <div className="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
         </Link>
       </li>
     </ul>

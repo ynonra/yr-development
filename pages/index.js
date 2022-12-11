@@ -118,7 +118,7 @@ export default function Home() {
                   }`}
                 />
                 <button
-                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
+                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all hover:bg-appPurple-200/10 rounded-r-full  ${
                     answerAIndex === 0 ? "text-white" : "text-appPurple-200"
                   }`}
                   onClick={() => setAnswerAIndex(0)}
@@ -126,7 +126,7 @@ export default function Home() {
                   צנועים
                 </button>
                 <button
-                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
+                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all hover:bg-appPurple-200/10 rounded-l-full ${
                     answerAIndex === 1 ? "text-white" : "text-appPurple-200"
                   }`}
                   onClick={() => setAnswerAIndex(1)}
@@ -152,7 +152,7 @@ export default function Home() {
                   }`}
                 />
                 <button
-                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
+                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all hover:bg-appPurple-200/10 rounded-r-full ${
                     answerBIndex === 0 ? "text-white" : "text-appPurple-200"
                   }`}
                   onClick={() => setAnswerBIndex(0)}
@@ -160,7 +160,7 @@ export default function Home() {
                   כן בטח
                 </button>
                 <button
-                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all ${
+                  className={`z-0 px-3 py-2 w-1/2 cursor-pointer transition-all hover:bg-appPurple-200/10 rounded-l-full ${
                     answerBIndex === 1 ? "text-white" : "text-appPurple-200"
                   }`}
                   onClick={() => setAnswerBIndex(1)}
