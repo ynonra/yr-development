@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <>
       {/* gradient - background */}
-      <div className="absolute top-0 inset-x-0 h-[650px] md:h-[730px] bg-gradient-to-b md:bg-gradient-to-l from-appPurple-500 to-appPurple-700 rounded-br-[5.8rem] md:rounded-br-[18rem] -z-10" />
+      <div className="absolute top-0 inset-x-0 h-[650px] md:h-[730px] bg-gradient-to-b md:bg-gradient-to-l from-appIndigo-500 to-appPurple-600 rounded-t-none rounded-bl-none big-radius -z-10" />
       {/* *********** */}
       {/* FOR DESKTOP */}
       {/* *********** */}

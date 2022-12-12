@@ -7,15 +7,16 @@ body {
   font-family: "Open sans", system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
-    letter-spacing: -0.025em;
-  }
+  letter-spacing: -0.025em;
+}
 main {
-  padding: 0 1rem;
+  padding: 0;
   overflow-x: hidden;
 }
 p {
   line-height: 1.6;
   margin-bottom: 0.6rem;
+  font-weight: 300;
 }
 ::placeholder {
   font-family: "Open sans", system-ui, -apple-system, BlinkMacSystemFont,
@@ -27,4 +28,10 @@ p {
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
+}
+
+@layer components {
+  .big-radius {
+    @apply rounded-[5.8rem] md:rounded-[18rem];
+  }
 }

@@ -19,15 +19,20 @@ module.exports = {
     extend: {
       colors: {
         appRed: {
-          500: "#ef6b74",
+          50: "#fff9fb",
           100: "#fededb",
+          400: "#ed7b83",
+          500: "#ef6b74",
         },
         appPurple: {
-          200: "#7475d6",
-          300: "#5a7fdb",
-          400: "#9d68cf",
+          50: "#f9faff",
+          300: "#9d68cf",
+          600: "#5a3281",
+        },
+        appIndigo: {
+          200: "#5a7fdb",
+          300: "#7475d6",
           500: "#4a43b1",
-          700: "#5a3281",
         },
       },
     },

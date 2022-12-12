@@ -3,7 +3,7 @@ import technologies from "../data/technologies";
 
 const TechCard = ({ tech }) => {
   return (
-    <div className="flex items-center justify-center bg-appPurple-500/5 shadow-sm w-32 h-32 sm:w-48 sm:h-48">
+    <div className="flex items-center justify-center bg-appIndigo-500/5 shadow-sm w-32 h-32 sm:w-48 sm:h-48">
       <Image
         width={60}
         height={60}

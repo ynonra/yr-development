@@ -13,7 +13,7 @@ const ContactIcons = ({
     >
       <a
         href="tel:0586741194"
-        className={`hover:outline hover:outline-2 outline-offset-1 flex items-center justify-center w-9 h-9 border ${
+        className={`hover:bg-white/10 flex items-center justify-center w-9 h-9 border ${
           inverted ? "border-black text-black" : "border-white text-white"
         } rounded-full`}
         aria-label="phone"
@@ -24,7 +24,7 @@ const ContactIcons = ({
         href="mailto:ynonra@gmail.com"
         target="_blank"
         rel="noreferrer"
-        className={`hover:outline hover:outline-2 outline-offset-1 flex items-center justify-center w-9 h-9 border ${
+        className={`hover:bg-white/10 flex items-center justify-center w-9 h-9 border ${
           inverted ? "border-black text-black" : "border-white text-white"
         } rounded-full`}
         aria-label="email"
@@ -35,7 +35,7 @@ const ContactIcons = ({
         href="https://wa.me/972586741194"
         target="_blank"
         rel="noreferrer"
-        className="hover:outline hover:outline-2 outline-offset-1 outline-appRed-500 flex items-center justify-center w-9 h-9 bg-appRed-500 text-white rounded-full"
+        className="hover:bg-appRed-400 flex items-center justify-center w-9 h-9 bg-appRed-500 text-white rounded-full"
         aria-label="whatsapp"
       >
         <IoLogoWhatsapp size={"1.1em"} />

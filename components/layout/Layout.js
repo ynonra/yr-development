@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
       <main
         className={`${headerData.mobileMarginTopClass} ${headerData.desktopMarginTopClass}`}
       >
-        <div className={`${mainData.maxWidthClass} mx-auto`}>{children}</div>
+        {children}
       </main>
       <Footer />
     </>

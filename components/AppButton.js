@@ -17,7 +17,7 @@ const AppButton = ({
         !inverted
           ? "bg-appRed-500 text-white"
           : "bg-white text-appRed-500 border border-appRed-500"
-      } rounded-full px-12 py-3 font-light transition hover:outline hover:outline-2 outline-appRed-500/50 outline-offset-1 ${disabled && "pointer-events-none opacity-80"} ${className}`}
+      } rounded-full px-12 py-3 font-light transition hover:bg-appRed-400 ${disabled && "pointer-events-none opacity-80"} ${className}`}
       {...props}
     >
       {children}

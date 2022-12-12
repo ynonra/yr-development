@@ -29,7 +29,7 @@ const NavLinks = ({ closeDrawer = () => {} }) => {
           onClick={closeDrawer}
         >
           שירותים
-          <div className="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
+          <div className="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
         </Link>
       </li>
       <li>
@@ -39,7 +39,7 @@ const NavLinks = ({ closeDrawer = () => {} }) => {
           onClick={closeDrawer}
         >
           המלצות
-          <div className="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
+          <div className="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
         </Link>
       </li>
       <li>
@@ -49,7 +49,7 @@ const NavLinks = ({ closeDrawer = () => {} }) => {
           onClick={closeDrawer}
         >
           תיק עבודות
-          <div className="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
+          <div className="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500" />
         </Link>
       </li>
       <li>
