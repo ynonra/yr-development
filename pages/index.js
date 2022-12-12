@@ -57,7 +57,7 @@ export default function Home() {
           <h1 className="tracking-tight text-4xl md:text-5xl lg:text-7xl font-semibold md:font-bold leading-none md:leading-tight mb-4 md:mb-4 text-center md:text-start">
             יוצר{" "}
             <span className="relative">
-              <div className="absolute -z-10 bg-appRed-500 -inset-x-0.5 bottom-1.5 md:bottom-2.5 h-2 md:h-3.5 rounded-full"></div>
+              <div className="absolute -z-10 bg-appRed-500 -inset-x-0.5 bottom-1.5 md:bottom-2 lg:bottom-3.5 h-2 md:h-3 lg:h-[1.1rem] rounded-full"></div>
               <span>מוצרים דיגיטלים</span>
             </span>{" "}
             <div>במחירים נגישים</div>
