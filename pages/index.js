@@ -214,7 +214,7 @@ export default function Home() {
               <span className="z-10 relative">מ-א’ ועד ת’</span>
             </span>
           </h2>
-          <p className="font-light leading-normal max-w-sm px-[3.3rem] sm:px-0 sm:max-w-lg">
+          <p className="font-light leading-normal max-w-[17.5rem] sm:max-w-lg">
             המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות
             היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת
             מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד
@@ -243,7 +243,7 @@ export default function Home() {
           />
         </section>
       </div>
-      <div className="pt-12 sm:pt-16 pb-28 bg-gradient-to-b md:bg-gradient-to-r from-appIndigo-500 to-appPurple-600 big-radius rounded-t-none rounded-bl-none max-sm:rounded-none">
+      <div className="pt-12 sm:pt-16 pb-14 sm:pb-28 bg-gradient-to-b md:bg-gradient-to-r from-appIndigo-500 to-appPurple-600 big-radius rounded-t-none rounded-bl-none max-sm:rounded-none">
         <section className="text-center max-w-5xl mx-auto">
           <h2 className="text-white text-2xl md:text-4xl relative font-bold">
             תהליך{" "}
