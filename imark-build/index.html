@@ -1,0 +1,1879 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>ינון רחמים | פיתוח אתרים ואפליקציות</title>
+    <meta
+      name="description"
+      content="אנו מציעים ללקוחותינו מגוון פתרונות טכנולוגיים שישדרגו להם את העסק. מערכות ניהול, אתרי תדמית, אפליקציות, עיצוב ואיפיון, כתיבת תוכן ועוד. המחירים הוגנים, והתוצאה?... בואו לראות בעצמכם..."
+    />
+    <meta name="next-head-count" content="4" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="true"
+    />
+    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="assets/css/5a5d2f3b50bf377c.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/5a5d2f3b50bf377c.css"
+      data-n-g=""
+    />
+    <link
+      rel="preload"
+      href="assets/css/b32b5c51c9c1a1db.css"
+      as="style"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/css/b32b5c51c9c1a1db.css"
+      data-n-p=""
+    />
+    <noscript data-n-css=""></noscript>
+    <style
+      data-href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    >
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0C4k.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0C4k.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjr0C4k.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1y4k.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1y4k.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: normal;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1y4k.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 300;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 500;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 600;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSKmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSumu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+1F00-1FFF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSymu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0370-03FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS2mu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSCmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169,
+          U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSGmu0SC55K5gw.woff2)
+          format("woff2");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Open Sans";
+        font-style: normal;
+        font-weight: 800;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2)
+          format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    <style
+      data-href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap"
+    >
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v23/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-1Uw.woff)
+          format("woff");
+      }
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v23/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FWkUzdYPFkZVOA6w.woff)
+          format("woff");
+        unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF,
+          U+A640-A69F, U+FE2E-FE2F;
+      }
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v23/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FU0UzdYPFkZVOA6w.woff)
+          format("woff");
+        unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+      }
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v23/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FVUUzdYPFkZVOA6w.woff)
+          format("woff");
+        unicode-range: U+0590-05FF, U+200C-2010, U+20AA, U+25CC, U+FB1D-FB4F;
+      }
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v23/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FWUUzdYPFkZVOA6w.woff)
+          format("woff");
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+          U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      }
+      @font-face {
+        font-family: "Rubik";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/rubik/v23/iJWZBXyIfDnIV5PNhY1KTN7Z-Yh-4I-FV0UzdYPFkZVO.woff)
+          format("woff");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+          U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="__next">
+      <div
+        class="absolute top-0 inset-x-0 h-[650px] md:h-[730px] bg-gradient-to-b md:bg-gradient-to-l from-appIndigo-500 to-appPurple-600 rounded-t-none rounded-bl-none big-radius -z-10"
+      ></div>
+      <header
+        class="z-20 inset-0 bottom-auto px-4 sm:px-10 py-5 text-white md:h-20"
+      >
+        <div
+          class="flex flex-row mx-auto h-full justify-between items-center gap-y-8"
+        >
+          <div class="flex items-center gap-2">
+            <button
+              class="md:hidden flex items-center justify-center w-9 h-9 border border-white text-white rounded-full"
+              aria-label="menu"
+            >
+              <svg
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                class="w-6 h-6"
+                height="1em"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M64 384h384v-42.666H64V384zm0-106.666h384v-42.667H64v42.667zM64 128v42.665h384V128H64z"
+                ></path>
+              </svg>
+            </button>
+            <section class="flex items-center gap-2 text-xl flex-row md:w-36">
+              <a
+                href="tel:0586741194"
+                class="hover:bg-white/10 flex items-center justify-center w-9 h-9 border border-white text-white rounded-full"
+                aria-label="phone"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M885.6 230.2L779.1 123.8a80.83 80.83 0 0 0-57.3-23.8c-21.7 0-42.1 8.5-57.4 23.8L549.8 238.4a80.83 80.83 0 0 0-23.8 57.3c0 21.7 8.5 42.1 23.8 57.4l83.8 83.8A393.82 393.82 0 0 1 553.1 553 395.34 395.34 0 0 1 437 633.8L353.2 550a80.83 80.83 0 0 0-57.3-23.8c-21.7 0-42.1 8.5-57.4 23.8L123.8 664.5a80.89 80.89 0 0 0-23.8 57.4c0 21.7 8.5 42.1 23.8 57.4l106.3 106.3c24.4 24.5 58.1 38.4 92.7 38.4 7.3 0 14.3-.6 21.2-1.8 134.8-22.2 268.5-93.9 376.4-201.7C828.2 612.8 899.8 479.2 922.3 344c6.8-41.3-6.9-83.8-36.7-113.8z"
+                  ></path></svg></a
+              ><a
+                href="mailto:ynonra@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+                class="hover:bg-white/10 flex items-center justify-center w-9 h-9 border border-white text-white rounded-full"
+                aria-label="email"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-80.8 108.9L531.7 514.4c-7.8 6.1-18.7 6.1-26.5 0L189.6 268.9A7.2 7.2 0 0 1 194 256h648.8a7.2 7.2 0 0 1 4.4 12.9z"
+                  ></path></svg></a
+              ><a
+                href="https://wa.me/972586741194"
+                target="_blank"
+                rel="noreferrer"
+                class="hover:bg-appRed-400 flex items-center justify-center w-9 h-9 bg-appRed-500 text-white rounded-full"
+                aria-label="whatsapp"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  height="1.1em"
+                  width="1.1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M260.062 32C138.605 32 40.134 129.701 40.134 250.232c0 41.23 11.532 79.79 31.559 112.687L32 480l121.764-38.682c31.508 17.285 67.745 27.146 106.298 27.146C381.535 468.464 480 370.749 480 250.232 480 129.701 381.535 32 260.062 32zm109.362 301.11c-5.174 12.827-28.574 24.533-38.899 25.072-10.314.547-10.608 7.994-66.84-16.434-56.225-24.434-90.052-83.844-92.719-87.67-2.669-3.812-21.78-31.047-20.749-58.455 1.038-27.413 16.047-40.346 21.404-45.725 5.351-5.387 11.486-6.352 15.232-6.413 4.428-.072 7.296-.132 10.573-.011 3.274.124 8.192-.685 12.45 10.639 4.256 11.323 14.443 39.153 15.746 41.989 1.302 2.839 2.108 6.126.102 9.771-2.012 3.653-3.042 5.935-5.961 9.083-2.935 3.148-6.174 7.042-8.792 9.449-2.92 2.665-5.97 5.572-2.9 11.269 3.068 5.693 13.653 24.356 29.779 39.736 20.725 19.771 38.598 26.329 44.098 29.317 5.515 3.004 8.806 2.67 12.226-.929 3.404-3.599 14.639-15.746 18.596-21.169 3.955-5.438 7.661-4.373 12.742-2.329 5.078 2.052 32.157 16.556 37.673 19.551 5.51 2.989 9.193 4.529 10.51 6.9 1.317 2.38.901 13.531-4.271 26.359z"
+                  ></path></svg
+              ></a>
+            </section>
+          </div>
+          <nav class="hidden md:flex flex-row items-center gap-10">
+            <ul
+              class="tracking-wide flex flex-col sm:flex-row justify-center items-center gap-x-2 lg:gap-x-4 gap-y-1.5 text-lg sm:text-lg font-light"
+            >
+              <li>
+                <a class="px-2 py-1 block relative" href="/"
+                  >בית
+                  <div
+                    class="absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+              <li>
+                <a class="px-2 py-1 block relative group" href="/#services"
+                  >שירותים
+                  <div
+                    class="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="px-2 py-1 block relative group"
+                  href="/#recommendations"
+                  >המלצות
+                  <div
+                    class="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+              <li>
+                <a class="px-2 py-1 block relative group" href="/#projects"
+                  >תיק עבודות
+                  <div
+                    class="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+              <li>
+                <a class="px-2 py-1 block relative group" href="/#contact"
+                  >יצירת קשר
+                  <div
+                    class="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="flex justify-end md:w-36">
+            <a href="/"
+              ><svg
+                width="54"
+                height="42"
+                viewBox="0 0 54 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29.25 41V2C29.25 2 49.7576 2.56156 48.6713 11.856C47.8194 19.144 35.4602 28.5574 35.4602 28.5574C35.4602 28.5574 48.6713 27.3883 52.25 41"
+                  stroke="white"
+                  stroke-width="2"
+                ></path>
+                <path
+                  d="M1.10823 1C1.03814 18.0876 -0.563354 14.5909 11.375 23.4167M11.375 23.4167C23.3134 14.5909 21.7119 18.0876 21.6418 1M11.375 23.4167C11.375 30.2834 11.375 41 11.375 41"
+                  stroke="white"
+                  stroke-width="2"
+                ></path></svg
+            ></a>
+          </div>
+        </div>
+      </header>
+      <main class="mt-5 md:mt-20">
+        <section
+          id="home"
+          class="max-w-5xl mx-auto relative flex flex-col md:flex-row justify-center md:justify-between items-center mt-0 gap-7 md:gap-3"
+        >
+          <img
+            alt="light"
+            src="assets/images/light.svg"
+            width="320"
+            height="320"
+            decoding="async"
+            data-nimg="1"
+            class="max-md:hidden object-contain"
+            loading="lazy"
+            style="color: transparent"
+          /><img
+            alt="light"
+            src="assets/images/light.svg"
+            width="180"
+            height="180"
+            decoding="async"
+            data-nimg="1"
+            class="md:hidden object-contain"
+            loading="lazy"
+            style="color: transparent"
+          />
+          <div
+            class="text-center md:text-right text-white flex flex-col items-center md:items-start md:mt-20"
+          >
+            <h1
+              class="tracking-tight text-4xl md:text-5xl lg:text-7xl font-semibold md:font-bold leading-none md:leading-tight mb-4 md:mb-4 text-center md:text-start"
+            >
+              יוצר<!-- -->
+              <span class="relative"
+                ><div
+                  class="absolute -z-10 bg-appRed-500 -inset-x-0.5 bottom-1.5 md:bottom-2 lg:bottom-3.5 h-2 md:h-3 lg:h-[1.1rem] rounded-full"
+                ></div>
+                <span>מוצרים דיגיטלים</span></span
+              >
+              <div>במחירים נגישים</div>
+            </h1>
+            <div
+              class="md:tracking-wide text-xl md:text-2xl mb-4 md:mb-10 font-light"
+            >
+              <div class="md:inline">אם אתם יכולים לחלום את זה,</div>
+              אני יכול ליצור את זה
+            </div>
+            <button
+              class="text-lg bg-appRed-500 text-white rounded-full px-12 py-3 font-light transition hover:bg-appRed-400 false"
+            >
+              ספר לי עוד
+            </button>
+          </div>
+        </section>
+        <section
+          id="about-me"
+          class="max-w-5xl mx-auto relative flex flex-col md:flex-row items-center md:items-start md:justify-between mt-24 md:mt-60 gap-y-9 md:gap-14 lg:gap-[5.8rem]"
+        >
+          <article class="text-center md:text-right mt-10 md:mt-0 px-6 md:px-0">
+            <h2 class="text-2xl md:text-4xl relative font-bold mb-6">
+              נעים<!-- -->
+              <span class="relative"
+                ><div
+                  class="absolute -z-10 bg-appRed-500 -inset-x-0.5 bottom-1 md:bottom-2 h-2 md:h-2.5 rounded-full"
+                ></div>
+                <span>להכיר</span></span
+              >
+            </h2>
+            <p class="track">
+              אהלן, אני ינון. בן 28, מתגורר בצפת ומתפרנס מאחד המקצועות הכי שווים
+              בשוק - פיתוח אתרים ואפליקציות. אני נהנה להתעורר לעבודה הזו בכל
+              בוקר מחדש. יש משהו מאוד מרגש ביצירה עבור לקוחות. אפשר לומר שאני
+              מגשים להם חלומות.
+            </p>
+            <p>
+              בטח גם לכם יש חלום להקים אתר אינטרנט יוצא דופן או אפליקציה שתשנה
+              חיים של אנשים. ואולי יש לכם חלום יותר צנוע, למשל ליצור אתר מרשים
+              לעסק או לעמותה, או לחילופין לעצב קורות חיים אינטראקטיביים.
+            </p>
+            <div
+              class="flex flex-col px-7 py-6 gap-6 rounded-3xl shadow-xl shadow-appIndigo-300/10 mt-8"
+            >
+              <div
+                class="flex flex-col lg:flex-row gap-y-1.5 items-center justify-between"
+              >
+                <span class="font-bold">איזה מין חולמים אתם?</span>
+                <div class="relative flex rounded-full text-center w-56">
+                  <div
+                    class="absolute border-2 border-appIndigo-300 -inset-px rounded-full"
+                  ></div>
+                  <div
+                    class="opacity-0 absolute bg-appIndigo-300 w-1/2 inset-y-0 -z-10 transition-all"
+                  ></div>
+                  <button
+                    class="z-0 px-3 py-2 w-1/2 cursor-pointer transition-all hover:bg-appIndigo-300/10 rounded-r-full text-appIndigo-300"
+                  >
+                    צנועים</button
+                  ><button
+                    class="z-0 px-3 py-2 w-1/2 cursor-pointer transition-all hover:bg-appIndigo-300/10 rounded-l-full text-appIndigo-300"
+                  >
+                    שאפתנים
+                  </button>
+                </div>
+              </div>
+              <hr />
+              <div
+                class="flex flex-col lg:flex-row gap-y-1.5 items-center justify-between"
+              >
+                <span class="font-bold">רוצים להגשים את החלום?</span>
+                <div class="relative flex rounded-full text-center w-56">
+                  <div
+                    class="absolute border-2 border-appIndigo-300 -inset-px rounded-full"
+                  ></div>
+                  <div
+                    class="opacity-0 absolute bg-appIndigo-300 w-1/2 inset-y-0 -z-10 transition-all"
+                  ></div>
+                  <button
+                    class="z-0 px-3 py-2 w-1/2 cursor-pointer transition-all hover:bg-appIndigo-300/10 rounded-r-full text-appIndigo-300"
+                  >
+                    כן בטח</button
+                  ><button
+                    class="z-0 px-3 py-2 w-1/2 cursor-pointer transition-all hover:bg-appIndigo-300/10 rounded-l-full text-appIndigo-300"
+                  >
+                    שחרר אותי
+                  </button>
+                </div>
+              </div>
+              <hr />
+              <div
+                class="flex flex-col lg:flex-row gap-y-1.5 items-center justify-between"
+              >
+                <span class="font-bold text-center md:text-right"
+                  >מגניב :) אשמח שתספרו לי עליו ואולי אגשים לכם את החלום.</span
+                ><button
+                  class="text-lg bg-appRed-500 text-white rounded-full px-12 py-3 font-light transition hover:bg-appRed-400 false shrink-0 py-2 text-base px-16"
+                >
+                  צרו איתי קשר
+                </button>
+              </div>
+            </div>
+          </article>
+          <div class="flex w-full justify-center md:justify-end">
+            <div
+              class="flex justify-center w-[74vw] sm:w-80 lg:w-[26rem] relative rounded-b-full overflow-hidden"
+            >
+              <img
+                alt="ינון-רחמים"
+                src="assets/images/me-cropped.png"
+                width="400"
+                height="400"
+                decoding="async"
+                data-nimg="1"
+                class="object-contain mr-[2%]"
+                loading="lazy"
+                style="color: transparent"
+              />
+              <div
+                class="bg-gradient-to-br from-appIndigo-200 to-appPurple-300 rounded-full absolute h-[74vw] sm:h-80 lg:h-[26rem] w-[74vw] sm:w-80 lg:w-[26rem] bottom-px -z-10 left-1/2 -translate-x-1/2"
+              ></div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="mt-16 sm:mt-32 pt-12 sm:pt-20 pb-28 bg-gradient-to-l from-appRed-50 to-appPurple-50 big-radius rounded-b-none rounded-tr-none"
+        >
+          <section
+            id="services"
+            class="max-w-5xl mx-auto relative flex flex-col items-center px-3 sm:px-10 pt-5 sm:pt-10 text-center"
+          >
+            <h2 class="text-2xl md:text-4xl relative font-bold mb-6">
+              מוצרים דיגטליים<!-- -->
+              <span class="relative"
+                ><div
+                  class="absolute bg-appRed-500 -inset-x-0.5 bottom-1 md:bottom-2 h-2 md:h-2.5 rounded-full"
+                ></div>
+                <span class="z-10 relative">מ-א’ ועד ת’</span></span
+              >
+            </h2>
+            <p class="font-light leading-normal max-w-[17.5rem] sm:max-w-lg">
+              המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות
+              היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת
+              מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד
+              בשיתוף פעולה עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו
+              לגבהים חדשים.
+            </p>
+          </section>
+          <section
+            class="max-w-5xl mx-auto flex flex-col items-center md:flex-row justify-around mt-0 gap-y-8"
+          >
+            <article
+              class="flex flex-col items-center w-full max-w-sm sm:max-w-[14.5rem] px-3 sm:px-0"
+            >
+              <div class="relative h-64 w-64">
+                <img
+                  alt="מערכות-ניהול"
+                  src="assets/images/fingerprint.svg"
+                  decoding="async"
+                  data-nimg="fill"
+                  loading="lazy"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    color: transparent;
+                  "
+                />
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl self-start mb-2 font-bold">מערכות ניהול</h3>
+                <p class="leading-snug">
+                  מערכת ניהול טובה תחסוך לארגון שלכם הרבה מאוד שעות עבודה ותסייע
+                  לכם להתמקד במה שחשוב באמת.
+                </p>
+              </div>
+            </article>
+            <article
+              class="flex flex-col items-center w-full max-w-sm sm:max-w-[14.5rem] px-3 sm:px-0"
+            >
+              <div class="relative h-64 w-64">
+                <img
+                  alt="אפליקציות"
+                  src="assets/images/roulette-wheel.svg"
+                  decoding="async"
+                  data-nimg="fill"
+                  loading="lazy"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    color: transparent;
+                  "
+                />
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl self-start mb-2 font-bold">אפליקציות</h3>
+                <p class="leading-snug">
+                  יש לכם רעיון מגניב שעתיד לשנות לאנשים את החיים לטובה? דברו
+                  אליי. אשמח לפתח את זה!
+                </p>
+              </div>
+            </article>
+            <article
+              class="flex flex-col items-center w-full max-w-sm sm:max-w-[14.5rem] px-3 sm:px-0"
+            >
+              <div class="relative h-64 w-64">
+                <img
+                  alt="אתרי-אינטרנט"
+                  src="assets/images/hands-up.svg"
+                  decoding="async"
+                  data-nimg="fill"
+                  loading="lazy"
+                  style="
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    color: transparent;
+                  "
+                />
+              </div>
+              <div class="text-center">
+                <h3 class="text-2xl self-start mb-2 font-bold">אתרי אינטרנט</h3>
+                <p class="leading-snug">
+                  אני יכול לפתח גם אתרים פשוטים וגם מורכבים. מוזמנים לדבר איתי
+                  על פרויקטים בכל סדר גודל.
+                </p>
+              </div>
+            </article>
+          </section>
+        </div>
+        <div
+          class="pt-12 sm:pt-16 pb-14 sm:pb-28 bg-gradient-to-b md:bg-gradient-to-r from-appIndigo-500 to-appPurple-600 big-radius rounded-t-none rounded-bl-none max-sm:rounded-none"
+        >
+          <section class="text-center max-w-5xl mx-auto">
+            <h2 class="text-white text-2xl md:text-4xl relative font-bold">
+              תהליך<!-- -->
+              <span class="relative"
+                ><div
+                  class="absolute bg-appRed-500 -inset-x-0.5 bottom-1 md:bottom-2 h-2 md:h-2.5 rounded-full"
+                ></div>
+                <span class="z-10 relative">העבודה</span></span
+              >
+            </h2>
+            <div
+              class="px-5 sm:px-0 mt-16 mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center w-fit justify-items-center"
+            >
+              <article
+                class="max-w-sm sm:w-64 lg:w-72 flex flex-col justify-center items-center px-7 pb-4 text-white relative bg-white/5 rounded-3xl"
+              >
+                <div
+                  class="rounded-full bg-appRed-500 flex justify-center items-center absolute top-0 right-0 m-3 w-12 h-12 font-semibold text-2xl"
+                >
+                  <span class="z-10">1</span>
+                  <div
+                    class="absolute -inset-1 bg-appRed-500/30 rounded-full"
+                  ></div>
+                </div>
+                <img
+                  alt="אפיון"
+                  src="assets/images/certificate.svg"
+                  width="150"
+                  height="150"
+                  decoding="async"
+                  data-nimg="1"
+                  loading="lazy"
+                  style="color: transparent; transform: scale(1)"
+                />
+                <h3 class="text-2xl font-semibold mb-1">אפיון</h3>
+                <p class="leading-normal">
+                  יושבים ביחד ומדברים על דרישות הפרוייקט, מהם הצרכים, מה
+                  האפשרויות השונות, וכו׳. הכל מסוכם במסמך שמהווה את השלד של
+                  המוצר
+                </p>
+              </article>
+              <article
+                class="max-w-sm sm:w-64 lg:w-72 flex flex-col justify-center items-center px-7 pb-4 text-white relative bg-white/10 rounded-3xl"
+              >
+                <div
+                  class="rounded-full bg-appRed-500 flex justify-center items-center absolute top-0 right-0 m-3 w-12 h-12 font-semibold text-2xl"
+                >
+                  <span class="z-10">2</span>
+                  <div
+                    class="absolute -inset-1 bg-appRed-500/30 rounded-full"
+                  ></div>
+                </div>
+                <img
+                  alt="קופירייטינג"
+                  src="assets/images/paper.svg"
+                  width="150"
+                  height="150"
+                  decoding="async"
+                  data-nimg="1"
+                  loading="lazy"
+                  style="color: transparent; transform: scale(1)"
+                />
+                <h3 class="text-2xl font-semibold mb-1">קופירייטינג</h3>
+                <p class="leading-normal">
+                  אחד החלקים המשמעותיים במוצר תדמיתי הינו התוכן שבו. אנו מציעים
+                  שירותים של כתיבה שיווקית, שתקפיץ לכם את הרמה וגם את הכניסות!
+                </p>
+              </article>
+              <article
+                class="max-w-sm sm:w-64 lg:w-72 flex flex-col justify-center items-center px-7 pb-4 text-white relative bg-white/5 rounded-3xl"
+              >
+                <div
+                  class="rounded-full bg-appRed-500 flex justify-center items-center absolute top-0 right-0 m-3 w-12 h-12 font-semibold text-2xl"
+                >
+                  <span class="z-10">3</span>
+                  <div
+                    class="absolute -inset-1 bg-appRed-500/30 rounded-full"
+                  ></div>
+                </div>
+                <img
+                  alt="עיצוב"
+                  src="assets/images/puzzle.svg"
+                  width="150"
+                  height="150"
+                  decoding="async"
+                  data-nimg="1"
+                  loading="lazy"
+                  style="color: transparent; transform: scale(1)"
+                />
+                <h3 class="text-2xl font-semibold mb-1">עיצוב</h3>
+                <p class="leading-normal">
+                  בשלב זה כבר מתחילים לראות את החלום רוקם עור וגידים ומתגשם...
+                  מעצב ילווה אתכם לכל אורך התהליך עד לעיצוב שאתם הכי אוהבים
+                </p>
+              </article>
+              <article
+                class="max-w-sm sm:w-64 lg:w-72 flex flex-col justify-center items-center px-7 pb-4 text-white relative bg-white/10 rounded-3xl"
+              >
+                <div
+                  class="rounded-full bg-appRed-500 flex justify-center items-center absolute top-0 right-0 m-3 w-12 h-12 font-semibold text-2xl"
+                >
+                  <span class="z-10">4</span>
+                  <div
+                    class="absolute -inset-1 bg-appRed-500/30 rounded-full"
+                  ></div>
+                </div>
+                <img
+                  alt="פיתוח"
+                  src="assets/images/time1.svg"
+                  width="150"
+                  height="150"
+                  decoding="async"
+                  data-nimg="1"
+                  loading="lazy"
+                  style="color: transparent; transform: scale(1)"
+                />
+                <h3 class="text-2xl font-semibold mb-1">פיתוח</h3>
+                <p class="leading-normal">
+                  הגיע הזמן ללכלך את הידיים ולפתח את המוצר שלכם בהתאמה מדוייקת
+                  להחלטות שהתקבלו בשלבים הקודמים. לוקח קצת זמן, אבל שווה לחכות!
+                </p>
+              </article>
+              <article
+                class="max-w-sm sm:w-64 lg:w-72 flex flex-col justify-center items-center px-7 pb-4 text-white relative bg-white/5 rounded-3xl"
+              >
+                <div
+                  class="rounded-full bg-appRed-500 flex justify-center items-center absolute top-0 right-0 m-3 w-12 h-12 font-semibold text-2xl"
+                >
+                  <span class="z-10">5</span>
+                  <div
+                    class="absolute -inset-1 bg-appRed-500/30 rounded-full"
+                  ></div>
+                </div>
+                <img
+                  alt="בקרת איכות"
+                  src="assets/images/star1.svg"
+                  width="150"
+                  height="150"
+                  decoding="async"
+                  data-nimg="1"
+                  loading="lazy"
+                  style="color: transparent; transform: scale(1)"
+                />
+                <h3 class="text-2xl font-semibold mb-1">בקרת איכות</h3>
+                <p class="leading-normal">
+                  רגע לפני שמשחררים את המוצר ומספרים לכולם, עושים בדיקות אחרונות
+                  כדי לוודא שאין תקלות לא צפויות
+                </p>
+              </article>
+              <article
+                class="max-w-sm sm:w-64 lg:w-72 flex flex-col justify-center items-center px-7 pb-4 text-white relative bg-white/10 rounded-3xl"
+              >
+                <div
+                  class="rounded-full bg-appRed-500 flex justify-center items-center absolute top-0 right-0 m-3 w-12 h-12 font-semibold text-2xl"
+                >
+                  <span class="z-10">6</span>
+                  <div
+                    class="absolute -inset-1 bg-appRed-500/30 rounded-full"
+                  ></div>
+                </div>
+                <img
+                  alt="עלייה לאוויר"
+                  src="assets/images/cheer.svg"
+                  width="150"
+                  height="150"
+                  decoding="async"
+                  data-nimg="1"
+                  loading="lazy"
+                  style="color: transparent; transform: scale(0.8)"
+                />
+                <h3 class="text-2xl font-semibold mb-1">עלייה לאוויר</h3>
+                <p class="leading-normal">
+                  היום הגדול הגיע, לאחר שעברנו ביחד את הדרך למוצר המושלם עבורכם,
+                  באה העת להנות מהפירות. לחיים!
+                </p>
+              </article>
+            </div>
+          </section>
+        </div>
+        <section class="relative mt-24" id="projects">
+          <h2 class="text-4xl font-bold mb-10 text-center sm:text-right">
+            תיק עבודות
+          </h2>
+          <div
+            class="flex flex-wrap justify-center gap-x-6 gap-y-8 md:gap-y-14 lg:gap-y-20"
+          >
+            <a href="/project/vogo"
+              ><div
+                class="bg-white w-56 h-52 lg:w-64 lg:h-56 flex items-center justify-center group relative hover:shadow-sm shadow-sm"
+              >
+                <div
+                  class="w-4/5 h-28 lg:h-28 relative md:opacity-80 group-hover:opacity-100 sm:grayscale-[100%] sm:group-hover:grayscale-0 transition-all duration-300"
+                >
+                  <img
+                    alt="logo-vogo"
+                    src="assets/images/works-logos/vogo-big.svg"
+                    decoding="async"
+                    data-nimg="fill"
+                    loading="lazy"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      object-fit: contain;
+                      color: transparent;
+                      transform: scale(0.9);
+                    "
+                  />
+                </div>
+                <div
+                  class="bg-appRed-500/50 absolute inset-x-0 bottom-0 h-1.5 scale-y-0 group-hover:scale-y-100 opacity-0 group-hover:opacity-100 transition-all"
+                  style="transform-origin: bottom"
+                ></div></div></a
+            ><a href="/project/simana"
+              ><div
+                class="bg-white w-56 h-52 lg:w-64 lg:h-56 flex items-center justify-center group relative hover:shadow-sm shadow-sm"
+              >
+                <div
+                  class="w-4/5 h-28 lg:h-28 relative md:opacity-80 group-hover:opacity-100 sm:grayscale-[100%] sm:group-hover:grayscale-0 transition-all duration-300"
+                >
+                  <img
+                    alt="logo-simana"
+                    src="assets/images/works-logos/סימנא.svg"
+                    decoding="async"
+                    data-nimg="fill"
+                    loading="lazy"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      object-fit: contain;
+                      color: transparent;
+                      transform: scale(1);
+                    "
+                  />
+                </div>
+                <div
+                  class="bg-appRed-500/50 absolute inset-x-0 bottom-0 h-1.5 scale-y-0 group-hover:scale-y-100 opacity-0 group-hover:opacity-100 transition-all"
+                  style="transform-origin: bottom"
+                ></div></div></a
+            ><a href="/project/memdalet"
+              ><div
+                class="bg-white w-56 h-52 lg:w-64 lg:h-56 flex items-center justify-center group relative hover:shadow-sm shadow-sm"
+              >
+                <div
+                  class="w-4/5 h-28 lg:h-28 relative md:opacity-80 group-hover:opacity-100 sm:grayscale-[100%] sm:group-hover:grayscale-0 transition-all duration-300"
+                >
+                  <img
+                    alt="logo-memdalet"
+                    src="assets/images/works-logos/מם-דלת.gif"
+                    decoding="async"
+                    data-nimg="fill"
+                    loading="lazy"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      object-fit: contain;
+                      color: transparent;
+                      transform: scale(1);
+                    "
+                  />
+                </div>
+                <div
+                  class="bg-appRed-500/50 absolute inset-x-0 bottom-0 h-1.5 scale-y-0 group-hover:scale-y-100 opacity-0 group-hover:opacity-100 transition-all"
+                  style="transform-origin: bottom"
+                ></div></div></a
+            ><a href="/project/kaf-hachaim"
+              ><div
+                class="bg-white w-56 h-52 lg:w-64 lg:h-56 flex items-center justify-center group relative hover:shadow-sm shadow-sm"
+              >
+                <div
+                  class="w-4/5 h-28 lg:h-28 relative md:opacity-80 group-hover:opacity-100 sm:grayscale-[100%] sm:group-hover:grayscale-0 transition-all duration-300"
+                >
+                  <img
+                    alt="logo-kaf-hachaim"
+                    src="assets/images/works-logos/כף החיים.png"
+                    decoding="async"
+                    data-nimg="fill"
+                    loading="lazy"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      object-fit: contain;
+                      color: transparent;
+                      transform: scale(0.6);
+                    "
+                  />
+                </div>
+                <div
+                  class="bg-appRed-500/50 absolute inset-x-0 bottom-0 h-1.5 scale-y-0 group-hover:scale-y-100 opacity-0 group-hover:opacity-100 transition-all"
+                  style="transform-origin: bottom"
+                ></div></div></a
+            ><a href="/project/birkat-eliyahu"
+              ><div
+                class="bg-white w-56 h-52 lg:w-64 lg:h-56 flex items-center justify-center group relative hover:shadow-sm shadow-sm"
+              >
+                <div
+                  class="w-4/5 h-28 lg:h-28 relative md:opacity-80 group-hover:opacity-100 sm:grayscale-[100%] sm:group-hover:grayscale-0 transition-all duration-300"
+                >
+                  <img
+                    alt="logo-birkat-eliyahu"
+                    src="assets/images/works-logos/ברכת אליהו.svg"
+                    decoding="async"
+                    data-nimg="fill"
+                    loading="lazy"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      object-fit: contain;
+                      color: transparent;
+                      transform: scale(0.9);
+                    "
+                  />
+                </div>
+                <div
+                  class="bg-appRed-500/50 absolute inset-x-0 bottom-0 h-1.5 scale-y-0 group-hover:scale-y-100 opacity-0 group-hover:opacity-100 transition-all"
+                  style="transform-origin: bottom"
+                ></div></div></a
+            ><a href="/project/squadd"
+              ><div
+                class="bg-white w-56 h-52 lg:w-64 lg:h-56 flex items-center justify-center group relative hover:shadow-sm shadow-sm"
+              >
+                <div
+                  class="w-4/5 h-28 lg:h-28 relative md:opacity-80 group-hover:opacity-100 sm:grayscale-[100%] sm:group-hover:grayscale-0 transition-all duration-300"
+                >
+                  <img
+                    alt="logo-squadd"
+                    src="assets/images/works-logos/squadd-big.png"
+                    decoding="async"
+                    data-nimg="fill"
+                    loading="lazy"
+                    style="
+                      position: absolute;
+                      height: 100%;
+                      width: 100%;
+                      left: 0;
+                      top: 0;
+                      right: 0;
+                      bottom: 0;
+                      object-fit: contain;
+                      color: transparent;
+                      transform: scale(1);
+                    "
+                  />
+                </div>
+                <div
+                  class="bg-appRed-500/50 absolute inset-x-0 bottom-0 h-1.5 scale-y-0 group-hover:scale-y-100 opacity-0 group-hover:opacity-100 transition-all"
+                  style="transform-origin: bottom"
+                ></div></div
+            ></a>
+          </div>
+        </section>
+        <section
+          id="recommendations"
+          class="relative border-2 border-appRed-500 bg-white py-10 mx-auto text-center mt-28"
+        >
+          <h2 class="text-4xl font-bold mb-12 mx-10 sm:text-right">
+            לקוחות מספרים
+          </h2>
+          <div
+            class="-z-10 absolute top-[58%] left-1/2 -translate-x-1/2 rotate-12"
+          >
+            <div class="bg-appRed-500/50 w-[100vw] h-20"></div>
+            <div class="bg-appRed-500/10 w-[200vw] h-20"></div>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide !h-auto">
+                <div
+                  class="flex flex-col items-start justify-between h-full px-3 sm:px-10 mb-10 pb-10"
+                >
+                  <p
+                    class="text-base sm:text-2xl font-light leading-normal sm:text-right"
+                  >
+                    תענוג לעבוד עם ינון, מהתכנון של האתר ברעיון ועד שהוא הביא את
+                    זה למוצר מוגמר הכל מושלם! השקיע את כל הנשמה בעבודה. ואני שמח
+                    שינון הוא זה שעשה לי את האתר לא הייתי יכול לבקש דרך קלה יותר
+                    לאתר מושלם!
+                  </p>
+                  <div
+                    class="self-center sm:self-end flex flex-col sm:flex-row gap-x-5 gap-y-2 items-center"
+                  >
+                    <div
+                      class="w-12 h-12 relative border border-appRed-500/10 rounded-full overflow-hidden"
+                    >
+                      <img
+                        alt="המלצה-מאת-מיכאל מנריקס"
+                        src="assets/images/profiles/michael.jpg"
+                        decoding="async"
+                        data-nimg="fill"
+                        class="object-cover"
+                        loading="lazy"
+                        style="
+                          position: absolute;
+                          height: 100%;
+                          width: 100%;
+                          left: 0;
+                          top: 0;
+                          right: 0;
+                          bottom: 0;
+                          color: transparent;
+                        "
+                      />
+                    </div>
+                    <div class="flex flex-col sm:text-right">
+                      <span class="text-sm text-gray-500"
+                        >בעלים של מ.ד. הדפסות</span
+                      ><span class="">מיכאל מנריקס</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !h-auto">
+                <div
+                  class="flex flex-col items-start justify-between h-full px-3 sm:px-10 mb-10 pb-10"
+                >
+                  <p
+                    class="text-base sm:text-2xl font-light leading-normal sm:text-right"
+                  >
+                    מעבר לעבודה המדויקת והמקצועית של ינון, פגשתי באיש מקצוע ישר,
+                    מקצועי ואחראי. ינון הקפיד לעדכן לאורך כל העבודה יחד, תוך
+                    שהוא מסביר ומציג את השלבים שעוברים יחד. הזריזות בשילוב
+                    מקצועיות ואמינות הביאה לתוצר מקצועי בדיוק כמו שדימיינתי. אין
+                    ספק שהעבודה עם ינון משתלמת ומוכיחה את עצמה.
+                  </p>
+                  <div
+                    class="self-center sm:self-end flex flex-col sm:flex-row gap-x-5 gap-y-2 items-center"
+                  >
+                    <div
+                      class="w-12 h-12 relative border border-appRed-500/10 rounded-full overflow-hidden"
+                    >
+                      <img
+                        alt="המלצה-מאת-אמיתי אלירם"
+                        src="assets/images/profiles/amitai.jpg"
+                        decoding="async"
+                        data-nimg="fill"
+                        class="object-cover"
+                        loading="lazy"
+                        style="
+                          position: absolute;
+                          height: 100%;
+                          width: 100%;
+                          left: 0;
+                          top: 0;
+                          right: 0;
+                          bottom: 0;
+                          color: transparent;
+                        "
+                      />
+                    </div>
+                    <div class="flex flex-col sm:text-right">
+                      <span class="text-sm text-gray-500">היזם של ווגו</span
+                      ><span class="">אמיתי אלירם</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide !h-auto">
+                <div
+                  class="flex flex-col items-start justify-between h-full px-3 sm:px-10 mb-10 pb-10"
+                >
+                  <p
+                    class="text-base sm:text-2xl font-light leading-normal sm:text-right"
+                  >
+                    פשוט מדהים ביופיו ובכלל👑 עבודה מצויינת של המפתח.... ערוך
+                    יפה, אפשרויות מתקדמות ועוד. ממש יפה
+                  </p>
+                  <div
+                    class="self-center sm:self-end flex flex-col sm:flex-row gap-x-5 gap-y-2 items-center"
+                  >
+                    <div
+                      class="w-12 h-12 relative border border-appRed-500/10 rounded-full overflow-hidden"
+                    >
+                      <img
+                        alt="המלצה-מאת-לירון"
+                        src="assets/images/profiles/liron-k.png"
+                        decoding="async"
+                        data-nimg="fill"
+                        class="object-cover"
+                        loading="lazy"
+                        style="
+                          position: absolute;
+                          height: 100%;
+                          width: 100%;
+                          left: 0;
+                          top: 0;
+                          right: 0;
+                          bottom: 0;
+                          color: transparent;
+                        "
+                      />
+                    </div>
+                    <div class="flex flex-col sm:text-right">
+                      <span class="text-sm text-gray-500">מגיב בגוגל פלי</span
+                      ><span class="">לירון</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <section
+          id="contact"
+          class="relative flex max-sm:flex-col justify-around items-center py-10 mx-auto text-center mt-20 max-w-4xl min-w-[300px]"
+        >
+          <h2 class="sm:hidden text-4xl font-bold mb-2 relative">
+            <div
+              class="absolute -z-10 bg-appRed-500 h-4 bottom-0 -right-2 w-24"
+            ></div>
+            בואו נדבר
+          </h2>
+          <form
+            class="flex flex-col w-full items-center text-center max-sm:order-3"
+          >
+            <h2 class="max-sm:hidden text-4xl font-bold mb-2">בואו נדבר</h2>
+            <span class="text-lg text-gray-400 italic font-light max-sm:w-40"
+              >שלחו לי מספר טלפון. אחזור אליכם בהקדם</span
+            >
+            <div
+              class="mt-8 sm:mt-14 flex relative w-11/12 sm:w-96 h-14 p-2 border-2 border-appRed-500 rounded-full"
+            >
+              <input
+                class="text-lg placeholder:font-thin text-center absolute inset-0 left-40 px-3 outline-none rounded-full"
+                maxlength="12"
+                type="tel"
+                placeholder="05X-XXX-XXXX"
+                name="phone"
+                id="phone"
+              /><button
+                class="text-lg bg-appRed-500 text-white rounded-full px-12 py-3 font-light transition hover:bg-appRed-400 false inset-0 right-auto absolute rounded-r-none"
+              >
+                דבר אליי ;)
+              </button>
+            </div>
+          </form>
+          <div class="relative w-80 h-72 sm:w-[29rem] sm:h-[29rem]">
+            <img
+              alt="contact-me"
+              src="assets/images/got-mail.svg"
+              decoding="async"
+              data-nimg="fill"
+              class="object-cover"
+              loading="lazy"
+              style="
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                color: transparent;
+              "
+            />
+          </div>
+        </section>
+      </main>
+      <footer class="px-10 py-5 w-full">
+        <div class="flex flex-col mx-auto gap-5 max-w-7xl">
+          <section class="hidden sm:flex items-center justify-between">
+            <a href="/"
+              ><svg
+                width="54"
+                height="42"
+                viewBox="0 0 54 42"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M29.25 41V2C29.25 2 49.7576 2.56156 48.6713 11.856C47.8194 19.144 35.4602 28.5574 35.4602 28.5574C35.4602 28.5574 48.6713 27.3883 52.25 41"
+                  stroke="black"
+                  stroke-width="2"
+                ></path>
+                <path
+                  d="M1.10823 1C1.03814 18.0876 -0.563354 14.5909 11.375 23.4167M11.375 23.4167C23.3134 14.5909 21.7119 18.0876 21.6418 1M11.375 23.4167C11.375 30.2834 11.375 41 11.375 41"
+                  stroke="black"
+                  stroke-width="2"
+                ></path></svg
+            ></a>
+            <ul
+              class="tracking-wide flex flex-col sm:flex-row justify-center items-center gap-x-2 lg:gap-x-4 gap-y-1.5 text-lg sm:text-lg font-light"
+            >
+              <li>
+                <a class="px-2 py-1 block relative" href="/"
+                  >בית
+                  <div
+                    class="absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+              <li>
+                <a class="px-2 py-1 block relative group" href="/#services"
+                  >שירותים
+                  <div
+                    class="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+              <li>
+                <a
+                  class="px-2 py-1 block relative group"
+                  href="/#recommendations"
+                  >המלצות
+                  <div
+                    class="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+              <li>
+                <a class="px-2 py-1 block relative group" href="/#projects"
+                  >תיק עבודות
+                  <div
+                    class="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+              <li>
+                <a class="px-2 py-1 block relative group" href="/#contact"
+                  >יצירת קשר
+                  <div
+                    class="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                  ></div
+                ></a>
+              </li>
+            </ul>
+          </section>
+          <hr />
+          <section
+            class="flex flex-col sm:flex-row items-center justify-center sm:justify-between gap-y-4 my-2 sm:my-0"
+          >
+            <section class="flex items-center gap-2 text-xl flex-row-reverse">
+              <a
+                href="tel:0586741194"
+                class="hover:bg-white/10 flex items-center justify-center w-9 h-9 border border-black text-black rounded-full"
+                aria-label="phone"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M885.6 230.2L779.1 123.8a80.83 80.83 0 0 0-57.3-23.8c-21.7 0-42.1 8.5-57.4 23.8L549.8 238.4a80.83 80.83 0 0 0-23.8 57.3c0 21.7 8.5 42.1 23.8 57.4l83.8 83.8A393.82 393.82 0 0 1 553.1 553 395.34 395.34 0 0 1 437 633.8L353.2 550a80.83 80.83 0 0 0-57.3-23.8c-21.7 0-42.1 8.5-57.4 23.8L123.8 664.5a80.89 80.89 0 0 0-23.8 57.4c0 21.7 8.5 42.1 23.8 57.4l106.3 106.3c24.4 24.5 58.1 38.4 92.7 38.4 7.3 0 14.3-.6 21.2-1.8 134.8-22.2 268.5-93.9 376.4-201.7C828.2 612.8 899.8 479.2 922.3 344c6.8-41.3-6.9-83.8-36.7-113.8z"
+                  ></path></svg></a
+              ><a
+                href="mailto:ynonra@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+                class="hover:bg-white/10 flex items-center justify-center w-9 h-9 border border-black text-black rounded-full"
+                aria-label="email"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 1024 1024"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M928 160H96c-17.7 0-32 14.3-32 32v640c0 17.7 14.3 32 32 32h832c17.7 0 32-14.3 32-32V192c0-17.7-14.3-32-32-32zm-80.8 108.9L531.7 514.4c-7.8 6.1-18.7 6.1-26.5 0L189.6 268.9A7.2 7.2 0 0 1 194 256h648.8a7.2 7.2 0 0 1 4.4 12.9z"
+                  ></path></svg></a
+              ><a
+                href="https://wa.me/972586741194"
+                target="_blank"
+                rel="noreferrer"
+                class="hover:bg-appRed-400 flex items-center justify-center w-9 h-9 bg-appRed-500 text-white rounded-full"
+                aria-label="whatsapp"
+                ><svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  height="1.1em"
+                  width="1.1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M260.062 32C138.605 32 40.134 129.701 40.134 250.232c0 41.23 11.532 79.79 31.559 112.687L32 480l121.764-38.682c31.508 17.285 67.745 27.146 106.298 27.146C381.535 468.464 480 370.749 480 250.232 480 129.701 381.535 32 260.062 32zm109.362 301.11c-5.174 12.827-28.574 24.533-38.899 25.072-10.314.547-10.608 7.994-66.84-16.434-56.225-24.434-90.052-83.844-92.719-87.67-2.669-3.812-21.78-31.047-20.749-58.455 1.038-27.413 16.047-40.346 21.404-45.725 5.351-5.387 11.486-6.352 15.232-6.413 4.428-.072 7.296-.132 10.573-.011 3.274.124 8.192-.685 12.45 10.639 4.256 11.323 14.443 39.153 15.746 41.989 1.302 2.839 2.108 6.126.102 9.771-2.012 3.653-3.042 5.935-5.961 9.083-2.935 3.148-6.174 7.042-8.792 9.449-2.92 2.665-5.97 5.572-2.9 11.269 3.068 5.693 13.653 24.356 29.779 39.736 20.725 19.771 38.598 26.329 44.098 29.317 5.515 3.004 8.806 2.67 12.226-.929 3.404-3.599 14.639-15.746 18.596-21.169 3.955-5.438 7.661-4.373 12.742-2.329 5.078 2.052 32.157 16.556 37.673 19.551 5.51 2.989 9.193 4.529 10.51 6.9 1.317 2.38.901 13.531-4.271 26.359z"
+                  ></path></svg
+              ></a>
+            </section>
+            <div class="sm:hidden my-8">
+              <ul
+                class="tracking-wide flex flex-col sm:flex-row justify-center items-center gap-x-2 lg:gap-x-4 gap-y-1.5 text-lg sm:text-lg font-light"
+              >
+                <li>
+                  <a class="px-2 py-1 block relative" href="/"
+                    >בית
+                    <div
+                      class="absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                    ></div
+                  ></a>
+                </li>
+                <li>
+                  <a class="px-2 py-1 block relative group" href="/#services"
+                    >שירותים
+                    <div
+                      class="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                    ></div
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="px-2 py-1 block relative group"
+                    href="/#recommendations"
+                    >המלצות
+                    <div
+                      class="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                    ></div
+                  ></a>
+                </li>
+                <li>
+                  <a class="px-2 py-1 block relative group" href="/#projects"
+                    >תיק עבודות
+                    <div
+                      class="scale-x-90 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                    ></div
+                  ></a>
+                </li>
+                <li>
+                  <a class="px-2 py-1 block relative group" href="/#contact"
+                    >יצירת קשר
+                    <div
+                      class="scale-x-75 opacity-0 group-hover:opacity-100 transition duration-200 group-hover:scale-100 absolute -bottom-0.5 -inset-x-0 h-1 rounded bg-appRed-500"
+                    ></div
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <a target="_blank" href="https://sensei.art"
+              >UX/UI Design by sensei.art</a
+            >
+          </section>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
