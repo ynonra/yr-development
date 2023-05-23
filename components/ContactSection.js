@@ -16,12 +16,13 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
 
   const validate = () => {
     const phone = phoneRef.current.value.replace(/\D/g, "");
+    if (phone === "6504992804")
+      return alert("contact via email please - ynonra@gmail.com");
     return /^\d{7,10}$/.test(phone);
   };
 
   const onSubmit = async (event) => {
     event.preventDefault();
-
     const isValid = validate();
     if (!isValid) {
       return setError("המספר אינו תקין");
