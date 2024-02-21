@@ -50,7 +50,7 @@ const TECHNOLOGIES = {
   },
   [techTypes.tailwindcss]: {
     imageUrl:
-      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original-wordmark.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   [techTypes.firebase]: {
     imageUrl:
