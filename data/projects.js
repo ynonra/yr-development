@@ -2,6 +2,26 @@ import { techTypes } from "./technologies";
 
 export const PROJECTS_DATA = [
   {
+    slug: "rivka-rahamim",
+    logoFilename: "rivka-rahamim.png",
+    logoScale: 1,
+    title: "רבקה רחמים",
+    inShort: "אתר תדמית מעוצב למאפרת ומעצבת שיער",
+    customerNeed:
+      "הלקוחה בעלת עסק חדש בתחום האיפור והשיער, ורצתה להקים אתר תדמיתי שיציג את השירותים שלה ויאפשר ללקוחות חדשים להכיר ולהתרשם מכישוריה. הדרישה הייתה לאתר ייחודי ומעוצב, שיתאים לסגנון העסק ויבדל את הלקוחה משאר נותני השירותים בתחום.",
+    developmentProcess:
+      "תהליך הפיתוח כלל אפיון ועיצוב מדוייק מטעם מעצבת מקצועית. לאחר התאמות ושינויים, הלקוחה אישרה את העיצוב, ומשם העבודה הייתה בצד הפיתוח שלי, תוך בדיקה של תאימות למגוון רחב של גדלי-מסכים, והטמעת עיצוב מוקפד ואלגנטי.\nהפיתוח נעשה באמצעות Astro ו-tailwind, על מנת לשפר את ביצועי האתר ולשלוט באופן מלא על הניראות של האלמנטים באתר.\nיחד עם זאת, החלטתי להפתיע את הלקוחה עם בונוס מטורף על חשבון הבית, של עיצוב ופיתוח ישומון שיעזור לה להתפרסם. כי ככה זה שמערבבים עבודה עם משפחה ;)",
+    technologies: [techTypes.astro, techTypes.tailwindcss],
+    impact:
+      "המוצר הדיגיטלי החדש יצר ללקוחה נכס חדש ומודרני, שמסייע לה להגיע ללקוחות חדשים ולהציג את כישוריה בצורה מקצועית ומרשימה. האתר קיבל תגובות חיוביות רבות מלקוחות חדשים וקיימים, והוא מהווה כיום כלי מרכזי וחשוב בתהליך השיווק של העסק.",
+    links: {
+      websiteUrl: "https://rivka-rahamim.co.il",
+      googlePlayUrl: "https://play.google.com/store/apps/details?id=com.ipurim&utm_source=yr-development",
+      appStoreUrl:
+        "https://apps.apple.com/il/app/%D7%90-%D7%99-%D7%A4%D7%95%D7%A8%D7%99%D7%9D/id6478288683?l=he&utm_source=yr-development",
+    },
+  },
+  {
     slug: "classweekly",
     logoFilename: "classweekly.png",
     logoScale: 1,

@@ -1,6 +1,7 @@
 export const techTypes = {
   php: "php",
   nodejs: "nodejs",
+  astro: "astro",
   nextjs: "nextjs",
   vuejs: "vuejs",
   javascript: "javascript",
@@ -27,6 +28,10 @@ const TECHNOLOGIES = {
   [techTypes.nodejs]: {
     imageUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  },
+  [techTypes.astro]: {
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
   },
   [techTypes.nextjs]: {
     imageUrl:
