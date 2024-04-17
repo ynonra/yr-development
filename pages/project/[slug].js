@@ -145,7 +145,7 @@ const Project = ({ data }) => {
         src={`/images/works/${data.slug}/3.png`}
         key={`${data.slug}-mockup-3`}
         alt={`${data.slug}-mockup`}
-        className="object-contain mx-auto mt-32 mb-12 w-auto"
+        className="object-contain mx-auto mt-32 mb-12"
         width={600}
         height={600}
       />

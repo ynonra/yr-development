@@ -53,6 +53,24 @@ export const PROJECTS_DATA = [
     links: { websiteUrl: "https://classweekly.com" },
   },
   {
+    slug: "jokes-israel",
+    logoFilename: "jokes-israel.png",
+    logoScale: 1,
+    title: "בדיחות כחולבן",
+    inShort: "יישומון חברתי לשיתוף בדיחות ישראליות",
+    customerNeed:
+      "הפרוייקט הזה פותח ביוזמתי כחלק מתהליך הלמידה שלי לפתח אפליקציות עם flutter. כחובב צחוק (ובמיוחד בדיחות פנימיות), רציתי לפתח יישומון שיאפשר למשתמשים לשתף בדיחות, לסמן ׳לייק׳, ולצפות בפרופילים של משתמשים אחרים. ",
+    developmentProcess:
+      "תהליך הפיתוח כלל איפיון ועיצוב בסיסי. בצד השרת השתמשתי בפיירבייס בלבד, כדי לחסוך בעלויות שרת (ממש בחינם עד לכתיבת שורות אלה).\nבצד הלקוח, הפיתוח נעשה ב-Flutter, מתוך למידה הדרגתית של הפריימוורק הנפלא הזה.\nבנוסף, כדי לשלוט על התוכן המוצג באתר, יצרתי איזור ניהול שבו אני יכול להוסיף ולערוך תוכן כמו קטגוריות, בדיחות, וכו׳",
+    technologies: [techTypes.firebase, techTypes.flutter],
+    impact:
+      "היישומון פורסם בחנות של גוגל פלי בלבד, בגירסת בטא, ואף על פי שלא פרסמתי אותו כלל וכלל, מאות משתמשים כבר הורידו אותו ומפרסמים וקוראים בדיחות באופן קבוע... די מרשים לא ? :)\nמוזמנים לצחוק קצת גם אתם !",
+    links: {
+      googlePlayUrl:
+        "https://play.google.com/store/apps/details?id=com.jokes.israel.jokes_israel",
+    },
+  },
+  {
     slug: "vogo",
     logoFilename: "vogo-big.svg",
     logoScale: 0.9,
