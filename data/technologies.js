@@ -11,10 +11,11 @@ export const techTypes = {
   firebase: "firebase",
   react: "react",
   "react-native": "react-native",
+  flutter: "flutter",
   mongodb: "mongodb",
   cloudinary: "cloudinary",
   "material-ui": "material-ui",
-  "RNUILib": "RNUILib",
+  RNUILib: "RNUILib",
   "react-native-paper": "react-native-paper",
   "google-cloud": "google-cloud",
   pwa: "pwa",
@@ -68,6 +69,10 @@ const TECHNOLOGIES = {
   [techTypes["react-native"]]: {
     imageUrl:
       "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  },
+  [techTypes.flutter]: {
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
   },
   [techTypes.mongodb]: {
     imageUrl:
