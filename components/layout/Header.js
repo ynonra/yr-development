@@ -38,9 +38,7 @@ const Header = () => {
       {/* *********** */}
 
       <header
-        className={`hidden sm:block z-20  inset-0 bottom-auto px-10 py-5 bg-white ${
-          headerData.desktopHeightClass
-        }`}
+        className={`hidden sm:block z-20 fixed inset-x-0 top-0 px-10 py-5 bg-white ${headerData.desktopHeightClass}`}
       >
         <div
           className={`flex flex-row mx-auto h-full justify-between items-center gap-y-8 ${headerData.maxWidthClass}`}
