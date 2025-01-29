@@ -8,7 +8,7 @@ const RecommendationCard = ({
 }) => {
   return (
     <div className="flex flex-col items-start justify-between h-full px-3 sm:px-10 mb-10 pb-10">
-      <p className="text-base sm:text-2xl font-light leading-normal sm:text-right">
+      <p className="text-base sm:text-2xl font-light leading-normal sm:text-right whitespace-pre-line">
         {description}
       </p>
       <div className="self-center sm:self-end flex flex-col sm:flex-row gap-x-5 gap-y-2 items-center">
