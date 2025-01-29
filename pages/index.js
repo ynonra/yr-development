@@ -35,7 +35,8 @@ export default function Home() {
           content="אנו מציעים ללקוחותינו מגוון פתרונות טכנולוגיים שישדרגו להם את העסק. מערכות ניהול, אתרי תדמית, אפליקציות, עיצוב ואיפיון, כתיבת תוכן ועוד. המחירים הוגנים, והתוצאה?... בואו לראות בעצמכם..."
         />
       </Head>
-      {/* 1 - INTRO */}
+      {/* MARK: 1 - INTRO
+       */}
       <section className="flex justify-center sm:justify-between items-center mt-0 sm:mt-24">
         <HashLinkAnchor id="home" />
 
@@ -79,7 +80,8 @@ export default function Home() {
           />
         </div>
       </section>
-      {/* 2 - ABOUT ME */}
+      {/* MARK: 2 - ABOUT ME
+       */}
       <section className="flex flex-col sm:flex-row items-center sm:items-start sm:justify-between mt-24 sm:mt-52 max-w-5xl mx-auto anchor-link-offset">
         <HashLinkAnchor id="about-me" offset={30} />
         {/* my image */}
@@ -189,7 +191,8 @@ export default function Home() {
         </article>
       </section>
       <div className="max-w-5xl mx-auto">
-        {/* 3 - SERVICES */}
+        {/* MARK: 3 - SERVICES
+         */}
         <section className="border-2 border-appRed-500 px-3 sm:px-10 py-5 sm:py-10 mx-auto text-center mt-28 max-w-4xl">
           <HashLinkAnchor id="services" />
           <h2 className="text-4xl font-bold mb-6">
@@ -264,7 +267,8 @@ export default function Home() {
             />
           </div>
         </section>
-        {/* 4 - Works */}
+        {/* MARK: 4 - Works
+         */}
         <section className="mt-24">
           <HashLinkAnchor id="projects" />
           <h2 className="text-4xl font-bold mb-10 text-center sm:text-right">
@@ -282,7 +286,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* 5 - RECOMMENDATIONS */}
+        {/* MARK: 5 - Reviews
+         */}
         <section className="border-2 border-appRed-500 bg-white py-10 mx-auto text-center mt-28 max-w-4xl relative">
           <HashLinkAnchor id="recommendations" />
           <h2 className="text-4xl font-bold mb-12 mx-10 sm:text-right">
@@ -315,7 +320,8 @@ export default function Home() {
             ))}
           </Swiper>
         </section>
-        {/* 6 - CONTACT */}
+        {/* MARK: 6 - CONTACT
+         */}
         <ContactSection />
       </div>
     </>

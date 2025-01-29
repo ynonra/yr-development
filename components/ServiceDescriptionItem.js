@@ -20,7 +20,7 @@ const ServiceDescriptionItem = ({
       </div>
       <div className="text-right">
         <h3 className="text-2xl font-rubik self-start mb-4">{title}</h3>
-        <p className="">{description}</p>
+        <p className="leading-normal">{description}</p>
       </div>
     </article>
   );
