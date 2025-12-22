@@ -8,7 +8,7 @@ const ContactIcons = ({ reverse = false }) => {
       }`}
     >
       <a
-        href="https://wa.me/972586741194"
+        href="https://wa.me/972546741194"
         target="_blank"
         rel="noreferrer"
         className="flex items-center justify-center w-10 h-10 bg-appRed-500 text-white rounded-full"
@@ -17,7 +17,7 @@ const ContactIcons = ({ reverse = false }) => {
         <AiOutlineWhatsApp size={"1.1em"} />
       </a>
       <a
-        href="tel:0586741194"
+        href="tel:0546741194"
         className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full"
         aria-label="phone"
       >
