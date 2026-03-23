@@ -10,7 +10,7 @@ import WorkCard from "../components/WorkCard";
 import WorkStepCard from "../components/WorkStepCard";
 import RecommendationCard from "../components/RecommendationCard";
 import HashLinkAnchor from "../components/HashLinkAnchor";
-import { Pagination, A11y } from "swiper";
+import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -303,7 +303,6 @@ export default function Home() {
               bulletActiveClass: "!bg-appRed-500 !opacity-100 !h-3.5 !w-2.5",
               bulletClass:
                 "transition-all w-2 h-2 rounded-full bg-gray-300 rotate-90",
-              horizontalClass: "flex justify-center items-center gap-2 w-20",
             }}
             modules={[Pagination]}
             autoplay

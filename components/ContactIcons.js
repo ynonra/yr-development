@@ -1,4 +1,4 @@
-import { AiOutlineMail, AiFillPhone, AiOutlineWhatsApp } from "react-icons/ai";
+import { AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 
 const ContactIcons = ({ reverse = false }) => {
   return (
@@ -8,20 +8,13 @@ const ContactIcons = ({ reverse = false }) => {
       }`}
     >
       <a
-        href="https://wa.me/972546741194"
+        href="https://www.linkedin.com/in/%D7%99%D7%A0%D7%95%D7%9F-%D7%A8%D7%97%D7%9E%D7%99%D7%9D-328a9620a"
         target="_blank"
         rel="noreferrer"
         className="flex items-center justify-center w-10 h-10 bg-appRed-500 text-white rounded-full"
-        aria-label="whatsapp"
+        aria-label="linkedin"
       >
-        <AiOutlineWhatsApp size={"1.1em"} />
-      </a>
-      <a
-        href="tel:0546741194"
-        className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full"
-        aria-label="phone"
-      >
-        <AiFillPhone />
+        <AiFillLinkedin size={"1.1em"} />
       </a>
       <a
         href="mailto:ynonra@gmail.com"

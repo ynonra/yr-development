@@ -1,34 +1,19 @@
-import { Fragment, useState, useEffect } from "react";
+import { useState } from "react";
 import ContactIcons from "../ContactIcons";
 import Logo from "../Logo";
 import { headerData } from "./data";
 import NavLinks from "./NavLinks";
 import { BiMenu } from "react-icons/bi";
-import { AiOutlineClose } from "react-icons/ai";
-import { Dialog, Transition } from "@headlessui/react";
+import { Dialog, DialogPanel, Transition, TransitionChild } from "@headlessui/react";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  // useEffect(() => {
-  //   console.log("useEffect", drawerOpen);
-  //   if (drawerOpen) {
-  //     document.documentElement.style.overflow = "hidden";
-  //   } else {
-  //     document.documentElement.style.overflow = "";
-  //   }
-  // }, [drawerOpen]);
-
   const toggleDrawer = () => {
-    console.log("toggleDrawer, from", drawerOpen);
     setDrawerOpen((open) => !open);
   };
   const closeDrawer = () => {
-    console.log("closeDrawer");
     setDrawerOpen(false);
-  };
-  const openDrawer = () => {
-    setDrawerOpen(true);
   };
 
   return (
@@ -80,10 +65,9 @@ const Header = () => {
         <BiMenu className="z-10" />
       </button>
 
-      <Transition appear show={drawerOpen} as={Fragment}>
+      <Transition appear show={drawerOpen}>
         <Dialog as="div" className="relative z-30" onClose={closeDrawer}>
-          <Transition.Child
-            as={Fragment}
+          <TransitionChild
             enter="ease-out duration-300"
             enterFrom="opacity-0"
             enterTo="opacity-100"
@@ -98,12 +82,11 @@ const Header = () => {
                 WebkitBackdropFilter: "blur(16px)",
               }}
             />
-          </Transition.Child>
+          </TransitionChild>
 
           <div className="fixed inset-0 overflow-y-auto">
             <div className="flex min-h-full items-center justify-center p-4 text-center">
-              <Transition.Child
-                as={Fragment}
+              <TransitionChild
                 enter="ease-out duration-500"
                 enterFrom="opacity-0 scale-105"
                 enterTo="opacity-100 scale-100"
@@ -111,7 +94,7 @@ const Header = () => {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="transform overflow-hidden transition-all">
+                <DialogPanel className="transform overflow-hidden transition-all">
                   <div
                     className={`flex flex-col sm:flex-row mx-auto justify-center h-full sm:justify-between items-center gap-y-8 ${headerData.maxWidthClass}`}
                   >
@@ -123,8 +106,8 @@ const Header = () => {
                     </nav>
                     <ContactIcons />
                   </div>
-                </Dialog.Panel>
-              </Transition.Child>
+                </DialogPanel>
+              </TransitionChild>
             </div>
           </div>
         </Dialog>

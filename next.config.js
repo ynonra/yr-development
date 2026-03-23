@@ -1,11 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  output: "export",
   images: {
-    domains: [
-      "cdn.jsdelivr.net",
-      "res.cloudinary.com",
-      "arpitbhalla.gallerycdn.vsassets.io",
+    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "cdn.jsdelivr.net",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "https",
+        hostname: "arpitbhalla.gallerycdn.vsassets.io",
+      },
     ],
   },
 };

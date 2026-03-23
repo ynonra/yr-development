@@ -29,6 +29,13 @@ p {
   visibility: hidden;
   pointer-events: none;
 }
+.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 5rem;
+}
 #__next {
   display: flex;
   flex-direction: column;

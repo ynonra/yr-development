@@ -12,7 +12,7 @@ import HashLinkAnchor from "../../components/HashLinkAnchor";
 export async function getStaticPaths() {
   return {
     paths: PROJECTS_DATA.map(({ slug }) => ({ params: { slug } })),
-    fallback: true, // can also be true or 'blocking'
+    fallback: false,
   };
 }
 
