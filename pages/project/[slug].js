@@ -24,6 +24,9 @@ export async function getStaticProps(context) {
   };
 }
 
+const Paragraphs = ({ text }) =>
+  text.split("\n").map((str) => <p key={str.slice(-10)}>{str}</p>);
+
 const Project = ({ data }) => {
   if (!data)
     return (
@@ -35,9 +38,6 @@ const Project = ({ data }) => {
         <AppButton href="/#projects">לתיק עבודות</AppButton>
       </div>
     );
-
-  const Paragraphs = ({ text }) =>
-    text.split("\n").map((str) => <p key={str.slice(-10)}>{str}</p>);
 
   const documentTitle = `ינון רחמים | פרוייקט ${data.title}`;
 
