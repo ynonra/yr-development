@@ -24,6 +24,9 @@ export async function getStaticProps(context) {
   };
 }
 
+const Paragraphs = ({ text }) =>
+  text.split("\n").map((str) => <p key={str.slice(-10)}>{str}</p>);
+
 const Project = ({ data }) => {
   if (!data)
     return (
@@ -35,9 +38,6 @@ const Project = ({ data }) => {
         <AppButton href="/#projects">לתיק עבודות</AppButton>
       </div>
     );
-
-  const Paragraphs = ({ text }) =>
-    text.split("\n").map((str) => <p key={str.slice(-10)}>{str}</p>);
 
   const documentTitle = `ינון רחמים | פרוייקט ${data.title}`;
 
@@ -80,7 +80,7 @@ const Project = ({ data }) => {
             ספר לי עוד
           </AppButton>
         </div>
-        <div className="max-sm:hidden w-[35rem] h-[29rem] relative my-24">
+        <div className="max-sm:hidden w-140 h-116 relative my-24">
           <Image
             src={`/images/works/${data.slug}/1.png`}
             key={`${data.slug}-mockup-1`}
@@ -106,7 +106,7 @@ const Project = ({ data }) => {
       {/* 2 - Description */}
       <section className="flex max-lg:flex-col justify-between items-start mt-20 sm:mt-48">
         <div className="w-full flex justify-center lg:ml-8">
-          <div className="w-96 h-96 lg:w-[29rem] lg:h-[40rem] relative mb-14 lg:mb-0">
+          <div className="w-96 h-96 lg:w-116 lg:h-160 relative mb-14 lg:mb-0">
             <Image
               src={`/images/works/${data.slug}/2.png`}
               key={`${data.slug}-mockup-2`}

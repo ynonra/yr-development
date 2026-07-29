@@ -26,7 +26,7 @@ const weWillSpeakSoonPage = () => {
           </div>
           <AppButton href="/#projects">תיק עבודות</AppButton>
         </div>
-        <div className="w-64 sm:w-[35rem] h-64 sm:h-[35rem] relative">
+        <div className="w-64 sm:w-140 h-64 sm:h-140 relative">
           {/* <Image
             src="/images/medal.svg"
             fill

@@ -71,7 +71,7 @@ export default function Home() {
             ספר לי עוד
           </AppButton>
         </div>
-        <div className="hidden sm:block w-[25rem] h-[25rem] relative">
+        <div className="hidden sm:block w-100 h-100 relative">
           <Image
             src="/images/light.svg"
             fill
@@ -90,14 +90,14 @@ export default function Home() {
           נעים להכיר
         </h2>
         <div className="flex w-full sm:w-1/2">
-          <div className="w-full h-96 px-8 sm:w-[26rem] sm:h-[36rem] relative">
+          <div className="w-full h-96 px-8 sm:w-104 sm:h-144 relative">
             <Image
               src="/images/me.png"
               fill
               alt="ינון-רחמים"
               className="object-contain"
             />
-            <div className="bg-appPurple-500 rounded-full absolute w-[70vw] h-[70vw] sm:h-96 sm:w-96 top-5 -z-10 left-1/2 -translate-x-[48%]" />
+            <div className="bg-appPurple-500 rounded-full absolute w-[70vw] h-[70vw] sm:h-96 sm:w-96 top-5 -z-10 left-1/2 translate-x-[-48%]" />
           </div>
         </div>
         <article className="sm:w-1/2 mt-10 sm:mt-0 px-6 sm:px-0">
@@ -294,13 +294,13 @@ export default function Home() {
             לקוחות מספרים
           </h2>
           <div className="-z-10 absolute top-[58%] left-1/2 -translate-x-1/2 rotate-12">
-            <div className="bg-appRed-500/50 w-[100vw] h-20" />
+            <div className="bg-appRed-500/50 w-screen h-20" />
             <div className="bg-appRed-500/10 w-[200vw] h-20" />
           </div>
           <Swiper
             pagination={{
               clickable: true,
-              bulletActiveClass: "!bg-appRed-500 !opacity-100 !h-3.5 !w-2.5",
+              bulletActiveClass: "bg-appRed-500! opacity-100! h-3.5! w-2.5!",
               bulletClass:
                 "transition-all w-2 h-2 rounded-full bg-gray-300 rotate-90",
             }}
@@ -308,7 +308,7 @@ export default function Home() {
             autoplay
           >
             {RECOMMENDATIONS.map(({ description, profile }) => (
-              <SwiperSlide className="!h-auto" key={profile.role}>
+              <SwiperSlide className="h-auto!" key={profile.role}>
                 <RecommendationCard
                   description={description}
                   profileImageFilename={profile.imageFilename}
