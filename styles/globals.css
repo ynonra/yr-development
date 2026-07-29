@@ -1,26 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-body {
-  direction: rtl;
-  font-family: "Open sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
+@theme {
+  --font-*: initial;
+  --font-rubik:
+    Rubik, Open sans, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI;
+
+  --color-appRed-100: #fededb;
+  --color-appRed-500: #e87f75;
+
+  --color-appPurple-500: #99adf9;
 }
-main {
-  padding: 0 1rem;
-  overflow-x: hidden;
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
 }
-p {
-  line-height: 1.8;
-  margin-bottom: 0.2rem;
+
+/*
+  These element-level defaults must stay inside `@layer base`. Unlayered CSS
+  beats every cascade layer in v4, so leaving them at the top level would let
+  them override utility classes (`main` padding vs `py-12`, `p` margin vs
+  `mb-6`) — the opposite of the v3 behaviour, where utilities won on
+  specificity.
+*/
+@layer base {
+  body {
+    direction: rtl;
+    font-family: "Open sans", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+  }
+  main {
+    padding: 0 1rem;
+    overflow-x: hidden;
+  }
+  p {
+    line-height: 1.8;
+    margin-bottom: 0.2rem;
+  }
+  ::placeholder {
+    font-family: "Open sans", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+      "Helvetica Neue", sans-serif;
+  }
 }
-::placeholder {
-  font-family: "Open sans", system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-    sans-serif;
-}
+
 .anchor-link-offset::before {
   display: block;
   content: " ";

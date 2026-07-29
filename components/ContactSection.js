@@ -75,7 +75,7 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
         )}
         <div className="mt-8 sm:mt-14 flex relative w-11/12 sm:w-80 h-14 p-2 border-2 border-appRed-500/40 rounded-lg">
           <input
-            className="text-lg placeholder:font-thin text-center absolute inset-0 left-24 px-3 outline-none rounded-lg"
+            className="text-lg placeholder:font-thin text-center absolute inset-0 left-24 px-3 outline-hidden rounded-lg"
             maxLength={12}
             type="tel"
             placeholder="05X-XXX-XXXX"
@@ -101,7 +101,7 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
         )}
       </form>
       {!dialogMode && (
-        <div className="relative w-80 h-72 sm:w-[29rem] sm:h-[29rem]">
+        <div className="relative w-80 h-72 sm:w-116 sm:h-116">
           <Image
             // src="/images/finish-line.svg"
             src="/images/got-mail.svg"
