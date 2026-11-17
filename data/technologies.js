@@ -19,6 +19,11 @@ export const techTypes = {
   "react-native-paper": "react-native-paper",
   "google-cloud": "google-cloud",
   pwa: "pwa",
+  typescript: "typescript",
+  cloudflare: "cloudflare",
+  "react-router": "react-router",
+  sqlite: "sqlite",
+  contentful: "contentful",
 };
 
 const TECHNOLOGIES = {
@@ -99,6 +104,26 @@ const TECHNOLOGIES = {
   },
   [techTypes.RNUILib]: {
     imageUrl: "/images/rnui.png",
+  },
+  [techTypes.typescript]: {
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
+  [techTypes.cloudflare]: {
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg",
+  },
+  [techTypes["react-router"]]: {
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/reactrouter/reactrouter-original.svg",
+  },
+  [techTypes.sqlite]: {
+    imageUrl:
+      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original.svg",
+  },
+  [techTypes.contentful]: {
+    imageUrl:
+      "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/contentful.svg",
   },
 };
 
