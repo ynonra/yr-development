@@ -3,6 +3,7 @@ import { techTypes } from "./technologies";
 export const PROJECTS_DATA = [
   {
     slug: "mishkan-ariel",
+    kind: "חנות אונליין ומערכת ניהול",
     logoFilename: "mishkan-ariel.svg",
     logoScale: 1,
     title: "משכן אריאל",
@@ -25,6 +26,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "melody-trails",
+    kind: "פלטפורמה לימודית וחנות",
     logoFilename: "melody-trails.svg",
     logoScale: 1,
     title: "טיולים בצלילים",
@@ -50,6 +52,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "rivka-rahamim",
+    kind: "אתר תדמית",
     logoFilename: "rivka-rahamim.png",
     logoScale: 1,
     title: "רבקה רחמים",
@@ -71,6 +74,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "classweekly",
+    kind: "אתר מכירות",
     logoFilename: "classweekly.png",
     logoScale: 1,
     title: "ClassWeekly",
@@ -86,6 +90,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "simana",
+    kind: "יישומון ללימוד",
     logoFilename: "סימנא.svg",
     title: "סימנא",
     inShort:
@@ -112,6 +117,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "jokes-israel",
+    kind: "אפליקציה חברתית",
     logoFilename: "jokes-israel.png",
     logoScale: 1,
     title: "בדיחות כחולבן",
@@ -130,6 +136,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "ateret-mordechay",
+    kind: "אתר ומערכת ניהול תוכן",
     logoFilename: "ateret-mordechay.png",
     logoScale: 0.8,
     title: "ישיבת עטרת מרדכי",
@@ -145,6 +152,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "vogo",
+    kind: "מערכת לעמותות",
     logoFilename: "vogo-big.svg",
     logoScale: 0.9,
     title: "ווגו",
@@ -168,6 +176,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "memdalet",
+    kind: "חנות אונליין",
     logoFilename: "מם-דלת.gif",
     title: "מ.ד. הדפסות",
     inShort:
@@ -188,6 +197,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "kaf-hachaim",
+    kind: "אפליקציה",
     logoFilename: "כף החיים.png",
     logoScale: 0.6,
     title: "כף החיים",
@@ -206,6 +216,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "birkat-eliyahu",
+    kind: "אתר ומערכת ניהול",
     title: 'בד"ץ ברכת אליהו',
     logoFilename: "ברכת אליהו.svg",
     logoScale: 0.9,
@@ -226,6 +237,7 @@ export const PROJECTS_DATA = [
   },
   {
     slug: "squadd",
+    kind: "אפליקציה חברתית",
     title: "Squadd",
     logoFilename: "squadd-big.png",
     inShort:

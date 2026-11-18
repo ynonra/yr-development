@@ -1,0 +1,155 @@
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import { PiShoppingBagOpenFill, PiMagnifyingGlassBold } from "react-icons/pi";
+import { RiRobot2Fill } from "react-icons/ri";
+import ContactDialog from "../ContactDialog";
+import HashLinkAnchor from "../HashLinkAnchor";
+import HandNote from "./HandNote";
+import { PROJECTS_DATA } from "../../data/projects";
+
+const chip =
+  "absolute bg-white rounded-2xl border border-line shadow-[0_12px_32px_-12px_rgba(27,32,64,0.28)] text-ink animate-chip-in";
+
+const PhotoStage = () => (
+  <div className="relative w-full max-w-[340px] sm:max-w-[430px] mx-auto aspect-[1/1.2]">
+    {/* periwinkle disc, the photo's head rises above it */}
+    <div className="absolute inset-x-0 bottom-0 aspect-square rounded-full bg-peri" />
+    <div
+      className="absolute inset-0 overflow-hidden"
+      style={{ borderRadius: "0 0 50% 50% / 0 0 41.67% 41.67%" }}
+    >
+      <Image
+        src="/images/yinon.webp"
+        alt="ינון רחמים"
+        width={900}
+        height={897}
+        priority
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[112%] max-w-none"
+      />
+    </div>
+
+    {/* things I build, floating around me */}
+    <div
+      className={`${chip} top-[66%] -right-2 sm:top-[34%] sm:-right-24 flex items-center gap-2.5 px-3 py-2.5`}
+      style={{ animationDelay: "250ms" }}
+    >
+      <span className="grid place-items-center w-8 h-8 rounded-full bg-coral text-white text-base">
+        <PiShoppingBagOpenFill />
+      </span>
+      <span className="leading-tight">
+        <span className="block text-sm font-semibold">הזמנה חדשה התקבלה</span>
+        <span className="block text-xs text-ink-soft">₪480, לפני דקה</span>
+      </span>
+    </div>
+
+    <div
+      className={`${chip} bottom-[-4%] -left-2 sm:bottom-[22%] sm:-left-20 w-52 sm:w-60 p-3`}
+      style={{ animationDelay: "500ms" }}
+    >
+      <span className="flex items-center gap-1.5 text-xs font-semibold text-ink-soft mb-1.5">
+        <RiRobot2Fill className="text-peri text-sm" />
+        סוכן AI
+      </span>
+      <span className="block text-sm leading-snug bg-mist rounded-xl rounded-tr-sm px-3 py-2">
+        מצאתי 3 מתנות לבר מצווה עד ₪300. לשלוח לך?
+      </span>
+    </div>
+
+    <div
+      className={`${chip} hidden sm:block bottom-[2%] -right-16 w-56 p-3`}
+      style={{ animationDelay: "750ms" }}
+    >
+      <span className="flex items-center gap-2 text-xs text-ink-soft border border-line rounded-full px-3 py-1.5">
+        <PiMagnifyingGlassBold />
+        חנות יודאיקה בצפון
+      </span>
+      <span className="flex items-baseline justify-between gap-2 mt-2 px-1">
+        <span className="text-sm font-semibold text-[#1a0dab]">העסק שלכם</span>
+        <span className="text-[11px] text-ink-soft">תוצאה ראשונה</span>
+      </span>
+    </div>
+
+    <HandNote
+      arrow="down-right"
+      className="absolute top-[2%] -left-2 sm:-left-10 text-base sm:text-lg text-ink-soft"
+      arrowClassName="mr-6 text-coral"
+    >
+      זה אני. החליפה רק לתמונה ;)
+    </HandNote>
+  </div>
+);
+
+const Hero = () => {
+  const [contactOpen, setContactOpen] = useState(false);
+  const logos = PROJECTS_DATA.filter((p) => p.logoFilename);
+
+  return (
+    <section className="pt-6 sm:pt-14">
+      <HashLinkAnchor id="home" />
+      <div className="grid lg:grid-cols-[1.15fr_1fr] items-center gap-x-10 gap-y-14">
+        <div className="text-center lg:text-right">
+          <h1 className="font-display font-extrabold text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-[4.4rem]">
+            <span className="block">
+              יוצר{" "}
+              <span className="relative inline-block">
+                <span className="absolute -z-10 inset-x-[-0.12em] bottom-[0.1em] h-[0.28em] bg-coral" />
+                מוצרים
+              </span>
+            </span>
+            <span className="block">דיגיטליים, מהר</span>
+            <span className="block">ובאיכות גבוהה</span>
+          </h1>
+          <p className="mt-6 text-lg sm:text-xl text-ink-soft max-w-xl mx-auto lg:mx-0">
+            אם אתם יכולים לחלום את זה, אני יכול ליצור את זה. אתרים, חנויות
+            אונליין, אפליקציות וסוכני AI, בפיתוח מבוסס AI שחוסך לכם זמן בלי
+            לוותר על איכות.
+          </p>
+          <div className="mt-9 flex flex-wrap justify-center lg:justify-start gap-3">
+            <button
+              type="button"
+              onClick={() => setContactOpen(true)}
+              className="rounded-full bg-ink text-white font-semibold px-7 py-3.5 transition-colors hover:bg-coral-ink cursor-pointer"
+            >
+              בואו נדבר
+            </button>
+            <Link
+              href="/#projects"
+              className="rounded-full border-2 border-ink/15 font-semibold px-7 py-3 transition-colors hover:border-ink"
+            >
+              לעבודות שלי
+            </Link>
+          </div>
+          <ContactDialog open={contactOpen} onClose={() => setContactOpen(false)} />
+        </div>
+        <PhotoStage />
+      </div>
+
+      <div className="mt-20 sm:mt-24">
+        <p className="text-sm text-ink-soft text-center lg:text-right mb-6">
+          חלק מהעסקים והמיזמים שבניתי עבורם
+        </p>
+        <ul className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 place-items-center gap-x-6 gap-y-8">
+          {logos.map(({ slug, logoFilename, title }) => (
+            <li key={slug}>
+              <Link
+                href={`/project/${slug}`}
+                className="relative block w-24 h-10 sm:w-28 sm:h-12 grayscale opacity-60 transition hover:grayscale-0 hover:opacity-100"
+              >
+                <Image
+                  src={`/images/works-logos/${logoFilename}`}
+                  alt={title}
+                  fill
+                  sizes="112px"
+                  className="object-contain"
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

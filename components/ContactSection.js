@@ -1,10 +1,10 @@
 import { useState, useRef } from "react";
 
-import Image from "next/image";
 import AppButton from "./AppButton";
 import HashLinkAnchor from "./HashLinkAnchor";
 import { useRouter } from "next/router";
 import ContactIcons from "./ContactIcons";
+import HandNote from "./home/HandNote";
 
 const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => {
   const phoneRef = useRef(null);
@@ -52,65 +52,92 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
 
   const clearError = () => setError("");
 
-  return (
-    <section
-      className={`flex max-sm:flex-col justify-around items-center py-10 mx-auto text-center ${
-        !dialogMode ? "mt-20" : ""
-      } max-w-4xl min-w-[300px]`}
-    >
-      <HashLinkAnchor id="contact" />
-      <h2 className="sm:hidden text-4xl font-bold mb-2 relative">
-        <div className="absolute -z-10 bg-appRed-500 h-4 bottom-0 -right-2 w-24"></div>
-        {title}
-      </h2>
-      <form
-        onSubmit={onSubmit}
-        className="flex flex-col w-full items-center text-center max-sm:order-3"
-      >
-        <h2 className="max-sm:hidden text-4xl font-bold mb-2">{title}</h2>
-        {!dialogMode && (
-          <span className="text-lg text-gray-400 italic font-light max-sm:w-40">
-            שלחו לי מספר טלפון. אחזור אליכם בהקדם
-          </span>
-        )}
-        <div className="mt-8 sm:mt-14 flex relative w-11/12 sm:w-80 h-14 p-2 border-2 border-appRed-500/40 rounded-lg">
-          <input
-            className="text-lg placeholder:font-thin text-center absolute inset-0 left-24 px-3 outline-hidden rounded-lg"
-            maxLength={12}
-            type="tel"
-            placeholder="05X-XXX-XXXX"
-            name="phone"
-            id="phone"
-            ref={phoneRef}
-            onChange={clearError}
-          />
-          <AppButton
-            disabled={loading}
-            className="inset-px right-auto absolute"
-            withoutTransition
-          >
-            {loading ? "היונה בדרך..." : "דבר אליי ;)"}
-          </AppButton>
-        </div>
-        {error ? <div className="mt-2 text-appRed-500">{error}</div> : null}
-        {dialogMode && (
+  if (dialogMode) {
+    return (
+      <section className="flex flex-col items-center py-10 mx-auto text-center max-w-4xl min-w-[300px]">
+        <form
+          onSubmit={onSubmit}
+          className="flex flex-col w-full items-center text-center"
+        >
+          <h2 className="font-display text-4xl font-bold mb-2">{title}</h2>
+          <div className="mt-8 flex relative w-11/12 sm:w-80 h-14 p-2 border-2 border-appRed-500/40 rounded-lg">
+            <input
+              className="text-lg text-center absolute inset-0 left-24 px-3 outline-hidden rounded-lg"
+              maxLength={12}
+              type="tel"
+              placeholder="05X-XXX-XXXX"
+              name="phone"
+              id="phone-dialog"
+              aria-label="מספר טלפון"
+              ref={phoneRef}
+              onChange={clearError}
+            />
+            <AppButton
+              disabled={loading}
+              className="inset-px right-auto absolute"
+              withoutTransition
+            >
+              {loading ? "היונה בדרך..." : "דבר אליי ;)"}
+            </AppButton>
+          </div>
+          {error ? <div className="mt-2 text-coral-ink">{error}</div> : null}
           <div className="mt-8">
-            {" "}
             <ContactIcons />
           </div>
-        )}
-      </form>
-      {!dialogMode && (
-        <div className="relative w-80 h-72 sm:w-116 sm:h-116">
-          <Image
-            // src="/images/finish-line.svg"
-            src="/images/got-mail.svg"
-            fill
-            alt="contact-me"
-            className="object-cover"
-          />
+        </form>
+      </section>
+    );
+  }
+
+  return (
+    <section className="relative mt-28 lg:mt-36 -mx-4 sm:mx-0 overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-night text-white px-6 py-14 sm:px-14 sm:py-20">
+      <HashLinkAnchor id="contact" />
+      <div
+        aria-hidden="true"
+        className="hidden sm:block absolute -left-24 -bottom-28 w-[26rem] h-[26rem] rounded-full bg-peri"
+      />
+      <div className="relative max-w-xl">
+        <h2 className="font-display font-extrabold text-5xl sm:text-6xl">{title}</h2>
+        <p className="mt-4 text-lg text-white/70">
+          שלחו לי מספר טלפון. אחזור אליכם בהקדם.
+        </p>
+        <form onSubmit={onSubmit} className="mt-9">
+          <label htmlFor="phone" className="sr-only">
+            מספר טלפון
+          </label>
+          <div className="flex items-center gap-2 max-w-md rounded-full bg-white p-1.5 focus-within:ring-2 focus-within:ring-coral">
+            <input
+              className="min-w-0 flex-1 bg-transparent px-4 text-lg text-ink placeholder:text-ink-soft/60 outline-hidden"
+              maxLength={12}
+              type="tel"
+              placeholder="05X-XXX-XXXX"
+              name="phone"
+              id="phone"
+              ref={phoneRef}
+              onChange={clearError}
+            />
+            <button
+              type="submit"
+              disabled={loading}
+              className="shrink-0 rounded-full bg-coral text-white font-semibold px-6 py-3 transition-colors hover:bg-coral-ink disabled:opacity-70 cursor-pointer"
+            >
+              {loading ? "היונה בדרך..." : "דבר אליי ;)"}
+            </button>
+          </div>
+          {error ? (
+            <p role="alert" className="mt-3 text-coral">
+              {error}
+            </p>
+          ) : null}
+        </form>
+        <HandNote className="mt-6 text-lg text-peri">
+          מבטיח לא להציק. טוב, אולי קצת.
+        </HandNote>
+        <div className="mt-10 flex items-center gap-4 text-white/70">
+          <span>או ישירות:</span>
+          <ContactIcons />
         </div>
-      )}
+      </div>
     </section>
   );
 };
