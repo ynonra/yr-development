@@ -91,13 +91,14 @@ const Hero = () => {
       <HashLinkAnchor id="home" />
       <div className="grid lg:grid-cols-[1.15fr_1fr] items-center gap-x-10 gap-y-14">
         <div className="text-center lg:text-right">
-          {/* Two lines that each stay on one line at every width: the size is fitted to the
-              first (~7.9em). The second is the shout: bigger, brick red, tilted, with comic
-              shout lines at its end, and it pops in once on load. */}
-          <h1 className="font-display font-extrabold text-[length:calc((100vw-2rem)/8.4)] leading-[1.15] sm:text-[4.2rem] lg:text-[3.9rem] xl:text-[4.5rem]">
-            <span className="block">כל העולם כולו AI</span>{" "}
-            <span className="relative inline-block mt-[0.2em] mb-[0.04em] lg:mt-[0.02em] lg:mb-[0.24em] text-[1.18em] text-coral-ink -rotate-3 origin-center lg:origin-right animate-shout-in">
-              ומה איתכם?!
+          {/* A calm first line, then the shout in two lines: bigger, brick red, tilted, with comic
+              shout lines at its end, and it pops in once on load. Sizes are fitted so the first
+              line (~8.5em, the widest) never wraps. */}
+          <h1 className="font-display font-extrabold text-[length:calc((100vw-2rem)/8.8)] leading-[1.15] sm:text-[4.2rem] lg:text-[3.6rem] xl:text-[4.25rem]">
+            <span className="block">המטרה שלי פשוטה</span>{" "}
+            <span className="relative inline-block mt-[0.2em] mb-[0.04em] lg:mt-[0.02em] lg:mb-[0.24em] text-[1.18em] leading-[1.05] text-coral-ink -rotate-3 origin-center lg:origin-right animate-shout-in">
+              <span className="block">לראות אתכם</span>{" "}
+              <span className="block">מחייכים</span>
               <svg
                 aria-hidden="true"
                 viewBox="0 0 40 44"
@@ -114,9 +115,9 @@ const Hero = () => {
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-ink-soft max-w-xl mx-auto lg:mx-0">
-            אני ינון, מפתח מכרמיאל. בונה אתרים, חנויות אונליין, אפליקציות וסוכני
-            AI, ומשתמש <span className="whitespace-nowrap">ב-AI</span> כדי לעבוד
-            מהר, בלי לוותר על איכות.
+            אם הרעיון לא שווה, אגיד לכם ישר. אם הוא שווה, אשים בו{" "}
+            <span className="whitespace-nowrap">את כל הלב</span> עד שהוא באוויר. אני ינון, מפתח מכרמיאל, ובונה אתרים, חנויות אונליין,
+            אפליקציות וסוכני AI.
           </p>
           <div className="mt-9 flex flex-wrap justify-center lg:justify-start gap-3">
             <button
