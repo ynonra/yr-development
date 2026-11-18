@@ -76,11 +76,12 @@ const About = () => {
               value={ready}
               onChange={setReady}
             />
-            {/* the arrow points up at "שחרר אותי", the left half of the pill */}
+            {/* Arrow tip sits under the middle of the "שחרר אותי" button, 148px from
+                the pill's right edge: 126px margin + 22px from the svg's right to its tip. */}
             <HandNote
-              arrow="up-left"
-              className="mt-1 text-lg text-ink-soft"
-              arrowClassName="mr-24 text-coral"
+              arrow="up-right"
+              className="mt-0.5 text-lg text-ink-soft"
+              arrowClassName="mr-[126px] text-coral"
             >
               אין תשובה לא נכונה. חוץ מ״שחרר אותי״
             </HandNote>

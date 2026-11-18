@@ -8,8 +8,8 @@ const ARROWS = {
   "down-right": (
     <path d="M10 6 C 22 30, 40 40, 66 44 M66 44 L 54 34 M66 44 L 53 52" />
   ),
-  // swoops up and to the left
-  "up-left": <path d="M70 50 C 56 26, 38 14, 14 12 M14 12 L 25 4 M14 12 L 26 20" />,
+  // rises from lower left and ends pointing straight up, tip at (52, 4)
+  "up-right": <path d="M18 54 C 20 30, 52 36, 52 4 M52 4 L 45 13 M52 4 L 59 13" />,
 };
 
 const HandNote = ({ children, arrow, className = "", arrowClassName = "" }) => {
