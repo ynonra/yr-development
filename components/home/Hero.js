@@ -91,21 +91,22 @@ const Hero = () => {
       <HashLinkAnchor id="home" />
       <div className="grid lg:grid-cols-[1.15fr_1fr] items-center gap-x-10 gap-y-14">
         <div className="text-center lg:text-right">
-          <h1 className="font-display font-extrabold text-[2.6rem] leading-[1.08] sm:text-6xl lg:text-[4.4rem]">
+          {/* Two lines, each one line at every width: the size is fitted to the longer second line (~9.4em). */}
+          <h1 className="font-display font-extrabold text-[length:calc((100vw-2rem)/9.7)] leading-[1.1] sm:text-6xl lg:text-[3.3rem] xl:text-[3.85rem]">
             <span className="block">
-              יוצר{" "}
+              כל העולם כולו{" "}
               <span className="relative inline-block">
                 <span className="absolute -z-10 inset-x-[-0.12em] bottom-[0.1em] h-[0.28em] bg-coral" />
-                מוצרים
+                AI
               </span>
+              ,
             </span>
-            <span className="block">דיגיטליים, מהר</span>
-            <span className="block">ובאיכות גבוהה</span>
+            <span className="block">והעיקר לא לפחד כלל</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-ink-soft max-w-xl mx-auto lg:mx-0">
-            אם אתם יכולים לחלום את זה, אני יכול ליצור את זה. אתרים, חנויות
-            אונליין, אפליקציות וסוכני AI, בפיתוח מבוסס AI שחוסך לכם זמן בלי
-            לוותר על איכות.
+            אני ינון, מפתח מצפת. בונה אתרים, חנויות אונליין, אפליקציות וסוכני
+            AI, ומשתמש <span className="whitespace-nowrap">ב-AI</span> כדי לעבוד
+            מהר, בלי לוותר על איכות.
           </p>
           <div className="mt-9 flex flex-wrap justify-center lg:justify-start gap-3">
             <button

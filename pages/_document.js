@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <link
           rel="preload"
-          href="/fonts/fb-crispy-800.woff2"
+          href="/fonts/fb-unica-sans-700.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

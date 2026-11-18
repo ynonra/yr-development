@@ -1,5 +1,5 @@
 /* Shared look for blog covers: the site's palette, fonts and floating "chips". Canvas is 1200x630. */
-@font-face { font-family: "Crispy"; src: url("/public/fonts/fb-crispy-800.woff2"); font-weight: 800; }
+@font-face { font-family: "Display"; src: url("/public/fonts/fb-unica-sans-700.woff2"); font-weight: 700 800; }
 @font-face { font-family: "Typo"; src: url("/public/fonts/fb-typograph-pro-400.woff2"); font-weight: 400; }
 @font-face { font-family: "Typo"; src: url("/public/fonts/fb-typograph-pro-600.woff2"); font-weight: 600; }
 @font-face { font-family: "Typo"; src: url("/public/fonts/fb-typograph-pro-700.woff2"); font-weight: 700; }
@@ -37,7 +37,7 @@ body {
   border-radius: 30px;
   box-shadow: 0 28px 56px -24px rgba(27, 32, 64, 0.38);
 }
-.display { font-family: "Crispy", "Typo", sans-serif; font-weight: 800; }
+.display { font-family: "Display", "Typo", sans-serif; font-weight: 800; }
 .sb { font-weight: 600; }
 .b { font-weight: 700; }
 .soft { color: var(--soft); }

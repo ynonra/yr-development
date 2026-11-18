@@ -4,18 +4,13 @@
   Self-hosted Fontbit fonts, one fixed-weight file per CSS weight, cut from the variable
   originals (Safari ignores remapped variable axes). Body text runs at 400 (Typograph's
   Regular). Browsers only download the weights a page uses.
-  Crispy has no Latin glyphs, so Latin in headings falls through to Typograph Pro.
+  Headings use Unica Sans Bold (its one weight covers both font-bold and font-extrabold).
+  Unica has no Latin letters, so Latin in headings ("AI") falls through to Typograph Pro.
 */
 @font-face {
-  font-family: "Fb Crispy";
-  src: url("/fonts/fb-crispy-700.woff2") format("woff2");
-  font-weight: 700;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Fb Crispy";
-  src: url("/fonts/fb-crispy-800.woff2") format("woff2");
-  font-weight: 800;
+  font-family: "Fb Unica Sans";
+  src: url("/fonts/fb-unica-sans-700.woff2") format("woff2");
+  font-weight: 700 800;
   font-display: swap;
 }
 @font-face {
@@ -63,7 +58,7 @@
 
 @theme {
   --font-*: initial;
-  --font-display: "Fb Crispy", "Fb Typograph Pro", system-ui, sans-serif;
+  --font-display: "Fb Unica Sans", "Fb Typograph Pro", system-ui, sans-serif;
   --font-body: "Fb Typograph Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-hand: "Playpen Sans Hebrew", "Fb Typograph Pro", cursive;
 
