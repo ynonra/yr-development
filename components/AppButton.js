@@ -17,7 +17,7 @@ const AppButton = ({
         !inverted
           ? "bg-appRed-500 text-white"
           : "bg-white text-appRed-500 border border-appRed-500"
-      } rounded-lg px-4 py-3 font-medium transition ${
+      } rounded-lg px-4 py-3 font-semibold transition ${
         !withoutTransition
           ? "hover:shadow-lg hover:-translate-y-0.5"
           : "hover:bg-appRed-500/95 hover:text-white"

@@ -13,7 +13,7 @@ const ARROWS = {
 };
 
 const HandNote = ({ children, arrow, className = "", arrowClassName = "" }) => (
-  <div className={`font-hand leading-snug ${className}`}>
+  <div className={`font-hand font-normal leading-snug ${className}`}>
     <span className="block -rotate-3">{children}</span>
     {arrow && (
       <svg
