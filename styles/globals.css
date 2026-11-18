@@ -80,6 +80,8 @@
 
   --animate-chip-in: chip-in 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
   --animate-shout-in: shout-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s both;
+  --animate-draw: draw 0.6s cubic-bezier(0.6, 0, 0.3, 1) both;
+  --animate-pop-in: pop-in 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 
   @keyframes chip-in {
     from {
@@ -89,6 +91,30 @@
     to {
       opacity: 1;
       transform: none;
+    }
+  }
+
+  /*
+    Draws an SVG stroke. Use on a path with pathLength="1" and stroke-dasharray "1 2": an offset
+    of 1.2 keeps the whole path (round caps included) inside the gap, 0 shows all of it.
+  */
+  @keyframes draw {
+    from {
+      stroke-dashoffset: 1.2;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+  @keyframes pop-in {
+    from {
+      opacity: 0;
+      scale: 0;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
     }
   }
 

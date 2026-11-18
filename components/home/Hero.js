@@ -11,6 +11,37 @@ import { PROJECTS_DATA } from "../../data/projects";
 const chip =
   "absolute bg-white rounded-2xl border border-line shadow-[0_12px_32px_-12px_rgba(27,32,64,0.28)] text-ink animate-chip-in";
 
+// A hand-drawn smiley that draws itself after the headline pops in: the face, then the eyes,
+// then the smile. With reduced motion it's simply there, fully drawn.
+const draw = "animate-draw [stroke-dasharray:1_2]";
+const SmileDoodle = ({ className = "" }) => (
+  <svg
+    aria-hidden="true"
+    viewBox="0 0 100 100"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+  >
+    <path
+      pathLength="1"
+      className={draw}
+      style={{ animationDelay: "750ms", animationDuration: "750ms" }}
+      d="M52 9 C 78 8, 94 28, 92 53 C 90 79, 69 94, 45 91 C 21 88, 6 70, 9 46 C 12 23, 30 9, 58 11"
+    />
+    <circle cx="36" cy="40" r="5" fill="currentColor" stroke="none" className="animate-pop-in origin-center [transform-box:fill-box]" style={{ animationDelay: "1500ms" }} />
+    <circle cx="64" cy="40" r="5" fill="currentColor" stroke="none" className="animate-pop-in origin-center [transform-box:fill-box]" style={{ animationDelay: "1620ms" }} />
+    <path
+      pathLength="1"
+      className={draw}
+      style={{ animationDelay: "1800ms", animationDuration: "500ms" }}
+      d="M28 59 C 36 77, 63 79, 73 57"
+    />
+  </svg>
+);
+
 const PhotoStage = () => (
   <div className="relative w-full max-w-[340px] sm:max-w-[430px] lg:max-w-[380px] xl:max-w-[430px] mx-auto aspect-[1/1.2]">
     {/* periwinkle disc, the photo's head rises above it */}
@@ -91,32 +122,22 @@ const Hero = () => {
       <HashLinkAnchor id="home" />
       <div className="grid lg:grid-cols-[1.15fr_1fr] items-center gap-x-10 gap-y-14">
         <div className="text-center lg:text-right">
-          {/* A calm first line, then the shout in two lines: bigger, brick red, tilted, with comic
-              shout lines at its end, and it pops in once on load. Sizes are fitted so the first
-              line (~8.5em, the widest) never wraps. */}
+          {/* A calm first line, then the shout in two lines: bigger, brick red, tilted, popping in
+              once on load, with a smiley that draws itself next to "מחייכים". Sizes are fitted
+              so the first line (~8.5em, the widest) never wraps. */}
           <h1 className="font-display font-extrabold text-[length:calc((100vw-2rem)/8.8)] leading-[1.15] sm:text-[4.2rem] lg:text-[3.6rem] xl:text-[4.25rem]">
             <span className="block">המטרה שלי פשוטה</span>{" "}
-            <span className="relative inline-block mt-[0.2em] mb-[0.04em] lg:mt-[0.02em] lg:mb-[0.24em] text-[1.18em] leading-[1.05] text-coral-ink -rotate-3 origin-center lg:origin-right animate-shout-in">
+            <span className="inline-block mt-[0.2em] mb-[0.04em] lg:mt-[0.02em] lg:mb-[0.24em] text-[1.18em] leading-[1.05] text-coral-ink -rotate-3 origin-center lg:origin-right animate-shout-in">
               <span className="block">לראות אתכם</span>{" "}
-              <span className="block">מחייכים</span>
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 40 44"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="4"
-                strokeLinecap="round"
-                className="absolute -left-[0.62em] -top-[0.05em] w-[0.5em] h-[0.55em] overflow-visible text-coral"
-              >
-                <path d="M34 14 L14 2" />
-                <path d="M33 23 L6 23" />
-                <path d="M34 32 L14 44" />
-              </svg>
+              <span className="block">
+                מחייכים
+                <SmileDoodle className="inline-block align-[-0.08em] ms-[0.18em] w-[0.78em] h-[0.78em] text-coral" />
+              </span>
             </span>
           </h1>
-          <p className="mt-6 text-lg sm:text-xl text-ink-soft max-w-xl mx-auto lg:mx-0">
-            אם הרעיון לא שווה, אגיד לכם ישר. אם הוא שווה, אשים בו{" "}
-            <span className="whitespace-nowrap">את כל הלב</span> עד שהוא באוויר. אני ינון, מפתח מכרמיאל, ובונה אתרים, חנויות אונליין,
+          <p className="mt-6 text-lg sm:text-xl text-ink-soft text-pretty max-w-xl mx-auto lg:mx-0">
+            אם אתם לא בכיוון הנכון, אגיד לכם ישר. ואם כן, אשים{" "}
+            <span className="whitespace-nowrap">את כל הלב</span> עד שהפרויקט באוויר. אני ינון, מפתח מכרמיאל, ובונה אתרים, חנויות אונליין,
             אפליקציות וסוכני AI.
           </p>
           <div className="mt-9 flex flex-wrap justify-center lg:justify-start gap-3">
