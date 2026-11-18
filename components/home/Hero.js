@@ -12,7 +12,7 @@ const chip =
   "absolute bg-white rounded-2xl border border-line shadow-[0_12px_32px_-12px_rgba(27,32,64,0.28)] text-ink animate-chip-in";
 
 const PhotoStage = () => (
-  <div className="relative w-full max-w-[340px] sm:max-w-[430px] mx-auto aspect-[1/1.2]">
+  <div className="relative w-full max-w-[340px] sm:max-w-[430px] lg:max-w-[380px] xl:max-w-[430px] mx-auto aspect-[1/1.2]">
     {/* periwinkle disc, the photo's head rises above it */}
     <div className="absolute inset-x-0 bottom-0 aspect-square rounded-full bg-peri" />
     <div
@@ -29,9 +29,11 @@ const PhotoStage = () => (
       />
     </div>
 
-    {/* things I build, floating around me */}
+    {/* Things I build, floating around me. They stay clear of the face (roughly 25%-79% of the
+        width and 7%-73% of the height): the order pops in above the head like a phone
+        notification, the other two sit on the shoulders. */}
     <div
-      className={`${chip} top-[66%] -right-2 sm:top-[34%] sm:-right-24 flex items-center gap-2.5 px-3 py-2.5`}
+      className={`${chip} top-[75%] right-0 sm:top-[-5%] sm:-right-6 lg:top-[-7%] lg:-right-10 xl:top-[-5%] xl:-right-6 flex items-center gap-2.5 px-3 py-2.5`}
       style={{ animationDelay: "250ms" }}
     >
       <span className="grid place-items-center w-8 h-8 rounded-full bg-coral text-white text-base">
@@ -44,7 +46,7 @@ const PhotoStage = () => (
     </div>
 
     <div
-      className={`${chip} bottom-[-4%] -left-2 sm:bottom-[22%] sm:-left-20 w-52 sm:w-60 p-3`}
+      className={`${chip} top-[97%] left-0 sm:top-[75%] sm:-left-16 lg:-left-4 xl:-left-16 w-52 sm:w-60 lg:w-52 xl:w-60 p-3`}
       style={{ animationDelay: "500ms" }}
     >
       <span className="flex items-center gap-1.5 text-xs font-semibold text-ink-soft mb-1.5">
@@ -57,7 +59,7 @@ const PhotoStage = () => (
     </div>
 
     <div
-      className={`${chip} hidden sm:block bottom-[2%] -right-16 w-56 p-3`}
+      className={`${chip} hidden sm:block bottom-[2%] -right-16 lg:-right-8 xl:-right-16 w-56 lg:w-52 xl:w-56 p-3`}
       style={{ animationDelay: "750ms" }}
     >
       <span className="flex items-center gap-2 text-xs text-ink-soft border border-line rounded-full px-3 py-1.5">
@@ -72,8 +74,8 @@ const PhotoStage = () => (
 
     <HandNote
       arrow="down-right"
-      className="absolute top-[2%] -left-2 sm:-left-10 text-base sm:text-lg text-ink-soft"
-      arrowClassName="mr-6 text-coral"
+      className="absolute top-[-3%] sm:top-[2%] left-0 sm:-left-10 lg:-left-4 xl:-left-10 text-base sm:text-lg lg:text-base xl:text-lg text-ink-soft"
+      arrowClassName="mr-[76px] sm:mr-9 lg:mr-[54px] xl:mr-9 text-coral"
     >
       זה אני. החליפה רק לתמונה ;)
     </HandNote>
@@ -125,7 +127,7 @@ const Hero = () => {
         <PhotoStage />
       </div>
 
-      <div className="mt-20 sm:mt-24">
+      <div className="mt-32 sm:mt-24">
         <p className="text-sm text-ink-soft text-center lg:text-right mb-6">
           חלק מהעסקים והמיזמים שבניתי עבורם
         </p>
