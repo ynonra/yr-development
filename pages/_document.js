@@ -6,14 +6,14 @@ export default function Document() {
       <Head>
         <link
           rel="preload"
-          href="/fonts/fb-crispy.woff2"
+          href="/fonts/fb-crispy-800.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
         />
         <link
           rel="preload"
-          href="/fonts/fb-typograph-pro.woff2"
+          href="/fonts/fb-typograph-pro-500.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"

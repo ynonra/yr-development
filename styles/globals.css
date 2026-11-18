@@ -1,21 +1,57 @@
 @import 'tailwindcss';
 
 /*
-  Self-hosted Fontbit fonts. The variable fonts' wght axes were remapped (avar) so
-  CSS weights land on the designer's named instances: 400 Regular, 700 Bold, 800 ExtraBold.
-  Body text runs at 550 (just under Typograph's Medium) for a sturdier read.
+  Self-hosted Fontbit fonts, one fixed-weight file per CSS weight, cut from the variable
+  originals (Safari ignores remapped variable axes). Body text runs at 500, between
+  Typograph's Regular and Medium. Browsers only download the weights a page uses.
   Crispy has no Latin glyphs, so Latin in headings falls through to Typograph Pro.
 */
 @font-face {
   font-family: "Fb Crispy";
-  src: url("/fonts/fb-crispy.woff2") format("woff2");
-  font-weight: 100 900;
+  src: url("/fonts/fb-crispy-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fb Crispy";
+  src: url("/fonts/fb-crispy-800.woff2") format("woff2");
+  font-weight: 800;
   font-display: swap;
 }
 @font-face {
   font-family: "Fb Typograph Pro";
-  src: url("/fonts/fb-typograph-pro.woff2") format("woff2");
-  font-weight: 100 900;
+  src: url("/fonts/fb-typograph-pro-300.woff2") format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fb Typograph Pro";
+  src: url("/fonts/fb-typograph-pro-400.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fb Typograph Pro";
+  src: url("/fonts/fb-typograph-pro-500.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fb Typograph Pro";
+  src: url("/fonts/fb-typograph-pro-600.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fb Typograph Pro";
+  src: url("/fonts/fb-typograph-pro-700.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fb Typograph Pro";
+  src: url("/fonts/fb-typograph-pro-800.woff2") format("woff2");
+  font-weight: 800;
   font-display: swap;
 }
 @font-face {
@@ -90,7 +126,7 @@
   body {
     direction: rtl;
     font-family: var(--font-body);
-    font-weight: 550;
+    font-weight: 500;
     background: var(--color-paper);
     color: var(--color-ink);
   }

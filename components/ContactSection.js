@@ -99,7 +99,7 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
       <div className="relative max-w-xl">
         <h2 className="font-display font-extrabold text-5xl sm:text-6xl">{title}</h2>
         <p className="mt-4 text-lg text-white/70">
-          שלחו לי מספר טלפון. אחזור אליכם בהקדם.
+          שלחו את מספר הווצאפ. אחזור אליכם בהקדם.
         </p>
         <form onSubmit={onSubmit} className="mt-9">
           <label htmlFor="phone" className="sr-only">
@@ -131,7 +131,7 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
           ) : null}
         </form>
         <HandNote className="mt-6 text-lg text-peri">
-          מבטיח לא להציק. טוב, אולי קצת.
+          מבטיח לא להציק. <span className="text-[0.7em]">הרבה</span>
         </HandNote>
         <div className="mt-10 flex items-center gap-4 text-white/70">
           <span>או ישירות:</span>
