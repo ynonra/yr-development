@@ -13,7 +13,7 @@ export default function Document() {
         />
         <link
           rel="preload"
-          href="/fonts/fb-typograph-pro-500.woff2"
+          href="/fonts/fb-typograph-pro-400.woff2"
           as="font"
           type="font/woff2"
           crossOrigin="anonymous"
