@@ -59,14 +59,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="relative">
-        <HandNote
-          arrow="down-left"
-          className="mb-2 lg:mb-0 lg:absolute lg:-top-16 lg:left-6 text-lg text-ink-soft"
-          arrowClassName="mr-auto text-coral"
-        >
-          אין תשובה לא נכונה. חוץ מ״שחרר אותי״
-        </HandNote>
+      <div>
         <div className="rounded-[2rem] bg-mist p-8 sm:p-10 space-y-8">
           <Toggle
             id="dreamer"
@@ -75,13 +68,23 @@ const About = () => {
             value={dreamer}
             onChange={setDreamer}
           />
-          <Toggle
-            id="ready"
-            label="רוצים להגשים את החלום?"
-            options={["כן בטח", "שחרר אותי"]}
-            value={ready}
-            onChange={setReady}
-          />
+          <div>
+            <Toggle
+              id="ready"
+              label="רוצים להגשים את החלום?"
+              options={["כן בטח", "שחרר אותי"]}
+              value={ready}
+              onChange={setReady}
+            />
+            {/* the arrow points up at "שחרר אותי", the left half of the pill */}
+            <HandNote
+              arrow="up-left"
+              className="mt-1 text-lg text-ink-soft"
+              arrowClassName="mr-24 text-coral"
+            >
+              אין תשובה לא נכונה. חוץ מ״שחרר אותי״
+            </HandNote>
+          </div>
           <div>
             <p className="mb-5">מגניב :) אשמח שתספרו לי עליו ואולי אגשים לכם את החלום.</p>
             <button

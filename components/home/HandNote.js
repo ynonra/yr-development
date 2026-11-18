@@ -12,24 +12,31 @@ const ARROWS = {
   "up-left": <path d="M70 50 C 56 26, 38 14, 14 12 M14 12 L 25 4 M14 12 L 26 20" />,
 };
 
-const HandNote = ({ children, arrow, className = "", arrowClassName = "" }) => (
-  <div className={`font-hand font-normal leading-snug ${className}`}>
-    <span className="block -rotate-3">{children}</span>
-    {arrow && (
-      <svg
-        viewBox="0 0 80 56"
-        className={`w-16 h-12 ${arrowClassName}`}
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        {ARROWS[arrow]}
-      </svg>
-    )}
-  </div>
-);
+const HandNote = ({ children, arrow, className = "", arrowClassName = "" }) => {
+  const svg = arrow && (
+    <svg
+      viewBox="0 0 80 56"
+      className={`block w-16 h-12 ${arrowClassName}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      {ARROWS[arrow]}
+    </svg>
+  );
+  // "up" arrows sit above the note, pointing at something above it
+  const above = arrow?.startsWith("up");
+
+  return (
+    <div className={`font-hand font-normal leading-snug ${className}`}>
+      {above && svg}
+      <span className="block -rotate-3">{children}</span>
+      {!above && svg}
+    </div>
+  );
+};
 
 export default HandNote;
