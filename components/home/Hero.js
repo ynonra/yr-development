@@ -91,17 +91,27 @@ const Hero = () => {
       <HashLinkAnchor id="home" />
       <div className="grid lg:grid-cols-[1.15fr_1fr] items-center gap-x-10 gap-y-14">
         <div className="text-center lg:text-right">
-          {/* Two lines, each one line at every width: the size is fitted to the longer second line (~9.4em). */}
-          <h1 className="font-display font-extrabold text-[length:calc((100vw-2rem)/9.7)] leading-[1.1] sm:text-6xl lg:text-[3.3rem] xl:text-[3.85rem]">
-            <span className="block">
-              כל העולם כולו{" "}
-              <span className="relative inline-block">
-                <span className="absolute -z-10 inset-x-[-0.12em] bottom-[0.1em] h-[0.28em] bg-coral" />
-                AI
-              </span>
-              ,
+          {/* Two lines that each stay on one line at every width: the size is fitted to the
+              first (~7.9em). The second is the shout: bigger, brick red, tilted, with comic
+              shout lines at its end, and it pops in once on load. */}
+          <h1 className="font-display font-extrabold text-[length:calc((100vw-2rem)/8.4)] leading-[1.15] sm:text-[4.2rem] lg:text-[3.9rem] xl:text-[4.5rem]">
+            <span className="block">כל העולם כולו AI</span>{" "}
+            <span className="relative inline-block mt-[0.2em] mb-[0.04em] lg:mt-[0.02em] lg:mb-[0.24em] text-[1.18em] text-coral-ink -rotate-3 origin-center lg:origin-right animate-shout-in">
+              ומה איתכם?!
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 40 44"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="4"
+                strokeLinecap="round"
+                className="absolute -left-[0.62em] -top-[0.05em] w-[0.5em] h-[0.55em] overflow-visible text-coral"
+              >
+                <path d="M34 14 L14 2" />
+                <path d="M33 23 L6 23" />
+                <path d="M34 32 L14 44" />
+              </svg>
             </span>
-            <span className="block">והעיקר לא לפחד כלל</span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-ink-soft max-w-xl mx-auto lg:mx-0">
             אני ינון, מפתח מצפת. בונה אתרים, חנויות אונליין, אפליקציות וסוכני
