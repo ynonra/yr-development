@@ -114,7 +114,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-ink-soft max-w-xl mx-auto lg:mx-0">
-            אני ינון, מפתח מצפת. בונה אתרים, חנויות אונליין, אפליקציות וסוכני
+            אני ינון, מפתח מכרמיאל. בונה אתרים, חנויות אונליין, אפליקציות וסוכני
             AI, ומשתמש <span className="whitespace-nowrap">ב-AI</span> כדי לעבוד
             מהר, בלי לוותר על איכות.
           </p>

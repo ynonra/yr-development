@@ -6,7 +6,7 @@ Derived from Yinon's own writing on this site: the original homepage, the projec
 
 ## The voice in one line
 
-A friendly developer from Safed talking to you at eye level: first person, warm, a little cheeky, honest about the hard parts, and always concrete.
+A friendly developer from Karmiel talking to you at eye level: first person, warm, a little cheeky, honest about the hard parts, and always concrete.
 
 ## Who talks to whom
 
@@ -35,7 +35,7 @@ Each comes with a real example. Use them; don't overuse them.
 
 - **Mostly everyday Hebrew**: מגניב, תותחים, ללכלך את הידיים, בונוס מטורף על חשבון הבית, ממש.
 - **Plus a pinch of literary or Torah-world phrasing**, which is part of Yinon's background: "על כן", "מחד... ומאידך", "על אחת כמה וכמה", "רוקם עור וגידים", "והיד עוד נטויה". One or two per piece adds character; more sounds stiff.
-- **The background is a feature**: Safed, the north, yeshiva study, reading the Torah portion, building for religious institutions and nonprofits. Mention it when it's relevant to the reader, for example "בתור תלמיד ישיבה, ספר זה הוא חובה...". Don't make it a gimmick.
+- **The background is a feature**: Karmiel, the north, yeshiva study, reading the Torah portion, building for religious institutions and nonprofits. Mention it when it's relevant to the reader, for example "בתור תלמיד ישיבה, ספר זה הוא חובה...". Don't make it a gimmick.
 - **Tech terms stay in English, with a plain-Hebrew explanation the first time**: "PWA, מה שאומר שהאפליקציה עובדת גם מחנויות האפליקציות וגם כאתר רגיל".
 
 ## How pieces are built

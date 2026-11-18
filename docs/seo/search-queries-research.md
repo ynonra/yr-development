@@ -1,6 +1,6 @@
 # Search query research: Hebrew (Israel), November 2026
 
-Researched on 2026-11-18 for a solo developer in Safed (צפת), northern Israel. Services covered:
+Researched on 2026-11-18 for a solo developer in Karmiel (כרמיאל), northern Israel. Services covered:
 - websites
 - online stores
 - apps
@@ -262,7 +262,7 @@ These are the formats that rank in Google and get quoted by AI assistants.
 
 These came out of the research and will do more than another article.
 
-1. **A north service page.** For example "בניית אתרים ואפליקציות בצפון: צפת, כרמיאל, קרית שמונה והגליל", answering "who", "where", "how much" and "how long".
+1. **A north service page.** For example "בניית אתרים ואפליקציות בצפון: כרמיאל, צפת, קרית שמונה והגליל", answering "who", "where", "how much" and "how long".
 2. **Google Business Profile**, fully completed, with categories, service area, photos and a steady flow of reviews. This drives both local SEO and local AI answers.
 3. **Consistent name, address and phone** everywhere, plus listings in Israeli directories (d.co.il, easy.co.il, Midrag).
 4. **Google Search Console and Bing Webmaster Tools.** Submit `https://yr-development.vercel.app/sitemap.xml` to both. Some AI assistants draw on Bing's index.

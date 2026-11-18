@@ -34,7 +34,7 @@ const JSON_LD = {
   url: SITE_URL,
   image: `${SITE_URL}/images/yinon.webp`,
   description: SITE_DESCRIPTION,
-  address: { "@type": "PostalAddress", addressLocality: "צפת", addressCountry: "IL" },
+  address: { "@type": "PostalAddress", addressLocality: "כרמיאל", addressCountry: "IL" },
   areaServed: { "@type": "Country", name: "ישראל" },
   founder: {
     "@type": "Person",
