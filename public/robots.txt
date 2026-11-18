@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yr-development.vercel.app/sitemap.xml

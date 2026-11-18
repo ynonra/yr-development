@@ -6,6 +6,7 @@ const LINKS = [
   { href: "/#services", label: "שירותים" },
   { href: "/#recommendations", label: "המלצות" },
   { href: "/#projects", label: "תיק עבודות" },
+  { href: "/blog", label: "בלוג" },
   { href: "/#contact", label: "יצירת קשר" },
 ];
 
@@ -17,7 +18,9 @@ const NavLinks = ({ closeDrawer = () => {} }) => {
   return (
     <ul className="flex flex-col sm:flex-row justify-center items-center gap-x-2 gap-y-1.5 text-lg sm:text-base">
       {LINKS.map(({ href, label }) => {
-        const current = href === "/" && pathname === "/";
+        const current =
+          (href === "/" && pathname === "/") ||
+          (href === "/blog" && pathname.startsWith("/blog"));
         return (
           <li key={href}>
             <Link

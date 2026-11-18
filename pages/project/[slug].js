@@ -7,8 +7,8 @@ import WorkLinks from "../../components/WorkLinks";
 import WorkCard from "../../components/WorkCard";
 import { PROJECTS_DATA } from "../../data/projects";
 import ContactSection from "../../components/ContactSection";
+import Seo from "../../components/Seo";
 import HashLinkAnchor from "../../components/HashLinkAnchor";
-import { SITE_DESCRIPTION } from "../../data/seo";
 
 export async function getStaticPaths() {
   return {
@@ -44,10 +44,12 @@ const Project = ({ data }) => {
 
   return (
     <div className="max-w-5xl mx-auto">
-      <Head>
-        <title>{documentTitle}</title>
-        <meta name="description" content={SITE_DESCRIPTION} />
-      </Head>
+      <Seo
+        title={documentTitle}
+        description={`${data.inShort.replace(/[.\s]+$/, "")}. פרויקט מתיק העבודות של ינון רחמים, פיתוח אתרים, אפליקציות ו-AI.`}
+        path={`/project/${data.slug}`}
+        image={`/images/works/${data.slug}/1.png`}
+      />
       {/* 1 - Intro */}
       <section className="flex max-sm:flex-col justify-between items-center">
         <div className="flex flex-col items-center sm:items-start sm:mt-14 max-w-md">
