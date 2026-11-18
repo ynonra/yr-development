@@ -17,6 +17,7 @@ import "swiper/css/pagination";
 import { PROJECTS_DATA } from "../data/projects";
 import ContactSection from "../components/ContactSection";
 import ContactDialog from "../components/ContactDialog";
+import { SITE_DESCRIPTION } from "../data/seo";
 
 export default function Home() {
   const [answerAIndex, setAnswerAIndex] = useState(null);
@@ -29,11 +30,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>ינון רחמים | פיתוח אתרים ואפליקציות</title>
-        <meta
-          name="description"
-          content="אנו מציעים ללקוחותינו מגוון פתרונות טכנולוגיים שישדרגו להם את העסק. מערכות ניהול, אתרי תדמית, אפליקציות, עיצוב ואיפיון, כתיבת תוכן ועוד. המחירים הוגנים, והתוצאה?... בואו לראות בעצמכם..."
-        />
+        <title>ינון רחמים | פיתוח אתרים, אפליקציות ו-AI</title>
+        <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
       {/* MARK: 1 - INTRO
        */}
@@ -56,7 +54,7 @@ export default function Home() {
               <div className="hidden sm:block absolute -z-10 bg-appRed-500 bottom-[.3em] right-1 h-3.5 -left-6"></div>
               <span>מוצרים</span>
             </span>{" "}
-            דיגיטלים<div>במחירים נגישים</div>
+            דיגיטליים<div>מהר ובאיכות גבוהה</div>
           </h1>
           <div className="hidden sm:block  text-gray-500 text-2xl mb-14 font-light">
             אם אתם יכולים לחלום את זה, אני יכול ליצור את זה
@@ -106,15 +104,21 @@ export default function Home() {
             נעים להכיר
           </h2>
           <p>
-            אהלן, אני ינון. בן 28, מתגורר בצפת ומתפרנס מאחד המקצועות הכי שווים
-            בשוק - פיתוח אתרים ואפליקציות. אני נהנה להתעורר לעבודה הזו בכל בוקר
-            מחדש. יש משהו מאוד מרגש ביצירה עבור לקוחות. אפשר לומר שאני מגשים להם
+            אהלן, אני ינון. מתגורר בצפת ומתפרנס מאחד המקצועות הכי שווים בשוק -
+            פיתוח אתרים ואפליקציות. אני נהנה להתעורר לעבודה הזו בכל בוקר מחדש.
+            יש משהו מאוד מרגש ביצירה עבור לקוחות. אפשר לומר שאני מגשים להם
             חלומות.
+          </p>
+          <p>
+            ובעניין ה-AI, אני בתוך זה עד הצוואר. אני מפתח בעזרת הכלים הכי
+            מתקדמים שיש, ובונה ללקוחות סוכני AI ובוטים שעובדים בשבילם מסביב
+            לשעון. מה שפעם לקח חודשים, לוקח היום שבועות. ואת הזמן שנחסך אני
+            משקיע בבדיקות ובדיוקים, כי מהר זה טוב רק כשזה גם עובד :)
           </p>
           <p>
             בטח גם לכם יש חלום להקים אתר אינטרנט יוצא דופן או אפליקציה שתשנה
             חיים של אנשים. ואולי יש לכם חלום יותר צנוע, למשל ליצור אתר מרשים
-            לעסק או לעמותה, או לחילופין לעצב קורות חיים אינטראקטיביים.
+            לעסק או לעמותה, או לחילופין להקים חנות אונליין שבאמת מוכרת.
           </p>
           <p className="mt-8">איזה מין חולמים אתם?</p>
           {/* <SwitchButtons label1="צנועים" label2="שאפתנים" questionIndex={0} /> */}
@@ -196,17 +200,18 @@ export default function Home() {
         <section className="border-2 border-appRed-500 px-3 sm:px-10 py-5 sm:py-10 mx-auto text-center mt-28 max-w-4xl">
           <HashLinkAnchor id="services" />
           <h2 className="text-4xl font-bold mb-6">
-            מוצרים דיגטליים מ-א’ ועד ת’
+            מוצרים דיגיטליים{" "}
+            <span className="whitespace-nowrap">מ-א’ ועד ת’</span>
           </h2>
           <p className="text-lg sm:text-2xl font-light leading-normal">
-            המומחיות שלי זה פיתוח ותכנות. אפשר לבנות מערכות מעולות באמצעות
-            היכולות האלה בלבד. אך יצירה של מוצרים דיגיטליים יוצאי דופן דורשת
-            מיומנויות נוספות כמו עיצוב, מיתוג, קופירייטינג ועוד. לכן אני עובד
-            בשיתוף פעולה עם אנשי מקצוע נוספים וביחד אנחנו מביאים את לקוחותינו
+            המומחיות שלי זה פיתוח ותכנות, ובשנים האחרונות גם פיתוח מבוסס AI. זה
+            מאפשר לי לבנות מוצרים מהר יותר מאי פעם, בלי להתפשר על איכות. ומה
+            שדורש עוד ידיים, כמו עיצוב, מיתוג וקופירייטינג? בשביל זה אני עובד
+            בשיתוף פעולה עם אנשי מקצוע נוספים, וביחד אנחנו מביאים את לקוחותינו
             לגבהים חדשים.
           </p>
         </section>
-        <section className="flex flex-col items-center md:flex-row justify-between mt-14 gap-y-8">
+        <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center mt-14 gap-y-8 lg:gap-y-14">
           <ServiceDescriptionItem
             number={1}
             imageFilename="fingerprint.svg"
@@ -228,20 +233,45 @@ export default function Home() {
             title="אתרי אינטרנט"
             description="אני יכול לפתח גם אתרים פשוטים וגם מורכבים. מוזמנים לדבר איתי על פרויקטים בכל סדר גודל."
           />
+          <ServiceDescriptionItem
+            number={4}
+            imageFilename="strike.svg"
+            imageAlt="חנויות-אונליין"
+            title="חנויות אונליין"
+            description="חנות שנראית טוב זה נחמד. חנות שמוכרת זה כבר סיפור אחר. סליקה, משלוחים, חשבוניות ופאנל ניהול נוח, הכל מחובר ועובד."
+          />
+          <ServiceDescriptionItem
+            number={5}
+            imageFilename="got-mail.svg"
+            imageAlt="סוכני-AI-ובוטים"
+            title="סוכני AI ובוטים"
+            description="בוט שעונה ללקוחות שלכם 24/7, או סוכן AI שמכיר את כל המידע של העסק ועונה על שאלות בשניות. והוא אף פעם לא מבקש העלאה ;)"
+          />
+          <ServiceDescriptionItem
+            number={6}
+            imageFilename="medal.svg"
+            imageAlt="SEO-ו-GEO"
+            title="SEO ו-GEO"
+            description="לא מספיק שיהיה לכם אתר מעולה, צריך שימצאו אותו. אני דואג שתופיעו גם בגוגל (SEO) וגם בתשובות של ChatGPT, Gemini ו-Claude (GEO)."
+          />
         </section>
         <section className="mt-20">
-          <h2 className="text-4xl font-bold mb-10 text-center sm:text-right">
+          <h2 className="text-4xl font-bold mb-4 text-center sm:text-right">
             תהליך העבודה
           </h2>
+          <p className="text-lg sm:text-xl font-light mb-10 text-center sm:text-right">
+            AI לא מחליף את התהליך, הוא מאיץ אותו. ככה מגיעים לאוויר מהר, בלי
+            לדלג על אף שלב.
+          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-8 md:gap-y-14 lg:gap-y-20 justify-between justify-items-center">
             <WorkStepCard
               title="אפיון"
-              description="יושבים ביחד ומדברים על דרישות הפרוייקט, מהם הצרכים, מה האפשרויות השונות, וכו׳. הכל מסוכם במסמך שמהווה את השלד של המוצר"
+              description="יושבים ביחד ומדברים על דרישות הפרויקט, מהם הצרכים, מה האפשרויות השונות, וכו׳. הכל מסוכם במסמך שמהווה את השלד של המוצר"
               imageFilename="certificate.svg"
             />
             <WorkStepCard
               title="קופירייטינג"
-              description="אחד החלקים המשמעותיים במוצר תדמיתי הינו התוכן שבו. אנו מציעים שירותים של כתיבה שיווקית, שתקפיץ לכם את הרמה וגם את הכניסות!"
+              description="אחד החלקים המשמעותיים במוצר תדמיתי הינו התוכן שבו. כתיבה שיווקית טובה תקפיץ לכם את הרמה וגם את הכניסות, מגוגל ומהצ׳אטים של ה-AI!"
               imageFilename="paper.svg"
             />
             <WorkStepCard
@@ -251,17 +281,17 @@ export default function Home() {
             />
             <WorkStepCard
               title="פיתוח"
-              description="הגיע הזמן ללכלך את הידיים ולפתח את המוצר שלכם בהתאמה מדוייקת להחלטות שהתקבלו בשלבים הקודמים. לוקח קצת זמן, אבל שווה לחכות!"
+              description="הגיע הזמן ללכלך את הידיים. בזכות פיתוח מבוסס AI זה קורה מהר, ותקבלו גרסה ראשונה לבדיקה כבר אחרי כמה ימים, לא חודשים."
               imageFilename="time1.svg"
             />
             <WorkStepCard
               title="בקרת איכות"
-              description="רגע לפני שמשחררים את המוצר ומספרים לכולם, עושים בדיקות אחרונות כדי לוודא שאין תקלות לא צפויות"
+              description="מהר זה לא על חשבון איכות. בדיקות אוטומטיות, בדיקות ידניות ובדיקות על כל מכשיר אפשרי, כדי שלא יהיו הפתעות ביום ההשקה."
               imageFilename="star1.svg"
             />
             <WorkStepCard
               title="עלייה לאוויר"
-              description="היום הגדול הגיע, לאחר שעברנו ביחד את הדרך למוצר המושלם עבורכם, באה העת להנות מהפירות. לחיים!"
+              description="היום הגדול הגיע, לאחר שעברנו ביחד את הדרך למוצר המושלם עבורכם, באה העת ליהנות מהפירות. לחיים!"
               imageFilename="cheer.svg"
               imageScale={0.8}
             />

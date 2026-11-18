@@ -8,6 +8,7 @@ import WorkCard from "../../components/WorkCard";
 import { PROJECTS_DATA } from "../../data/projects";
 import ContactSection from "../../components/ContactSection";
 import HashLinkAnchor from "../../components/HashLinkAnchor";
+import { SITE_DESCRIPTION } from "../../data/seo";
 
 export async function getStaticPaths() {
   return {
@@ -45,10 +46,7 @@ const Project = ({ data }) => {
     <div className="max-w-5xl mx-auto">
       <Head>
         <title>{documentTitle}</title>
-        <meta
-          name="description"
-          content="אנו מציעים ללקוחותינו מגוון פתרונות טכנולוגיים שישדרגו להם את העסק. מערכות ניהול, אתרי תדמית, אפליקציות, עיצוב ואיפיון, כתיבת תוכן ועוד. המחירים הוגנים, והתוצאה?... בואו לראות בעצמכם..."
-        />
+        <meta name="description" content={SITE_DESCRIPTION} />
       </Head>
       {/* 1 - Intro */}
       <section className="flex max-sm:flex-col justify-between items-center">
