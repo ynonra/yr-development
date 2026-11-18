@@ -4,15 +4,19 @@ export default function Document() {
   return (
     <Html lang="he">
       <Head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
+          rel="preload"
+          href="/fonts/fb-crispy.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Hebrew:wght@400;500;600&family=Playpen+Sans+Hebrew:wght@400;600&family=Rubik:wght@500;700;800&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          href="/fonts/fb-typograph-pro.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

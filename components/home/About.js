@@ -62,7 +62,7 @@ const About = () => {
       <div className="relative">
         <HandNote
           arrow="down-left"
-          className="mb-2 lg:mb-0 lg:absolute lg:-top-16 lg:left-6 text-lg text-ink-soft"
+          className="mb-2 lg:mb-0 lg:absolute lg:-top-16 lg:left-6 text-2xl text-ink-soft"
           arrowClassName="mr-auto text-coral"
         >
           אין תשובה לא נכונה. חוץ מ״שחרר אותי״

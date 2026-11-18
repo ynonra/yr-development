@@ -23,7 +23,7 @@ const Services = () => (
       {SERVICES.map(({ title, description, examples }) => (
         <li
           key={title}
-          className="grid md:grid-cols-[12rem_minmax(0,1fr)_minmax(0,19rem)] gap-x-10 gap-y-3 py-7 sm:py-8 border-b border-line"
+          className="grid md:grid-cols-[14rem_minmax(0,1fr)_minmax(0,19rem)] gap-x-10 gap-y-3 py-7 sm:py-8 border-b border-line"
         >
           <h3 className="font-display font-bold text-2xl sm:text-[1.7rem] leading-tight">
             {title}

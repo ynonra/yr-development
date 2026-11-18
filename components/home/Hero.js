@@ -72,8 +72,8 @@ const PhotoStage = () => (
 
     <HandNote
       arrow="down-right"
-      className="absolute top-[2%] -left-2 sm:-left-10 text-base sm:text-lg text-ink-soft"
-      arrowClassName="mr-6 text-coral"
+      className="absolute -top-[3%] -left-2 sm:-left-12 text-xl sm:text-2xl text-ink-soft"
+      arrowClassName="mr-24 sm:mr-16 text-coral"
     >
       זה אני. החליפה רק לתמונה ;)
     </HandNote>

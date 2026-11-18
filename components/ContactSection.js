@@ -130,7 +130,7 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
             </p>
           ) : null}
         </form>
-        <HandNote className="mt-6 text-lg text-peri">
+        <HandNote className="mt-9 text-2xl text-peri">
           מבטיח לא להציק. טוב, אולי קצת.
         </HandNote>
         <div className="mt-10 flex items-center gap-4 text-white/70">
