@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Seo from "../../components/Seo";
 import ContactSection from "../../components/ContactSection";
-import { getAllPosts, getPost, getPostSlugs, formatHebrewDate } from "../../lib/blog";
+import PostDate from "../../components/blog/PostDate";
+import { getAllPosts, getPost, getPostSlugs, formatDates } from "../../lib/blog";
 import { SITE_URL, AUTHOR } from "../../data/seo";
 
 export async function getStaticPaths() {
@@ -19,8 +20,8 @@ export async function getStaticProps({ params }) {
     props: {
       post: {
         ...post,
-        dateLabel: formatHebrewDate(post.date),
-        updatedLabel: post.updated ? formatHebrewDate(post.updated) : null,
+        dates: formatDates(post.date),
+        updatedDates: post.updated ? formatDates(post.updated) : null,
       },
       more,
     },
@@ -42,7 +43,7 @@ export default function Post({ post, more }) {
       dateModified: post.updated || post.date,
       author: { "@type": "Person", ...AUTHOR },
       publisher: { "@type": "Person", ...AUTHOR },
-      image: `${SITE_URL}/images/yinon.webp`,
+      image: `${SITE_URL}${post.ogImage || "/images/yinon.webp"}`,
       keywords: post.tags.join(", "),
     },
     {
@@ -63,6 +64,7 @@ export default function Post({ post, more }) {
         description={post.description}
         path={`/blog/${post.slug}`}
         type="article"
+        image={post.ogImage || undefined}
         jsonLd={jsonLd}
       >
         <meta property="article:published_time" content={post.date} />
@@ -87,10 +89,26 @@ export default function Post({ post, more }) {
             </span>
             ינון רחמים
           </span>
-          <time dateTime={post.date}>{post.dateLabel}</time>
-          {post.updatedLabel && <span>עודכן: {post.updatedLabel}</span>}
+          <PostDate iso={post.date} dates={post.dates} />
+          {post.updatedDates && (
+            <span>
+              עודכן: <PostDate iso={post.updated} dates={post.updatedDates} />
+            </span>
+          )}
           <span>{post.readingMinutes} דקות קריאה</span>
         </div>
+
+        {post.cover && (
+          <Image
+            src={post.cover}
+            alt={post.coverAlt}
+            width={1600}
+            height={840}
+            priority
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="mt-10 w-full h-auto rounded-3xl border border-line"
+          />
+        )}
 
         <div className="article mt-10" dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>

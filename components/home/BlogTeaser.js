@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import PostDate from "../blog/PostDate";
 
 const BlogTeaser = ({ posts }) => {
   if (!posts?.length) return null;
@@ -15,17 +17,33 @@ const BlogTeaser = ({ posts }) => {
         </Link>
       </div>
       <ul className="grid md:grid-cols-3 gap-5">
-        {posts.map(({ slug, title, description, readingMinutes }) => (
+        {posts.map(({ slug, title, description, date, dates, readingMinutes, cover, coverAlt }) => (
           <li key={slug}>
             <Link
               href={`/blog/${slug}`}
-              className="group flex flex-col h-full rounded-3xl bg-white border border-line p-7 transition-colors hover:border-coral"
+              className="group flex flex-col h-full rounded-3xl bg-white border border-line overflow-hidden transition-colors hover:border-coral"
             >
-              <span className="text-sm text-ink-soft">{readingMinutes} דקות קריאה</span>
-              <h3 className="mt-2 font-display font-bold text-xl leading-snug transition-colors group-hover:text-coral-ink">
-                {title}
-              </h3>
-              <p className="mt-3 text-ink-soft leading-relaxed line-clamp-3">{description}</p>
+              {cover && (
+                <Image
+                  src={cover}
+                  alt={coverAlt}
+                  width={1600}
+                  height={840}
+                  sizes="(min-width: 768px) 33vw, 100vw"
+                  className="w-full h-auto border-b border-line"
+                />
+              )}
+              <span className="flex flex-col p-6 sm:p-7">
+                <span className="text-sm text-ink-soft">
+                  <PostDate iso={date} dates={dates} />
+                  <span className="mx-2 text-line" aria-hidden="true">|</span>
+                  {readingMinutes} דק׳ קריאה
+                </span>
+                <h3 className="mt-2 font-display font-bold text-xl leading-snug transition-colors group-hover:text-coral-ink">
+                  {title}
+                </h3>
+                <span className="mt-3 text-ink-soft leading-relaxed line-clamp-3">{description}</span>
+              </span>
             </Link>
           </li>
         ))}

@@ -1,11 +1,13 @@
+import Image from "next/image";
 import Link from "next/link";
 import Seo from "../../components/Seo";
 import ContactSection from "../../components/ContactSection";
-import { getAllPosts, formatHebrewDate } from "../../lib/blog";
+import PostDate from "../../components/blog/PostDate";
+import { getAllPosts, formatDates } from "../../lib/blog";
 import { SITE_URL, AUTHOR } from "../../data/seo";
 
 export async function getStaticProps() {
-  const posts = getAllPosts().map((p) => ({ ...p, dateLabel: formatHebrewDate(p.date) }));
+  const posts = getAllPosts().map((p) => ({ ...p, dates: formatDates(p.date) }));
   return { props: { posts } };
 }
 
@@ -26,6 +28,7 @@ export default function Blog({ posts }) {
       headline: p.title,
       url: `${SITE_URL}/blog/${p.slug}`,
       datePublished: p.date,
+      ...(p.cover && { image: `${SITE_URL}${p.ogImage}` }),
     })),
   };
 
@@ -41,18 +44,33 @@ export default function Blog({ posts }) {
       </section>
 
       <ul className="mt-12 sm:mt-16 border-t border-line max-w-4xl">
-        {posts.map(({ slug, title, description, dateLabel, readingMinutes }) => (
+        {posts.map(({ slug, title, description, date, dates, readingMinutes, cover, coverAlt }) => (
           <li key={slug} className="border-b border-line">
-            <Link href={`/blog/${slug}`} className="group block py-8 sm:py-10">
-              <p className="text-sm text-ink-soft">
-                <time>{dateLabel}</time>
-                <span className="mx-3 text-line" aria-hidden="true">|</span>
-                {readingMinutes} דקות קריאה
-              </p>
-              <h2 className="mt-2 font-display font-bold text-2xl sm:text-3xl leading-tight transition-colors group-hover:text-coral-ink">
-                {title}
-              </h2>
-              <p className="mt-3 text-ink-soft leading-relaxed max-w-2xl">{description}</p>
+            <Link
+              href={`/blog/${slug}`}
+              className="group grid sm:grid-cols-[minmax(0,1fr)_15rem] gap-x-8 gap-y-5 items-center py-8 sm:py-10"
+            >
+              {cover && (
+                <Image
+                  src={cover}
+                  alt={coverAlt}
+                  width={1600}
+                  height={840}
+                  sizes="(min-width: 640px) 240px, 100vw"
+                  className="sm:order-2 w-full h-auto rounded-2xl border border-line transition-transform duration-300 group-hover:-rotate-1"
+                />
+              )}
+              <div className="sm:order-1">
+                <p className="text-sm text-ink-soft">
+                  <PostDate iso={date} dates={dates} />
+                  <span className="mx-3 text-line" aria-hidden="true">|</span>
+                  {readingMinutes} דקות קריאה
+                </p>
+                <h2 className="mt-2 font-display font-bold text-2xl sm:text-3xl leading-tight transition-colors group-hover:text-coral-ink">
+                  {title}
+                </h2>
+                <p className="mt-3 text-ink-soft leading-relaxed max-w-2xl">{description}</p>
+              </div>
             </Link>
           </li>
         ))}

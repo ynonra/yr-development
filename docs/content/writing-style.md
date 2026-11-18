@@ -95,6 +95,16 @@ All of these are true and published in the portfolio. Link to the project page w
 | מחיר הפרויקט נקבע בהתאם לדרישות. | התשובה הכנה היא "תלוי", אבל אפשר לתת טווחים די מדויקים. הנה הם. |
 | המערכת משפרת את היעילות הארגונית. | אם עדיין מנהלים הזמנות בוואטסאפ ובאקסל, אתם יודעים בדיוק כמה זמן הולך שם לאיבוד. |
 
+## Cover image
+
+Every post gets an illustrated cover in the site's style: the palette, white floating "chips" like the hero's, and at most one handwritten note. It shows a scene from the article, not its title (the title is always next to it).
+
+1. Copy a template in `scripts/blog-covers/` to `<slug>.html` and change the scene.
+2. Render it: `node scripts/blog-covers/render.mjs <slug>` (run from a folder with Playwright and WebKit installed). This writes `public/images/blog/<slug>.webp` for the site and `<slug>-og.jpg` for link previews.
+3. Add `coverAlt` to the front matter: a short Hebrew description starting with "איור:".
+
+The blog picks the cover up by slug. Dates are shown automatically: the Hebrew date first, the Gregorian one secondary.
+
 ## Checklist before publishing
 
 - [ ] First person singular, reader as "אתם".
@@ -104,3 +114,4 @@ All of these are true and published in the portfolio. Link to the project page w
 - [ ] One or two parenthetical jokes or winks, not more.
 - [ ] Standard spelling; no space before ! or ?.
 - [ ] Ends with a personal line and an invitation to talk.
+- [ ] Has a cover and `coverAlt`; links only to posts published before it.

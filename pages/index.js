@@ -7,17 +7,21 @@ import Process from "../components/home/Process";
 import Testimonials from "../components/home/Testimonials";
 import BlogTeaser from "../components/home/BlogTeaser";
 import ContactSection from "../components/ContactSection";
-import { getAllPosts } from "../lib/blog";
+import { getAllPosts, formatDates } from "../lib/blog";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "../data/seo";
 
 export async function getStaticProps() {
   const posts = getAllPosts()
     .slice(0, 3)
-    .map(({ slug, title, description, readingMinutes }) => ({
+    .map(({ slug, title, description, date, readingMinutes, cover, coverAlt }) => ({
       slug,
       title,
       description,
+      date,
+      dates: formatDates(date),
       readingMinutes,
+      cover,
+      coverAlt,
     }));
   return { props: { posts } };
 }

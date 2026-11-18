@@ -1,0 +1,55 @@
+/* Shared look for blog covers: the site's palette, fonts and floating "chips". Canvas is 1200x630. */
+@font-face { font-family: "Crispy"; src: url("/public/fonts/fb-crispy-800.woff2"); font-weight: 800; }
+@font-face { font-family: "Typo"; src: url("/public/fonts/fb-typograph-pro-400.woff2"); font-weight: 400; }
+@font-face { font-family: "Typo"; src: url("/public/fonts/fb-typograph-pro-600.woff2"); font-weight: 600; }
+@font-face { font-family: "Typo"; src: url("/public/fonts/fb-typograph-pro-700.woff2"); font-weight: 700; }
+@font-face { font-family: "Hand"; src: url("/public/fonts/playpen-sans-hebrew.woff2"); }
+
+:root {
+  --paper: #f7f8fd;
+  --ink: #1b2040;
+  --soft: #575d7d;
+  --line: #e1e5f3;
+  --coral: #e87f75;
+  --coral-ink: #b64a40;
+  --peri: #99adf9;
+  --peri-ink: #3346a8;
+  --mist: #e8ecfe;
+  --blush: #fededb;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 1200px; height: 630px; }
+body {
+  position: relative;
+  overflow: hidden;
+  direction: rtl;
+  font-family: "Typo", sans-serif;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.disc { position: absolute; border-radius: 50%; }
+.chip {
+  position: absolute;
+  background: #fff;
+  border: 2px solid var(--line);
+  border-radius: 30px;
+  box-shadow: 0 28px 56px -24px rgba(27, 32, 64, 0.38);
+}
+.display { font-family: "Crispy", "Typo", sans-serif; font-weight: 800; }
+.sb { font-weight: 600; }
+.b { font-weight: 700; }
+.soft { color: var(--soft); }
+.row { display: flex; align-items: center; }
+.between { display: flex; align-items: center; justify-content: space-between; }
+.bar { height: 14px; border-radius: 7px; background: var(--line); }
+.pill { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 6px 16px; }
+
+/* handwritten aside + drawn arrow, like the site's notes */
+.hand { position: absolute; font-family: "Hand", sans-serif; font-size: 32px; color: var(--soft); white-space: nowrap; transform: rotate(-3deg); }
+.drawn { position: absolute; fill: none; stroke: var(--coral); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+
+/* browser window chrome */
+.window-bar { display: flex; align-items: center; gap: 10px; padding: 18px 22px; border-bottom: 2px solid var(--line); }
+.dot { width: 14px; height: 14px; border-radius: 50%; }
