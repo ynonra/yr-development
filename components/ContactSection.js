@@ -135,7 +135,7 @@ const ContactSection = ({ title = "בואו נדבר", dialogMode = false }) => 
         </HandNote>
         <div className="mt-10 flex items-center gap-4 text-white/70">
           <span>או ישירות:</span>
-          <ContactIcons />
+          <ContactIcons tone="dark" />
         </div>
       </div>
     </section>

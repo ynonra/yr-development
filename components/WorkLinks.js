@@ -31,7 +31,7 @@ const WorkLinks = ({
         </AppButton>
       ) : null}
       {googlePlayUrl ? (
-        <a href={googlePlayUrl} target="_blank" rel="noreferrer">
+        <a href={googlePlayUrl} target="_blank" rel="noreferrer" className="transition-opacity hover:opacity-80">
           <Image
             width={1.117 * 120}
             height={25}
@@ -42,7 +42,7 @@ const WorkLinks = ({
         </a>
       ) : null}
       {appStoreUrl ? (
-        <a href={appStoreUrl} target="_blank" rel="noreferrer">
+        <a href={appStoreUrl} target="_blank" rel="noreferrer" className="transition-opacity hover:opacity-80">
           <Image
             width={120}
             height={25}

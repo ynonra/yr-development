@@ -20,7 +20,11 @@ const Footer = () => {
           <div className="sm:hidden my-8">
             <NavLinks />
           </div>
-          <Link target="_blank" href="https://sensei.art">
+          <Link
+            target="_blank"
+            href="https://sensei.art"
+            className="transition-colors hover:text-coral-ink underline-offset-4 hover:underline"
+          >
             UX/UI Design by sensei.art
           </Link>
         </section>

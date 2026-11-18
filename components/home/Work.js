@@ -21,7 +21,9 @@ const FeaturedCard = ({ slug, title, kind, inShort }) => (
     </div>
     <div className="p-6 sm:p-7">
       <p className="text-sm text-peri">{kind}</p>
-      <h3 className="mt-1 font-display font-bold text-2xl text-white">{title}</h3>
+      <h3 className="mt-1 font-display font-bold text-2xl text-white transition-colors group-hover:text-coral">
+        {title}
+      </h3>
       <p className="mt-2 text-white/65 leading-relaxed line-clamp-2">{inShort}</p>
     </div>
   </Link>
@@ -38,7 +40,9 @@ const Tile = ({ slug, title, kind }) => (
         className="object-contain p-3 transition-transform duration-500 group-hover:scale-105"
       />
     </div>
-    <h3 className="mt-3 font-display font-bold text-white leading-snug">{title}</h3>
+    <h3 className="mt-3 font-display font-bold text-white leading-snug transition-colors group-hover:text-coral">
+      {title}
+    </h3>
     <p className="text-xs text-peri">{kind}</p>
   </Link>
 );

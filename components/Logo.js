@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Logo = () => {
   return (
-    <Link href="/">
+    <Link href="/" className="block transition-opacity hover:opacity-70">
       <Image src={"/images/logo.svg"} width={50} height={50} alt="logo" />
     </Link>
   );

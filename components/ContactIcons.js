@@ -1,9 +1,17 @@
 import { AiOutlineMail, AiFillLinkedin } from "react-icons/ai";
 
-const ContactIcons = ({ reverse = false }) => {
+// Both icons share one style; tone="dark" is for the navy contact panel.
+const TONES = {
+  light: "bg-ink text-white hover:bg-coral-ink",
+  dark: "bg-white/10 text-white ring-1 ring-white/15 hover:bg-coral-ink hover:ring-coral-ink",
+};
+
+const ContactIcons = ({ reverse = false, tone = "light" }) => {
+  const icon = `flex items-center justify-center w-10 h-10 rounded-full transition-colors ${TONES[tone]}`;
+
   return (
     <section
-      className={`flex items-center gap-6 text-xl ${
+      className={`flex items-center gap-4 text-xl ${
         reverse ? "flex-row-reverse" : "flex-row"
       }`}
     >
@@ -11,19 +19,13 @@ const ContactIcons = ({ reverse = false }) => {
         href="https://www.linkedin.com/in/yinon-rahamim/"
         target="_blank"
         rel="noreferrer"
-        className="flex items-center justify-center w-10 h-10 bg-appRed-500 text-white rounded-full"
-        aria-label="linkedin"
+        className={icon}
+        aria-label="LinkedIn"
       >
-        <AiFillLinkedin size={"1.1em"} />
+        <AiFillLinkedin size="1.05em" />
       </a>
-      <a
-        href="mailto:ynonra@gmail.com"
-        target="_blank"
-        rel="noreferrer"
-        className="flex items-center justify-center w-10 h-10 bg-black text-white rounded-full"
-        aria-label="email"
-      >
-        <AiOutlineMail />
+      <a href="mailto:ynonra@gmail.com" className={icon} aria-label="אימייל">
+        <AiOutlineMail size="1.05em" />
       </a>
     </section>
   );
