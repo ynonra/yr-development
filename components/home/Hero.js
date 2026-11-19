@@ -11,33 +11,35 @@ import { PROJECTS_DATA } from "../../data/projects";
 const chip =
   "absolute bg-white rounded-2xl border border-line shadow-[0_12px_32px_-12px_rgba(27,32,64,0.28)] text-ink animate-chip-in";
 
-// A hand-drawn smiley that draws itself after the headline pops in: the face, then the eyes,
-// then the smile. With reduced motion it's simply there, fully drawn.
+// A hand-drawn growth chart that draws itself after the headline pops in: three bars rise one
+// after another, then a trend arrow shoots up across them. With reduced motion it's simply there.
 const draw = "animate-draw [stroke-dasharray:1_2]";
-const SmileDoodle = ({ className = "" }) => (
+const bar = "fill-peri animate-grow-up origin-bottom [transform-box:fill-box]";
+const GrowthDoodle = ({ className = "" }) => (
   <svg
     aria-hidden="true"
     viewBox="0 0 100 100"
     fill="none"
     stroke="currentColor"
-    strokeWidth="6"
+    strokeWidth="7"
     strokeLinecap="round"
     strokeLinejoin="round"
     className={className}
   >
+    <rect x="6" y="70" width="22" height="26" rx="4" stroke="none" className={bar} style={{ animationDelay: "700ms" }} />
+    <rect x="38" y="56" width="22" height="40" rx="4" stroke="none" className={bar} style={{ animationDelay: "820ms" }} />
+    <rect x="70" y="38" width="22" height="58" rx="4" stroke="none" className={bar} style={{ animationDelay: "940ms" }} />
     <path
       pathLength="1"
       className={draw}
-      style={{ animationDelay: "750ms", animationDuration: "750ms" }}
-      d="M52 9 C 78 8, 94 28, 92 53 C 90 79, 69 94, 45 91 C 21 88, 6 70, 9 46 C 12 23, 30 9, 58 11"
+      style={{ animationDelay: "1150ms", animationDuration: "650ms" }}
+      d="M5 56 C 14 49, 22 42, 31 37 C 37 40, 44 45, 50 46 C 62 34, 75 21, 89 8"
     />
-    <circle cx="36" cy="40" r="5" fill="currentColor" stroke="none" className="animate-pop-in origin-center [transform-box:fill-box]" style={{ animationDelay: "1500ms" }} />
-    <circle cx="64" cy="40" r="5" fill="currentColor" stroke="none" className="animate-pop-in origin-center [transform-box:fill-box]" style={{ animationDelay: "1620ms" }} />
     <path
       pathLength="1"
       className={draw}
-      style={{ animationDelay: "1800ms", animationDuration: "500ms" }}
-      d="M28 59 C 36 77, 63 79, 73 57"
+      style={{ animationDelay: "1750ms", animationDuration: "250ms" }}
+      d="M71 8 L 90 7 L 90 26"
     />
   </svg>
 );
@@ -123,15 +125,15 @@ const Hero = () => {
       <div className="grid lg:grid-cols-[1.15fr_1fr] items-center gap-x-10 gap-y-14">
         <div className="text-center lg:text-right">
           {/* A calm first line, then the shout in two lines: bigger, brick red, tilted, popping in
-              once on load, with a smiley that draws itself next to "מחייכים". Sizes are fitted
+              once on load, with a growth chart that draws itself next to "מצליחים". Sizes are fitted
               so the first line (~8.5em, the widest) never wraps. */}
           <h1 className="font-display font-extrabold text-[length:calc((100vw-2rem)/8.8)] leading-[1.15] sm:text-[4.2rem] lg:text-[3.6rem] xl:text-[4.25rem]">
             <span className="block">המטרה שלי פשוטה</span>{" "}
             <span className="inline-block mt-[0.2em] mb-[0.04em] lg:mt-[0.02em] lg:mb-[0.24em] text-[1.18em] leading-[1.05] text-coral-ink -rotate-3 origin-center lg:origin-right animate-shout-in">
               <span className="block">לראות אתכם</span>{" "}
               <span className="block">
-                מחייכים
-                <SmileDoodle className="inline-block align-[-0.08em] ms-[0.18em] w-[0.78em] h-[0.78em] text-coral" />
+                מצליחים
+                <GrowthDoodle className="inline-block align-[-0.06em] ms-[0.2em] w-[0.8em] h-[0.8em] text-coral" />
               </span>
             </span>
           </h1>

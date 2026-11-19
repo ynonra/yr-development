@@ -81,7 +81,7 @@
   --animate-chip-in: chip-in 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) both;
   --animate-shout-in: shout-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) 0.2s both;
   --animate-draw: draw 0.6s cubic-bezier(0.6, 0, 0.3, 1) both;
-  --animate-pop-in: pop-in 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  --animate-grow-up: grow-up 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 
   @keyframes chip-in {
     from {
@@ -107,14 +107,13 @@
     }
   }
 
-  @keyframes pop-in {
+  /* Grows an element up from its bottom edge (pair with origin-bottom). */
+  @keyframes grow-up {
     from {
-      opacity: 0;
-      scale: 0;
+      scale: 1 0;
     }
     to {
-      opacity: 1;
-      scale: 1;
+      scale: 1 1;
     }
   }
 
