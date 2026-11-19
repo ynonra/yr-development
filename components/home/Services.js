@@ -20,7 +20,7 @@ const Services = () => (
     </div>
 
     <ul className="border-t border-line">
-      {SERVICES.map(({ title, description, examples }) => (
+      {SERVICES.map(({ title, description, examples, page, pageLabel }) => (
         <li
           key={title}
           className="grid md:grid-cols-[14rem_minmax(0,1fr)_minmax(0,19rem)] gap-x-10 gap-y-3 py-7 sm:py-8 border-b border-line"
@@ -28,7 +28,17 @@ const Services = () => (
           <h3 className="font-display font-bold text-2xl sm:text-[1.7rem] leading-tight">
             {title}
           </h3>
-          <p className="text-ink-soft leading-relaxed max-w-prose">{description}</p>
+          <div className="max-w-prose">
+            <p className="text-ink-soft leading-relaxed">{description}</p>
+            {page && (
+              <Link
+                href={`/services/${page}`}
+                className="inline-block mt-2 font-semibold text-coral-ink underline decoration-1 underline-offset-4 hover:decoration-2"
+              >
+                {pageLabel}
+              </Link>
+            )}
+          </div>
           {examples.length > 0 && (
             <div className="flex flex-wrap items-center gap-2 md:justify-end md:self-start">
               <span className="text-sm text-ink-soft">למשל:</span>

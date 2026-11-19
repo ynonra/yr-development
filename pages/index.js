@@ -9,6 +9,7 @@ import BlogTeaser from "../components/home/BlogTeaser";
 import ContactSection from "../components/ContactSection";
 import { getAllPosts, formatDates } from "../lib/blog";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "../data/seo";
+import { BUSINESS_ID, PERSON_ID } from "../lib/schema";
 
 export async function getStaticProps() {
   const posts = getAllPosts()
@@ -30,6 +31,7 @@ export async function getStaticProps() {
 const JSON_LD = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": BUSINESS_ID,
   name: "ינון רחמים - פיתוח אתרים, אפליקציות ו-AI",
   url: SITE_URL,
   image: `${SITE_URL}/images/yinon.webp`,
@@ -38,6 +40,7 @@ const JSON_LD = {
   areaServed: { "@type": "Country", name: "ישראל" },
   founder: {
     "@type": "Person",
+    "@id": PERSON_ID,
     name: "ינון רחמים",
     jobTitle: "מפתח אתרים ואפליקציות",
     sameAs: ["https://www.linkedin.com/in/yinon-rahamim/"],

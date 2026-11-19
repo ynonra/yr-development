@@ -4,6 +4,7 @@ import Seo from "../../components/Seo";
 import ContactSection from "../../components/ContactSection";
 import PostDate from "../../components/blog/PostDate";
 import { getAllPosts, getPost, getPostSlugs, formatDates } from "../../lib/blog";
+import { faqJsonLd } from "../../lib/schema";
 import { SITE_URL, AUTHOR } from "../../data/seo";
 
 export async function getStaticPaths() {
@@ -55,7 +56,8 @@ export default function Post({ post, more }) {
         { "@type": "ListItem", position: 3, name: post.title, item: url },
       ],
     },
-  ];
+    faqJsonLd(post.faq),
+  ].filter(Boolean);
 
   return (
     <>

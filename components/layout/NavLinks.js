@@ -20,7 +20,8 @@ const NavLinks = ({ closeDrawer = () => {} }) => {
       {LINKS.map(({ href, label }) => {
         const current =
           (href === "/" && pathname === "/") ||
-          (href === "/blog" && pathname.startsWith("/blog"));
+          (href === "/blog" && pathname.startsWith("/blog")) ||
+          (href === "/#services" && pathname.startsWith("/services"));
         return (
           <li key={href}>
             <Link

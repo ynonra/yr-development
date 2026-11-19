@@ -1,4 +1,5 @@
-// Homepage services. `examples` are project slugs from data/projects.js.
+// Homepage services. `examples` are project slugs from data/projects.js; `page` is the
+// service page slug (content/services/<page>.md), when there is one, and `pageLabel` its link text.
 export const SERVICES = [
   {
     title: "מערכות ניהול",
@@ -14,6 +15,8 @@ export const SERVICES = [
   },
   {
     title: "אתרי אינטרנט",
+    page: "websites",
+    pageLabel: "כל הפרטים על בניית אתרים לעסקים",
     description:
       "אני יכול לפתח גם אתרים פשוטים וגם מורכבים. מוזמנים לדבר איתי על פרויקטים בכל סדר גודל.",
     examples: ["ateret-mordechay", "rivka-rahamim"],
