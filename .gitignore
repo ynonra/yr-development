@@ -37,3 +37,4 @@ next-env.d.ts
 
 # generated at build time
 /public/sitemap.xml
+/public/llms.txt

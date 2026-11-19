@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yr-development.vercel.app/sitemap.xml
+Sitemap: https://www.yr-development.co.il/sitemap.xml

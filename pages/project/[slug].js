@@ -9,6 +9,8 @@ import { PROJECTS_DATA } from "../../data/projects";
 import ContactSection from "../../components/ContactSection";
 import Seo from "../../components/Seo";
 import HashLinkAnchor from "../../components/HashLinkAnchor";
+import { breadcrumbJsonLd, PERSON_ID } from "../../lib/schema";
+import { SITE_URL } from "../../data/seo";
 
 export async function getStaticPaths() {
   return {
@@ -41,14 +43,38 @@ const Project = ({ data }) => {
     );
 
   const documentTitle = `ינון רחמים | פרוייקט ${data.title}`;
+  const path = `/project/${data.slug}`;
+  // A case study by Yinon; `about` is the client's live site, when there is one.
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      name: data.title,
+      ...(data.kind && { genre: data.kind }),
+      description: data.inShort,
+      url: `${SITE_URL}${path}`,
+      image: `${SITE_URL}/images/works/${data.slug}/1.png`,
+      inLanguage: "he-IL",
+      creator: { "@type": "Person", "@id": PERSON_ID, name: "ינון רחמים", url: SITE_URL },
+      ...(data.links?.websiteUrl && {
+        about: { "@type": "WebSite", name: data.title, url: data.links.websiteUrl },
+      }),
+    },
+    breadcrumbJsonLd([
+      { name: "בית", path: "/" },
+      { name: "תיק עבודות", path: "/#projects" },
+      { name: data.title, path },
+    ]),
+  ];
 
   return (
     <div className="max-w-5xl mx-auto">
       <Seo
         title={documentTitle}
         description={`${data.inShort.replace(/[.\s]+$/, "")}. פרויקט מתיק העבודות של ינון רחמים, פיתוח אתרים, אפליקציות ו-AI.`}
-        path={`/project/${data.slug}`}
+        path={path}
         image={`/images/works/${data.slug}/1.png`}
+        jsonLd={jsonLd}
       />
       {/* 1 - Intro */}
       <section className="flex max-sm:flex-col justify-between items-center">

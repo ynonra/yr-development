@@ -265,7 +265,7 @@ These came out of the research and will do more than another article.
 1. **A north service page.** For example "בניית אתרים ואפליקציות בצפון: כרמיאל, צפת, קרית שמונה והגליל", answering "who", "where", "how much" and "how long".
 2. **Google Business Profile**, fully completed, with categories, service area, photos and a steady flow of reviews. This drives both local SEO and local AI answers.
 3. **Consistent name, address and phone** everywhere, plus listings in Israeli directories (d.co.il, easy.co.il, Midrag).
-4. **Google Search Console and Bing Webmaster Tools.** Submit `https://yr-development.vercel.app/sitemap.xml` to both. Some AI assistants draw on Bing's index.
+4. **Google Search Console and Bing Webmaster Tools.** Submit `https://www.yr-development.co.il/sitemap.xml` to both. Some AI assistants draw on Bing's index.
 5. **AI crawlers.** `public/robots.txt` currently allows everything, including OAI-SearchBot, PerplexityBot, ClaudeBot and GPTBot. Keep search bots allowed. Blocking `Google-Extended` only affects Gemini training, not AI Overviews.
 6. **Real keyword volumes.** Run Google Keyword Planner (Israel, Hebrew) on the clusters above, and add the numbers to this report.
 7. **Original data.** Add real project numbers (weeks, price bands) to the articles over time. That is the single biggest advantage over agency price pages.
